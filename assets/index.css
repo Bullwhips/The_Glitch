@@ -1,0 +1,53 @@
+@font-face {
+    font-family: "technology";
+    src: url("/static/fonts/technology/Technology.ttf") format("truetype");
+  }
+  
+  @font-face {
+    font-family: "play";
+    src: url("/static/fonts/Play/Play-Regular.ttf") format("truetype");
+  }
+
+body{
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+main{
+    width: 440px;
+    height: 956;
+    background-color: black;
+}
+
+h1{
+    font-family: "technology";
+    color: white;
+    font-size: 36x;
+    text-align: center;
+    padding-top: 140px;
+}
+
+#dots{
+    color: white;
+}
+
+p{
+    color: white;
+    font-family: "technology";
+    font-size: 24px;
+    text-align: center;
+}
+
+.cursor{
+    display: inline;
+}
+
+h2{
+    color: white;
+}
+
+ul{
+    color: white;
+}
