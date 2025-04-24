@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "name": "Grupp 1",
+    "time": "01:30:26"
+  },
+  {
+    "id": 2,
+    "name": "Grupp 2",
+    "time": "01:27:01"
+  },
+  {
+    "id": 3,
+    "name": "Grupp 3",
+    "time": "01:20:58"
+  },
+  {
+    "name": "Grupp 7",
+    "id": 4,
+    "time": ""
+  },
+  {
+    "name": "Grupp 7",
+    "id": 5,
+    "time": ""
+  },
+  {
+    "name": "Grupp 7",
+    "id": 6,
+    "time": ""
+  }
+]
