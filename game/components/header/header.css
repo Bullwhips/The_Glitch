@@ -1,0 +1,20 @@
+#header-container {
+    position: absolute;
+    top: 0;
+    width: 440px;
+    background-color: #0D0000;
+    z-index: 1000;
+    height: 97px; /* eller vilken höjd du vill ha */
+    display: flex;
+    align-items: flex-start;
+}
+
+#logo {
+    width: 68px;
+    height: 68px;
+    margin: 14px 0px 0px 28px;
+    background-image: url("../../assets/images/logga_theglitch.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}

@@ -4,10 +4,11 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    overflow: hidden;
 }
 
 h1 {
-    font-family: "technology";
+    font-family: technology;
     color: white;
     font-size: 36px;
     text-align: center;
@@ -20,9 +21,9 @@ h1 {
     color: white;
 }
 
-p {
+#typewriter {
     color: white;
-    font-family: "technology";
+    font-family: technology;
     font-size: 24px;
     text-align: center;
 }

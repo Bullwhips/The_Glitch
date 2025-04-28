@@ -3,9 +3,19 @@
     src: url("./assets/fonts/technology/Technology.ttf") format("truetype");
 }
   
-  @font-face {
+@font-face {
     font-family: "play";
     src: url("./assets/fonts/Play/Play-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "ptmono";
+    src: url("./assets/fonts/PTmono/PTMono-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "quantico";
+    src: url("./assets/fonts/Quantico/Quantico-Regular.ttf") format("truetype");
 }
 
 body {
@@ -13,10 +23,13 @@ body {
     height: 100vh;
     display: flex;
     justify-content: center;
-    overflow: hidden;
 }
 
 main {
     width: 440px;
     background-color: black;
+}
+
+#wrapper {
+    overflow: scroll;
 }

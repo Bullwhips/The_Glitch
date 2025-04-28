@@ -1,0 +1,60 @@
+#page-container {
+    margin: 0;
+    height: 100%;
+    background-image: url("../../assets/images/background_red_coding.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: scroll;
+}
+
+#opacityBackground {
+    width: 440px;
+    height: 1150px;
+    background: rgba(0, 0, 0, 0.50);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#backDrop {
+    width: 400px;
+    height: 1117px;
+    border-radius: 20px;
+    background: #0D0000;
+}
+
+#textContainer {
+    width: 304px;
+    margin: 98px 57px 0 39px;
+    font-family: ptmono;
+    line-height: 150%; /* 30px */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    color: #FFF;
+}
+
+#welcomeText1 {
+    margin: 0 0 26px 0;
+    font-size: 20px;
+}
+
+#textPage1 {
+    margin: 0;
+    font-size: 16px;
+}
+
+#stepTwoButton {
+    width: 307px;
+    height: 65px;
+    margin: 20px 0 34px 0;
+    border: none;
+    border-radius: 20px;
+    background: #A6032F;
+
+    text-align: center;
+    color: #FFF;
+    font-size: 24px;
+    font-family: technology;
+}
