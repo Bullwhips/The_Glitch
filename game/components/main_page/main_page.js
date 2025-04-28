@@ -19,7 +19,7 @@ function renderMainPageContent (wrapper) {
 
     let startGameButton = document.createElement("button");
     startGameButton.id = "start-game-button";
-    startGameButton.textContent = "STARTA SPELET";
+    startGameButton.textContent = "STARTA GAME";
     backgroundDiv.append(startGameButton);
 
     startGameButton.addEventListener("click", () => {renderPage1(wrapper)});
