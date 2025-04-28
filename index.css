@@ -1,11 +1,11 @@
 @font-face {
     font-family: "technology";
-    src: url("/static/fonts/technology/Technology.ttf") format("truetype");
+    src: url("./assets/fonts/technology/Technology.ttf") format("truetype");
   }
   
   @font-face {
     font-family: "play";
-    src: url("/static/fonts/Play/Play-Regular.ttf") format("truetype");
+    src: url("./assets/fonts/Play/Play-Regular.ttf") format("truetype");
   }
 
 body{
