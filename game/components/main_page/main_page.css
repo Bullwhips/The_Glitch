@@ -1,0 +1,52 @@
+#background-div {
+    height: 100%;
+    background-image: url("../../assets/images/hooded_figure.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+h1 {
+    font-family: "technology";
+    color: white;
+    font-size: 36px;
+    text-align: center;
+    padding-top: 140px;
+    position: relative;
+    z-index: 1;
+}
+
+#dots {
+    color: white;
+}
+
+p {
+    color: white;
+    font-family: "technology";
+    font-size: 24px;
+    text-align: center;
+}
+
+.cursor {
+    display: inline;
+}
+
+#start-game-button {
+    width: 400px;
+    height: 65px;
+    border-radius: 20px;
+    position: fixed;
+    bottom: 73px;
+    border: none;
+    background: #A6032F;
+    margin-left: 20px;
+    margin-right: 20px;
+
+    color: #FFF;
+    text-align: center;
+    font-family: technology;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}

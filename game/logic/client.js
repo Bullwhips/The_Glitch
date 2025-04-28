@@ -16,32 +16,32 @@ let gruppNamn
 
 
 
-form.addEventListener("submit", async (event) => {
-  event.preventDefault()
+// form.addEventListener("submit", async (event) => {
+//   event.preventDefault()
   
-  gruppNamn = gruppInput.value
-  console.log(gruppNamn)
-  const grupp = {
-    name: gruppNamn
-  }
+//   gruppNamn = gruppInput.value
+//   console.log(gruppNamn)
+//   const grupp = {
+//     name: gruppNamn
+//   }
 
-  const request = new Request("/api/grupper", {
-    method: "POST",
-    headers: {"Content-Type": "application/json"},
-    body: JSON.stringify(grupp)
-  })
+//   const request = new Request("/api/grupper", {
+//     method: "POST",
+//     headers: {"Content-Type": "application/json"},
+//     body: JSON.stringify(grupp)
+//   })
 
-  const response = await fetch(request)
+//   const response = await fetch(request)
 
-  if (response.ok){
-    const grupp = await response.json()
+//   if (response.ok){
+//     const grupp = await response.json()
     
-    localStorage.setItem("glitchGroup", JSON.stringify(grupp));
-    console.log("Saved group to localStorage:", grupp);
-  }
+//     localStorage.setItem("glitchGroup", JSON.stringify(grupp));
+//     console.log("Saved group to localStorage:", grupp);
+//   }
 
-  form.reset()
-})
+//   form.reset()
+// })
 
 async function fetchAllGroups(params) {
   const response = await fetch("/api/grupper")
