@@ -23,5 +23,7 @@ function renderMainPageContent (wrapper) {
     backgroundDiv.append(startGameButton);
 
     startGameButton.addEventListener("click", () => {renderPage1(wrapper)});
+
+    
 }
 

@@ -1,3 +1,8 @@
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
 #background-div {
     height: 100%;
     background-image: url("../../assets/images/hooded_figure.webp");
@@ -5,6 +10,9 @@
     background-position: center;
     background-repeat: no-repeat;
     overflow: hidden;
+    opacity: 0;
+    animation: fadeIn 4s ease forwards;
+    animation-delay: 2s;
 }
 
 h1 {
@@ -15,6 +23,9 @@ h1 {
     padding-top: 140px;
     position: relative;
     z-index: 1;
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+    animation-delay: 5s;
 }
 
 #dots {
@@ -22,10 +33,12 @@ h1 {
 }
 
 #typewriter {
+    
     color: white;
     font-family: technology;
     font-size: 24px;
     text-align: center;
+    
 }
 
 .cursor {
@@ -36,13 +49,11 @@ h1 {
     width: 400px;
     height: 65px;
     border-radius: 20px;
-    position: fixed;
     margin-left: 20px;
     margin-right: 20px;
-    bottom: 73px;
+    margin-top: 500px;
     border: none;
     background: #A6032F;
-
     color: #FFF;
     text-align: center;
     font-family: technology;
@@ -50,4 +61,7 @@ h1 {
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+    animation-delay: 16s;
 }

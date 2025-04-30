@@ -9,16 +9,16 @@
 
   // Function that types out the text dynamically
   function type() {
-    if (index <= text.length) {
-      let visibleText = text.slice(0, index).replace(/\n/g, "<br>");
+    if (index < text.length) {
+      const currentChar = text[index];
+      const visibleText = text.slice(0, index + 1).replace(/\n/g, "<br>");
       typewriter.innerHTML = visibleText + '<span class="cursor">|</span>';
   
-      let currentChar = text[index - 1]; // get the last character added
       index++;
   
       let delay = speed;
       if (currentChar === '\n') {
-        delay = 800; // pause for 500ms on line break
+        delay = 800;
       }
   
       setTimeout(type, delay);
@@ -26,6 +26,11 @@
       startCursorBlinking();
     }
   }
+  
+  // Start typing after 5 seconds
+  setTimeout(() => {
+    type(); // Start typing for real
+  }, 7000);
 
 
 // Function that makes the | blink
@@ -39,7 +44,7 @@
     }, 500); // blink every 0.5s
   }
 
-  type();
+
 
 
 // Makes the dots blink
@@ -48,7 +53,7 @@
   setInterval(() => {
     count = (count + 1) % 4;
     dots.textContent = '.'.repeat(count);
-  }, 500);
+  }, 900);
 
   // /TYPEWRITER
 
