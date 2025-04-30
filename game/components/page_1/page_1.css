@@ -33,6 +33,7 @@
     flex-direction: column;
     justify-content: flex-end;
     color: #FFF;
+    overflow-x: hidden;
 }
 
 #welcomeText1 {
