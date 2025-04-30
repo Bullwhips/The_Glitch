@@ -8,4 +8,9 @@ function renderHeader (wrapper) {
     let logo = document.createElement("div");
     logo.id = "logo";
     headerContainer.append(logo);
+
+    let timerDisplay =document.createElement("p");
+    timerDisplay.id = "timerDisplay";
+    headerContainer.append(timerDisplay)
+    startTimer()
 }

@@ -18,3 +18,15 @@
     background-position: center;
     background-repeat: no-repeat;
 }
+
+#timerDisplay {
+    
+    font-family: technology;
+    color: #E50913;
+    font-size: 40px;
+    z-index: 1000;
+    margin: 0;
+    position: fixed;
+    left: 1060px;
+    top: 20px
+}
