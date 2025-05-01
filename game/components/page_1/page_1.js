@@ -2,6 +2,7 @@ function renderPage1(wrapper) {
     wrapper.innerHTML = "";
 
     renderHeader(wrapper);
+    renderMenu(wrapper);
 
     let pageContainer = document.createElement("div");
     pageContainer.id = "page-container";
