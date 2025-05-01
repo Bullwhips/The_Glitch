@@ -19,7 +19,7 @@
 
 #backDrop {
     width: 400px;
-    height: 1117px;
+    height: 1130px;
     border-radius: 20px;
     background: #0D0000;
 }
@@ -47,9 +47,8 @@
 }
 
 #stepTwoButton {
-    width: 307px;
     height: 65px;
-    margin: 20px 0 34px 0;
+    margin: 24px 0 34px 0;
     border: none;
     border-radius: 20px;
     background: #A6032F;

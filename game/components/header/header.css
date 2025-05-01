@@ -4,7 +4,7 @@
     width: 440px;
     background-color: #0D0000;
     z-index: 1000;
-    height: 97px; /* eller vilken höjd du vill ha */
+    height: 97px;
     display: flex;
     align-items: flex-start;
 }
