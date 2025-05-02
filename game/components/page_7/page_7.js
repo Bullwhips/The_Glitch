@@ -30,9 +30,16 @@ function renderPage7(wrapper){
                         `Detta uppdrag är analogt, men för att komma vidare måste ni skriva in det ni har avkodat.`
     textContainer.append(textPage7);
 
+    let inputField = document.createElement("input")
+    inputField.type = "text"
+    inputField.id = "inputField"
+    inputField.placeholder = "BOKSTÄVER"
+    textContainer.append(inputField)
+
+
     let nextStepButton = document.createElement("button")
     nextStepButton.id = "nextStepButton"
-    nextStepButton.textContent = "STEG 8"
+    nextStepButton.textContent = "STEG 7"
     nextStepButton.addEventListener("click", () => {renderPage2(wrapper)});
     textContainer.append(nextStepButton)
 

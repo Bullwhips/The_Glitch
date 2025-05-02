@@ -38,7 +38,7 @@ main {
 #page-container {
     margin: 0;
     height: 100%;
-    background-image: url("../../assets/images/background_red_coding.jpg");
+    background-image: url("/static/assets/images/background_red_coding.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -88,4 +88,18 @@ main {
     color: #FFF;
     font-size: 24px;
     font-family: technology;
+}
+
+#inputField{
+    height: 65px;
+    margin: 24px 0 34px 0;
+    border: 1px solid #E50913;
+    border-radius: 25px;
+    background: #0D0000;
+    text-align: center;
+    color: #b3b3b3;
+    font-size: 24px;
+    font-family: technology;
+
+    
 }
