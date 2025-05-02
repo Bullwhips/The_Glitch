@@ -11,21 +11,21 @@ function renderPage1(wrapper) {
     let opacityBackground = document.createElement("div");
     opacityBackground.id = "opacityBackground";
 
-    let backDrop1 = document.createElement("div")
-    backDrop1.id = "backDrop1"
-    opacityBackground.append(backDrop1)
+    let backDrop1 = document.createElement("div");
+    backDrop1.id = "backDrop1";
+    opacityBackground.append(backDrop1);
 
-    let textContainer = document.createElement("div")
-    textContainer.id = "textContainer"
-    backDrop1.append(textContainer)
+    let textContainer = document.createElement("div");
+    textContainer.id = "textContainer";
+    backDrop1.append(textContainer);
 
-    let headerText = document.createElement("h2")
-    headerText.id = "headerText"
-    headerText.textContent= "VÄLKOMNA SPELARE"
-    textContainer.append(headerText)
+    let headerText = document.createElement("h2");
+    headerText.id = "headerText";
+    headerText.textContent= "VÄLKOMNA SPELARE";
+    textContainer.append(headerText);
 
-    let bodyText = document.createElement("p")
-    bodyText.id = "bodyText"
+    let bodyText = document.createElement("p");
+    bodyText.id = "bodyText";
     bodyText.innerHTML =
                  `Kaira har fastnat i en glitch. Nu är det upp till er att hjälpa henne. 
                   Uppe i höger hörn ser ni tiden ni har på er att klara spelet. 
@@ -40,11 +40,11 @@ function renderPage1(wrapper) {
                   ALLA DETALJER ÄR VIKTIGA. DEN SOM SER ALLT MISSAR INGET.`;
     textContainer.append(bodyText);
 
-    let nextStepButton = document.createElement("button")
-    nextStepButton.id = "nextStepButton"
-    nextStepButton.textContent = "STEG 2"
+    let nextStepButton = document.createElement("button");
+    nextStepButton.id = "nextStepButton";
+    nextStepButton.textContent = "STEG 2";
     nextStepButton.addEventListener("click", () => {renderPage2(wrapper)});
-    textContainer.append(nextStepButton)
+    textContainer.append(nextStepButton);
 
     pageContainer.append(opacityBackground);
 }

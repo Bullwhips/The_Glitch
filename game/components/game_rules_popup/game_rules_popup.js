@@ -1,4 +1,5 @@
 function renderGameRulesPopup (wrapper) {
+    
     let gameRulesPopupContainer = document.createElement("div");
     gameRulesPopupContainer.id = "popup-container";
     gameRulesPopupContainer.classList.remove("hidden");
