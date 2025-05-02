@@ -1,5 +1,5 @@
 :root {
-    --button-size: 50px;
+    --menu-button-size: 50px;
 }
 
 #menu-container {
@@ -18,8 +18,8 @@
 }
 
 #menu-button-containers {
-    width: var(--button-size);
-    height: var(--button-size);
+    width: var(--menu-button-size);
+    height: var(--menu-button-size);
     background-color: #0D0000;
     border: 1px solid #E50913;
     border-radius: 50px;

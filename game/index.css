@@ -1,4 +1,9 @@
 @font-face {
+    font-family: "vt323";
+    src: url("./assets/fonts/VT323-Regular.ttf") format("truetype");
+}
+
+@font-face {
     font-family: "technology";
     src: url("./assets/fonts/technology/Technology.ttf") format("truetype");
 }
@@ -87,7 +92,7 @@ main {
     text-align: center;
     color: #FFF;
     font-size: 24px;
-    font-family: technology;
+    font-family: vt323;
 }
 
 #inputField{
@@ -99,7 +104,7 @@ main {
     text-align: center;
     color: #b3b3b3;
     font-size: 24px;
-    font-family: technology;
+    font-family: vt323;
 
     
 }
