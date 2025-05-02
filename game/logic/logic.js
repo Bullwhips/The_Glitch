@@ -127,5 +127,54 @@ if (currentGroup) {
 
 }
 
+// QUIZ
 
+let questions = 
+[
+  {
+    question: "Vad heter begreppet som är relaterat till datorer, som Grace Hopper var den första att uttrycka?",
+    answers: 
+    [
+      {
+        answer: "text1",
+        correct: false
+      },
+      {
+        answer: "text2",
+        correct: false
+      },
+      {
+        answer: "text3",
+        correct: false
+      },
+      {
+        answer: "text4",
+        correct: true
+      }
+    ]
+  },
+  {
+    question: "Vad heter begreppet som är relaterat till datorer, som Grace Hopper var den första att uttrycka?",
+    answers: 
+    [
+      {
+        answer: "text1",
+        correct: false
+      },
+      {
+        answer: "text2",
+        correct: false
+      },
+      {
+        answer: "text3",
+        correct: true
+      },
+      {
+        answer: "text4",
+        correct: false
+      }
+    ]
+  }
+
+]
 
