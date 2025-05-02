@@ -6,6 +6,7 @@
     background-position: center;
     background-repeat: no-repeat;
     overflow: scroll;
+    overflow-x: hidden;
 }
 
 #opacityBackground {
@@ -33,7 +34,7 @@
     flex-direction: column;
     justify-content: flex-end;
     color: #FFF;
-    overflow-x: hidden;
+    
 }
 
 #welcomeText1 {
