@@ -34,3 +34,58 @@ main {
 #wrapper {
     overflow: scroll;
 }
+
+#page-container {
+    margin: 0;
+    height: 100%;
+    background-image: url("../../assets/images/background_red_coding.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+#opacityBackground {
+    width: 440px;
+    height: 1150px;
+    background: rgba(0, 0, 0, 0.50);
+    display: flex;
+    justify-content: center;
+   
+}
+
+#textContainer {
+    width: 304px;
+    margin: 98px 57px 0 39px;
+    font-family: ptmono;
+    line-height: 150%; /* 30px */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    color: #FFF;
+    
+}
+
+#headerText {
+    margin: 0 0 26px 0;
+    font-size: 20px;
+}
+
+#bodyText {
+    margin: 0;
+    font-size: 16px;
+}
+
+#nextStepButton {
+    height: 65px;
+    margin: 24px 0 34px 0;
+    border: none;
+    border-radius: 20px;
+    background: #A6032F;
+
+    text-align: center;
+    color: #FFF;
+    font-size: 24px;
+    font-family: technology;
+}
