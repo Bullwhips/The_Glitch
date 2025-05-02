@@ -22,6 +22,6 @@ function renderMainPageContent (wrapper) {
     startGameButton.textContent = "STARTA GAME";
     backgroundDiv.append(startGameButton);
 
-    startGameButton.addEventListener("click", () => {renderPage1(wrapper)});   
+    startGameButton.addEventListener("click", () => {renderVideoPopup(wrapper)});   
 }
 
