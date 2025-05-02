@@ -32,10 +32,79 @@ function renderPage8(wrapper) {
     textContainer.append(bodyText);
 
     let quizContainer = document.createElement("div")
-    for (let i = 0; i < questions.length; i++) {
-        const element = array[i];
+    quizContainer.id = "quizContainer"
+    textContainer.append(quizContainer)
+
+    let quizHeader = document.createElement("p")
+    quizHeader.id = "quizHeader"
+    quizContainer.append(quizHeader)
+
+    let quizText = document.createElement("p")
+    quizText.id = "quizText"
+    quizContainer.append(quizText)
+
+    let answerContainer = document.createElement("div")
+    answerContainer.id = "answerContainer"
+    quizContainer.append(answerContainer)
+
+    let answerDiv1 = document.createElement("div")
+    answerDiv1.id = "answerDiv1"
+    answerContainer.append(answerDiv1)
+
+    let answerDiv2 = document.createElement("div")
+    answerDiv2.id = "answerDiv2"
+    answerContainer.append(answerDiv2)
+
+    let answerDiv3 = document.createElement("div")
+    answerDiv3.id = "answerDiv3"
+    answerContainer.append(answerDiv3)
+
+    let answerDiv4 = document.createElement("div")
+    answerDiv4.id = "answerDiv4"
+    answerContainer.append(answerDiv4)
+
+    Array.from(answerContainer.children).forEach((div, index) => {
+        div.addEventListener("click", () => {
+            if (questions[quizNumber].answers[index].correct) {
+                quiz();
+            } else {
+                console.log("WRONG");
+            }
+        });
+    });
+
+    let quizNumber = 0
+
+    function quiz() {
+
+        if (quizNumber == 0) {
+            quizHeader.textContent = "Fråga " + 1 + "/12"
+        }
+
+        else{
+            quizHeader.textContent = "Fråga " + quizNumber + "/12"
+        }
+      
+            
+            quizText.textContent = questions[quizNumber].question
+        
+
+            answerDiv1.textContent = questions[quizNumber].answers[0].answer
+            answerDiv2.textContent = questions[quizNumber].answers[1].answer
+            answerDiv3.textContent = questions[quizNumber].answers[2].answer
+            answerDiv4.textContent = questions[quizNumber].answers[3].answer
+
+           
+     
+
+         
+            
+            if (quizNumber <= 12) {
+                quizNumber++
+            }
         
     }
+ quiz()
 
     pageContainer.append(opacityBackground);
 }

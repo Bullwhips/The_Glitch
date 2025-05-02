@@ -129,7 +129,7 @@ if (currentGroup) {
 
 // QUIZ
 
-let questions = 
+const questions = 
 [
   {
     question: "Vad heter begreppet som är relaterat till datorer, som Grace Hopper var den första att uttrycka?",
@@ -154,7 +154,7 @@ let questions =
     ]
   },
   {
-    question: "Vad heter begreppet som är relaterat till datorer, som Grace Hopper var den första att uttrycka?",
+    question: "LMAO",
     answers: 
     [
       {
