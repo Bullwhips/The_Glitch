@@ -27,7 +27,7 @@ function renderMenu (wrapper) {
         <path d="M14.625 21.9375C14.5125 21.9375 14.4 21.9375 14.3438 21.8813C14.175 21.7688 14.0625 21.5438 14.0625 21.375V14.625C14.0625 14.4563 14.175 14.2313 14.3438 14.1188C14.5125 14.0063 14.7375 14.0063 14.9063 14.1188L21.6563 17.4938C21.825 17.6063 21.9938 17.775 21.9938 18C21.9938 18.225 21.8813 18.3938 21.6563 18.5063L14.9063 21.8813C14.7938 21.9375 14.7375 21.9375 14.625 21.9375ZM15.1875 15.525V20.475L20.1375 18L15.1875 15.525Z" fill="#E50913"/>
     </svg>
     `;
-    mediaContentButton.addEventListener("click", () => {renderMediaContentPopup(wrapper)});
+    mediaContentButton.addEventListener("click", () => {renderMediaFilesPopup(wrapper)});
     mediaContentButtonContainer.append(mediaContentButton);
 
     let informationButtonContainer = document.createElement("div");
