@@ -45,27 +45,37 @@ function renderPage8(wrapper) {
 
     let answerContainer = document.createElement("div")
     answerContainer.id = "answerContainer"
-    quizContainer.append(answerContainer)
+    backDrop8.append(answerContainer)
 
     let answerDiv1 = document.createElement("div")
     answerDiv1.id = "answerDiv1"
+    answerDiv1.classList.add("answerDiv")
     answerContainer.append(answerDiv1)
 
     let answerDiv2 = document.createElement("div")
     answerDiv2.id = "answerDiv2"
+    answerDiv2.classList.add("answerDiv")
     answerContainer.append(answerDiv2)
 
     let answerDiv3 = document.createElement("div")
     answerDiv3.id = "answerDiv3"
+    answerDiv3.classList.add("answerDiv")
     answerContainer.append(answerDiv3)
 
     let answerDiv4 = document.createElement("div")
     answerDiv4.id = "answerDiv4"
+    answerDiv4.classList.add("answerDiv")
     answerContainer.append(answerDiv4)
+
+    let displaynumber = 1
 
     Array.from(answerContainer.children).forEach((div, index) => {
         div.addEventListener("click", () => {
+            if (quizNumber == 2) {
+                renderPage9(wrapper)
+            }
             if (questions[quizNumber].answers[index].correct) {
+                displaynumber++
                 quiz();
             } else {
                 console.log("WRONG");
@@ -74,35 +84,22 @@ function renderPage8(wrapper) {
     });
 
     let quizNumber = 0
-
+   
     function quiz() {
-
-        if (quizNumber == 0) {
-            quizHeader.textContent = "Fråga " + 1 + "/12"
-        }
-
-        else{
-            quizHeader.textContent = "Fråga " + quizNumber + "/12"
-        }
-      
-            
+    
+            quizHeader.textContent = "Fråga " + displaynumber + "/12"
+        
             quizText.textContent = questions[quizNumber].question
         
-
             answerDiv1.textContent = questions[quizNumber].answers[0].answer
             answerDiv2.textContent = questions[quizNumber].answers[1].answer
             answerDiv3.textContent = questions[quizNumber].answers[2].answer
             answerDiv4.textContent = questions[quizNumber].answers[3].answer
 
-           
-     
-
-         
-            
             if (quizNumber <= 12) {
                 quizNumber++
+                
             }
-        
     }
  quiz()
 
