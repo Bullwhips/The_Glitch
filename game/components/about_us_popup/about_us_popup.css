@@ -1,0 +1,40 @@
+#popup-container-aboutus {
+    margin: 1.3rem;
+    width: 25rem;
+    max-height: 90vh;
+    position: absolute;
+    top: 3.5rem;
+    left: 25.5rem;
+    z-index: 1010;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background-color: rgb(13, 0, 0, 0.2);
+    border-radius: 20px;
+    backdrop-filter: blur(440px);
+    box-shadow: -20px -20px 20px 0px rgba(54, 34, 34, 0.25), 20px 20px 20px 0px rgba(54, 34, 34, 0.25);
+}
+
+#popup-content-container-aboutus {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 0.5rem;
+    line-height: 1.3rem;
+}
+
+#creaters-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(6, auto);
+    gap: 1rem;
+}
+
+#popup-text-container-aboutus {
+    width: 22.5rem;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.5rem;
+    line-height: 1.3rem;
+    border-top: 1px solid #A6032F;
+}
