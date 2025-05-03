@@ -19,16 +19,16 @@ function renderPage7(wrapper){
     textContainer.id = "textContainer"
     backDrop7.append(textContainer)
 
-    let headerText7 = document.createElement("h2")
-    headerText7.id = "headerText7"
-    headerText7.textContent= "ANALOGT UPPDRAG - AVKODA FÖR ATT FORTSÄTTA"
-    textContainer.append(headerText7)
+    let headerText = document.createElement("h2")
+    headerText.id = "headerText"
+    headerText.textContent= "ANALOGT UPPDRAG - AVKODA FÖR ATT FORTSÄTTA"
+    textContainer.append(headerText)
 
-     let textPage7 = document.createElement("p")
-    textPage7.id = "textPage7"
-    textPage7.innerHTML =
+     let bodyText = document.createElement("p")
+    bodyText.id = "bodyText"
+    bodyText.innerHTML =
                         `Detta uppdrag är analogt, men för att komma vidare måste ni skriva in det ni har avkodat.`
-    textContainer.append(textPage7);
+    textContainer.append(bodyText);
 
     let inputField = document.createElement("input")
     inputField.type = "text"
@@ -40,7 +40,7 @@ function renderPage7(wrapper){
     let nextStepButton = document.createElement("button")
     nextStepButton.id = "nextStepButton"
     nextStepButton.textContent = "STEG 7"
-    nextStepButton.addEventListener("click", () => {renderPage2(wrapper)});
+    nextStepButton.addEventListener("click", () => {renderPage8(wrapper)});
     textContainer.append(nextStepButton)
 
     pageContainer.append(opacityBackground);
