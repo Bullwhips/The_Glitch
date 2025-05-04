@@ -42,7 +42,7 @@ function renderPage1(wrapper) {
 
     let nextStepButton = document.createElement("button");
     nextStepButton.id = "nextStepButton";
-    nextStepButton.textContent = "STEG 2";
+    nextStepButton.textContent = "NÄSTA STEG";
     nextStepButton.addEventListener("click", () => {renderPage2(wrapper)});
     textContainer.append(nextStepButton);
 

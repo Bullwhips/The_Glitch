@@ -44,7 +44,7 @@ function renderPage2(wrapper) {
 
     let nextStepButton = document.createElement("button");
     nextStepButton.id = "nextStepButton";
-    nextStepButton.textContent = "STEG 3";
+    nextStepButton.textContent = "NÄSTA STEG";
     nextStepButton.addEventListener("click", () => {renderPage3(wrapper)});
     textContainer.append(nextStepButton);
 }

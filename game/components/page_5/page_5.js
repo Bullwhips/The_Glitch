@@ -28,6 +28,23 @@ function renderPage5 (wrapper) {
     let bodyText = document.createElement("p");
     bodyText.id = "bodyText";
     bodyText.innerHTML =
-                 `Använd er av länken nedan för att få fram rätt kod:`;
+                 `Klicka på play-knappen för att få ljudfilen att spelas upp. 
+                  Ni kan spela upp ljudet hur många gånger ni vill. 
+                  Var uppmärksamma på detaljer och ledtrådar.`;
     textContainer.append(bodyText);
+
+    let audioContainer = document.createElement("div");
+    audioContainer.id = "audio-container";
+    textContainer.append(audioContainer);
+
+    let audio = document.createElement("audio");
+    audio.id = "audio";
+    audio.controls = true;
+    audioContainer.append(audio);
+
+    let nextStepButton = document.createElement("button");
+    nextStepButton.id = "nextStepButton";
+    nextStepButton.textContent = "NÄSTA STEG";
+    nextStepButton.addEventListener("click", () => {renderPage6(wrapper)});
+    textContainer.append(nextStepButton);
 }

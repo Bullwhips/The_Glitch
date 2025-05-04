@@ -22,12 +22,27 @@ function renderPage6 (wrapper) {
 
     let headerText = document.createElement("h2");
     headerText.id = "headerText";
-    headerText.textContent= "AVKODA MEDDELANDET.";
+    headerText.textContent= "LYSSNA PÅ LÅTEN.";
     textContainer.append(headerText);
 
     let bodyText = document.createElement("p");
     bodyText.id = "bodyText";
     bodyText.innerHTML =
-                 `Använd er av länken nedan för att få fram rätt kod:`;
+                 `Tryck på play och lyssna på låten.`;
     textContainer.append(bodyText);
+
+    let audioContainer = document.createElement("div");
+    audioContainer.id = "audio-container";
+    textContainer.append(audioContainer);
+
+    let audio = document.createElement("audio");
+    audio.id = "audio";
+    audio.controls = true;
+    audioContainer.append(audio);
+
+    let nextStepButton = document.createElement("button");
+    nextStepButton.id = "nextStepButton";
+    nextStepButton.textContent = "NÄSTA STEG";
+    nextStepButton.addEventListener("click", () => {renderPage7(wrapper)});
+    textContainer.append(nextStepButton);
 }
