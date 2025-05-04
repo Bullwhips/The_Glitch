@@ -4,30 +4,30 @@ function renderPage5 (wrapper) {
     renderHeader(wrapper);
     renderMenu(wrapper);
 
-    let page5Container = document.createElement("div");
-    page5Container.id = "page-container";
-    wrapper.append(page5Container);
+    let pageContainer = document.createElement("div");
+    pageContainer.id = "page-container";
+    wrapper.append(pageContainer);
 
-    let opacity5Background = document.createElement("div");
-    opacity5Background.id = "opacityBackground";
-    page5Container.append(opacity5Background);
+    let opacityBackground = document.createElement("div");
+    opacityBackground.id = "opacityBackground";
+    pageContainer.append(opacityBackground);
 
     let backDrop5 = document.createElement("div");
     backDrop5.id = "backDrop2";
-    opacity5Background.append(backDrop5);
+    opacityBackground.append(backDrop5);
 
-    let textContainer5 = document.createElement("div");
-    textContainer5.id = "textContainer";
-    backDrop5.append(textContainer5);
+    let textContainer = document.createElement("div");
+    textContainer.id = "textContainer";
+    backDrop5.append(textContainer);
 
-    let headerText5 = document.createElement("h2");
-    headerText5.id = "headerText";
-    headerText5.textContent= "AVKODA MEDDELANDET.";
-    textContainer5.append(headerText5);
+    let headerText = document.createElement("h2");
+    headerText.id = "headerText";
+    headerText.textContent= "AVKODA MEDDELANDET.";
+    textContainer.append(headerText);
 
-    let bodyText5 = document.createElement("p");
-    bodyText5.id = "bodyText";
-    bodyText5.innerHTML =
+    let bodyText = document.createElement("p");
+    bodyText.id = "bodyText";
+    bodyText.innerHTML =
                  `Använd er av länken nedan för att få fram rätt kod:`;
-    textContainer5.append(bodyText5);
+    textContainer.append(bodyText);
 }
