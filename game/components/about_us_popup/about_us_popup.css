@@ -23,12 +23,29 @@
     line-height: 1.3rem;
 }
 
+#popup-text-headline-contact {
+    font-family: ptmono;
+    font-size: 16px;
+    color: #FFF;
+}
+
+#popup-text-headline-about {
+    font-family: ptmono;
+    font-size: 16px;
+    color: #FFF;
+}
+
 #creaters-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(6, auto);
     gap: 1rem;
+
+    color: #FFF;
+    font-family: ptmono;
+    font-size: 14px;
 }
+
 
 #popup-text-container-aboutus {
     width: 22.5rem;

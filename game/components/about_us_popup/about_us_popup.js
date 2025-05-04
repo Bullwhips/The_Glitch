@@ -16,12 +16,12 @@ function renderAboutUsPopup (wrapper) {
     aboutUsPopupContainer.appendChild(popupContentContainer2);
 
     let contactHeadline = document.createElement("h3");
-    contactHeadline.id = "popup-text-headlines";
+    contactHeadline.id = "popup-text-headline-contact";
     contactHeadline.textContent = "☎ KONTAKTA OSS";
     popupContentContainer2.appendChild(contactHeadline);
 
     let aboutUsHeadline = document.createElement("h3");
-    aboutUsHeadline.id = "popup-text-headlines";
+    aboutUsHeadline.id = "popup-text-headline-about";
     aboutUsHeadline.textContent = "OM OSS- VILKA ÄR VI BAKOM SPELET?"
     popupContentContainer2.appendChild(aboutUsHeadline);
 
@@ -30,16 +30,16 @@ function renderAboutUsPopup (wrapper) {
     popupContentContainer2.appendChild(creatersContainer);
 
     let creatersArray = [
-        {name: "Hedda Åberg", program: "MMA"},
-        {name: "Amir Hamed", program: "MMA"},
-        {name: "Elna Ressner", program: "MMA"},
-        {name: "Mikaela Rasmusson", program: "WDU"},
-        {name: "Johannes Dyk Strömberg", program: "WDU"}
+        {name: "Hedda Åberg", program: "MMA", picID: 1},
+        {name: "Amir Hamed", program: "MMA", picID: 2},
+        {name: "Elna Ressner", program: "MMA", picID: 3},
+        {name: "Mikaela Rasmusson", program: "WDU", picID: 4},
+        {name: "Johannes Dyk Strömberg", program: "WDU", picID: 5}
     ];
 
     creatersArray.forEach((element) => {
         let createrPic = document.createElement("div");
-        createrPic.id = "creater-pic";
+        createrPic.id = `creater-pic-${element.picID}`;
         creatersContainer.appendChild(createrPic);
 
         let createrName = document.createElement("p");
