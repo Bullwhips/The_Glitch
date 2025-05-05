@@ -28,9 +28,8 @@ function renderPage10(wrapper) {
      let bodyText = document.createElement("p")
     bodyText.id = "bodyText"
     bodyText.innerHTML =
-                        `Om ni har kommit till detta steg så ska ni, 
-                        när ni har hittat hieroglyferna i caféet och scannat QR-koden på routern, 
-                        återigen samla gruppen för att tillsammans skriva in det ord ni har avkodat.`
+                        `Radia Perlman står för routing och har arbetat med många algoritmer.
+                         Nu när ni har tagit er till detta steg ska ni hitta rätt router`
     textContainer.append(bodyText);
 
     let inputField = document.createElement("input")

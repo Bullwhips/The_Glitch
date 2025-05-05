@@ -1,0 +1,17 @@
+#tipsPopupContainer{
+    width: 440px;
+    height: 110%;
+    background-color: red;
+    position: absolute;
+    top: 10px;
+    left: 740px;
+}
+
+
+
+#xTips{
+    color: white;
+    width: 200px;
+    height: 100px;
+    
+}

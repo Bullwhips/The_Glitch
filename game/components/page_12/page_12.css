@@ -4,3 +4,15 @@
     border-radius: 20px;
     background: #0D0000;
 }
+
+#tipsButton {
+    height: 65px;
+    margin: 24px 0 34px 0;
+    border: none;
+    border-radius: 20px;
+    background: #b3b3b3;
+    text-align: center;
+    color: #0d0000;
+    font-size: 24px;
+    font-family: vt323;
+}

@@ -28,9 +28,9 @@ function renderPage11(wrapper) {
      let bodyText = document.createElement("p")
     bodyText.id = "bodyText"
     bodyText.innerHTML =
-                        `Vänd på dagboks sidorna. 
-                        Siffrorna skapar en kombination, men det finns bara en kombination som är rätt. 
-                        Skriv in kombinationen nedan för att gå vidare, ni har hur många försök som helst.`
+                        `Om ni har kommit till detta steg så ska ni dela på er. 
+                        När ni har hittat hieroglyferna i caféet och scannat QR-koden på kaffemaskinen ska ni ha hittat den gömda meningen. 
+                        Samla sedan gruppen för att tillsammans skriva in det ord ni har avkodat.`
     textContainer.append(bodyText);
 
     let inputField = document.createElement("input")
