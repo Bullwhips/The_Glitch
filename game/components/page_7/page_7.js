@@ -6,6 +6,7 @@ function renderPage7(wrapper){
 
     let pageContainer = document.createElement("div");
     pageContainer.id = "page-container";
+    pageContainer.classList.add("noScroll")
     wrapper.append(pageContainer);
 
     let opacityBackground = document.createElement("div");
@@ -35,12 +36,26 @@ function renderPage7(wrapper){
     inputField.id = "inputField"
     inputField.placeholder = "BOKSTÄVER"
     textContainer.append(inputField)
+    
 
+    function graceHopper(value) {
+        return ["GRACE HOPPER", "Grace Hopper", "Grace hopper", "grace Hopper", "grace hopper"]
+            .includes(value.trim());
+    }
+    
 
     let nextStepButton = document.createElement("button")
     nextStepButton.id = "nextStepButton"
-    nextStepButton.textContent = "STEG 7"
-    nextStepButton.addEventListener("click", () => {renderPage8(wrapper)});
+    nextStepButton.textContent = "ENTER"
+    nextStepButton.addEventListener("click", () => {
+        let userInput = inputField.value;
+        if (graceHopper(userInput)) {
+            renderPage8(wrapper);
+        } else {
+            inputShake(inputField);
+        }
+    });
+    
     textContainer.append(nextStepButton)
 
     pageContainer.append(opacityBackground);

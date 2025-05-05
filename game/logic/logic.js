@@ -76,25 +76,26 @@
   
         if (--timer < 0) {
           clearInterval(interval);
-          displayElement.textContent = "Tiden är slut!";
           
-          // Remove from localStorage
-          localStorage.removeItem("glitchTimerEnd");
+          renderGameOver(document.querySelector("#wrapper"))
           
-          const currentGroup = localStorage.getItem("glitchGroup");
-          if (currentGroup) {
-            const grupp = JSON.parse(currentGroup);
+          // // Remove from localStorage
+          // localStorage.removeItem("glitchTimerEnd");
+          
+          // const currentGroup = localStorage.getItem("glitchGroup");
+          // if (currentGroup) {
+          //   const grupp = JSON.parse(currentGroup);
             
-            // Send DELETE request to server to remove the group
-            fetch("/api/grupper", {
-              method: "DELETE",
-              headers: {"Content-Type": "application/json"},
-              body: JSON.stringify({ id: grupp.id })
-            });
+          //   // Send DELETE request to server to remove the group
+          //   fetch("/api/grupper", {
+          //     method: "DELETE",
+          //     headers: {"Content-Type": "application/json"},
+          //     body: JSON.stringify({ id: grupp.id })
+          //   });
         
-            // Remove group from local storage
-            localStorage.removeItem("glitchGroup");
-          }
+          //   // Remove group from local storage
+          //   localStorage.removeItem("glitchGroup");
+          // }
         }
         
     }, 1000);
@@ -110,8 +111,8 @@
       Timer(remaining, timerDisplay, false);
     } else {
       // Timer expired while user was away
-      timerDisplay.textContent = "Tiden är slut!";
       localStorage.removeItem("glitchTimerEnd");
+      Timer(2 * 60 * 60, timerDisplay);
     }
   } else {
     
@@ -127,34 +128,45 @@ if (currentGroup) {
 
 }
 
+function inputShake(input) {
+  input.classList.add("input-error");
+
+  // Remove the class after animation completes to allow retriggering
+  setTimeout(() => {
+      input.classList.remove("input-error");
+  }, 600); // match the longest animation duration
+}
+
 // QUIZ
 
 const questions = 
 [
   {
-    question: "Vad heter begreppet som är relaterat till datorer, som Grace Hopper var den första att uttrycka?",
+    question: "When was Grace Hopper born?",
+    multipleChoise: false,
     answers: 
     [
       {
-        answer: "text1",
+        answer: "December 9, 1906",
         correct: false
       },
       {
-        answer: "text2",
+        answer: "December 9, 2020",
         correct: false
       },
       {
-        answer: "text3",
+        answer: "January 1, 1999",
         correct: false
       },
       {
-        answer: "text4",
+        answer: "February, 1888",
         correct: true
       }
     ]
   },
   {
     question: "LMAO",
+    multipleChoise: true,
     answers: 
     [
       {
@@ -163,7 +175,7 @@ const questions =
       },
       {
         answer: "text2",
-        correct: false
+        correct: true
       },
       {
         answer: "text3",
