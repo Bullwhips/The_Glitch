@@ -52,6 +52,8 @@ function renderPage2(wrapper) {
     audio.addEventListener("ended", () => {
         if (!popupShown) {
             popupShown = true;
+            // Vi kallar argumentet för wrapper i funktionen
+            // men skickar med pageContainer som blir "wrappern"
             renderKairasMessagePopup(pageContainer);
         }
     });
@@ -71,7 +73,7 @@ function renderKairasMessagePopup (wrapper) {
     wrapper.appendChild(kairasMessagePopupContainer);
 
     let headTextRules = document.createElement("h2");
-    headTextRules.id = "head-text-popup-1";
+    headTextRules.id = "head-text-popup";
     headTextRules.textContent = "⚠ MEDDELANDE: ${players.name}";
     kairasMessagePopupContainer.appendChild(headTextRules);
 

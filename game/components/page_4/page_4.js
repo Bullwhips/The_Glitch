@@ -13,7 +13,7 @@ function renderPage4 (wrapper) {
     pageContainer.append(opacityBackground);
 
     let backDrop4 = document.createElement("div");
-    backDrop4.id = "backDrop2";
+    backDrop4.id = "backDrop4";
     opacityBackground.append(backDrop4);
 
     let textContainer = document.createElement("div");

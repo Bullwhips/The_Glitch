@@ -1,6 +1,6 @@
 #backDrop3 {
     width: 400px;
-    height: 34.4rem;
+    height: 72rem;
     border-radius: 20px;
     background: #0D0000;
 }
@@ -8,4 +8,38 @@
 #link {
     color: #FFF;
     font-size: 14px;
+}
+
+#quest-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    margin-top: 38px;
+    gap: 5px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+#down-arrow {
+    grid-column: 1 / 2;
+    grid-row: 1;
+}
+
+#right-arrow {
+    grid-column: 3 / 4;
+    grid-row: 1;
+}
+
+#number-on-left {
+    grid-column: 1 / 2;
+}
+
+#number-on-right {
+    grid-column: 3 / 4;
+}
+
+#input-field {
+    width: 45px;
+    height: 45px;
 }

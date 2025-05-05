@@ -10,6 +10,7 @@ function renderPage1(wrapper) {
 
     let opacityBackground = document.createElement("div");
     opacityBackground.id = "opacityBackground";
+    pageContainer.append(opacityBackground);
 
     let backDrop1 = document.createElement("div");
     backDrop1.id = "backDrop1";
@@ -45,6 +46,4 @@ function renderPage1(wrapper) {
     nextStepButton.textContent = "NÄSTA STEG";
     nextStepButton.addEventListener("click", () => {renderPage2(wrapper)});
     textContainer.append(nextStepButton);
-
-    pageContainer.append(opacityBackground);
 }
