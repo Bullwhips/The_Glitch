@@ -1,6 +1,6 @@
 
   // TYPEWRITER
-  const text = "Systemfel 224488, Jag behöver dig!\n Lössningen finns i allt, håll koll!";
+  const text = "Systemfel 22884, Jag behöver dig!\n Lösningen finns i allt, håll koll!";
   const speed = 80;
   let index = 0;
   const typewriter = document.getElementById("typewriter");

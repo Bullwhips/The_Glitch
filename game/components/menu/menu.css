@@ -3,9 +3,9 @@
 }
 
 #menu-container {
-    position: absolute;
+    position: fixed;
     top: 12vh;
-    left: 62vw;
+    left: 62vw;    
     width: 50px;
     height: 190px;
     z-index: 1001;
