@@ -71,7 +71,7 @@ function renderKairasMessagePopup (wrapper) {
     wrapper.appendChild(kairasMessagePopupContainer);
 
     let headTextRules = document.createElement("h2");
-    headTextRules.id = "head-text-popup";
+    headTextRules.id = "head-text-popup-1";
     headTextRules.textContent = "⚠ MEDDELANDE: ${players.name}";
     kairasMessagePopupContainer.appendChild(headTextRules);
 

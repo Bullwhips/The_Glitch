@@ -25,3 +25,11 @@
     color: #FFF;
     margin: 0.8rem 0 1.2rem 0;
 }
+
+#head-text-popup-1 {
+    font-family: ptmono;
+    font-size: 20px;
+    color: #FFF;
+    text-align: center;
+    margin: 5rem 0 1.75rem 0;
+}
