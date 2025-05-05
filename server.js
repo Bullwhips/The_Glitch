@@ -60,6 +60,16 @@ async function handleRequest(request) {
                         return new Response(JSON.stringify(grupp), options)
                     }
                 }
+
+                if (pathname.endsWith(".mp3")) {
+                    const filePath = `./game${pathname}`;
+                    return serveFile(request, filePath, {
+                      headers: {
+                        "Content-Type": "audio/mpeg",
+                      },
+                    });
+                }
+                  
                 return serveFile(request, "./game/index.html")
         }
 
