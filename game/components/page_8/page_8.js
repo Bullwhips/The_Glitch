@@ -6,6 +6,7 @@ function renderPage8(wrapper) {
 
     let pageContainer = document.createElement("div");
     pageContainer.id = "page-container";
+    pageContainer.classList.remove("noScroll")
     wrapper.append(pageContainer);
 
     let opacityBackground = document.createElement("div");
@@ -67,26 +68,84 @@ function renderPage8(wrapper) {
     answerDiv4.classList.add("answerDiv")
     answerContainer.append(answerDiv4)
 
+    let submitButton = document.createElement("button");
+    submitButton.textContent = "Submit";
+    submitButton.id = "nextStepButton";
+    submitButton.style.display = "none"; // hidden by default
+    backDrop8.append(submitButton);
+
+    submitButton.addEventListener("click", () => {
+    const currentAnswers = questions[quizNumber].answers;
+
+    let allCorrect = true;
+    for (let i = 0; i < currentAnswers.length; i++) {
+        const isSelected = selectedIndexes.has(i);
+        const isCorrect = currentAnswers[i].correct;
+
+        if ((isCorrect && !isSelected) || (!isCorrect && isSelected)) {
+            allCorrect = false;
+            Array.from(answerContainer.children).forEach(child => inputShake(child));
+        }
+    }
+
+    if (allCorrect) {
+        displaynumber++;
+        quizNumber++;
+        if (quizNumber >= questions.length) {
+            renderPage9(wrapper);
+        } else {
+            quiz();
+        }
+    }
+});
+
+    let selectedIndexes = new Set();
+
     let displaynumber = 1
 
     Array.from(answerContainer.children).forEach((div, index) => {
         div.addEventListener("click", () => {
-            if (quizNumber == 2) {
-                renderPage9(wrapper)
-            }
-            if (questions[quizNumber].answers[index].correct) {
-                displaynumber++
-                quiz();
+            if (questions[quizNumber].multipleChoise) {
+                // Toggle selection
+                if (selectedIndexes.has(index)) {
+                    selectedIndexes.delete(index);
+                    div.classList.remove("selected");
+                } else {
+                    selectedIndexes.add(index);
+                    div.classList.add("selected");
+                }
             } else {
-                console.log("WRONG");
+                // Single choice logic
+                if (questions[quizNumber].answers[index].correct) {
+                    displaynumber++;
+                    quizNumber++;
+                    if (quizNumber >= questions.length) {
+                        renderPage9(wrapper);
+                    } else {
+                        quiz();
+                    }
+                } else {
+                    inputShake(div);
+                }
             }
         });
-    });
+})        
 
     let quizNumber = 0
    
     function quiz() {
     
+
+            selectedIndexes.clear();
+            Array.from(answerContainer.children).forEach(div => div.classList.remove("selected"));
+
+            const currentQuestion = questions[quizNumber];
+
+    if (currentQuestion.multipleChoise) {
+            submitButton.style.display = "block";
+    } else {
+            submitButton.style.display = "none";
+}
             quizHeader.textContent = "Fråga " + displaynumber + "/12"
         
             quizText.textContent = questions[quizNumber].question
@@ -96,10 +155,6 @@ function renderPage8(wrapper) {
             answerDiv3.textContent = questions[quizNumber].answers[2].answer
             answerDiv4.textContent = questions[quizNumber].answers[3].answer
 
-            if (quizNumber <= 12) {
-                quizNumber++
-                
-            }
     }
  quiz()
 

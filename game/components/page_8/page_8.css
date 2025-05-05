@@ -31,3 +31,8 @@
     font-family: ptmono;
     border-radius: 20px;
 }
+
+.selected {
+    background-color: #8a2be2; /* or whatever style you want */
+    border: 2px solid white;
+}

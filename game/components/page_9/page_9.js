@@ -36,11 +36,22 @@ function renderPage9(wrapper) {
     inputField.placeholder = "BOKSTÄVER"
     textContainer.append(inputField)
 
+    function radiaPerlman(value) {
+        return ["RADIA PERLMAN", "Radia Perlman", "Radia perlman", "radia Perlman", "radia perlman"]
+            .includes(value.trim());
+    }
 
     let nextStepButton = document.createElement("button")
     nextStepButton.id = "nextStepButton"
-    nextStepButton.textContent = "STEG 9"
-    nextStepButton.addEventListener("click", () => {renderPage10(wrapper)});
+    nextStepButton.textContent = "ENTER"
+    nextStepButton.addEventListener("click", () => {
+        let userInput = inputField.value;
+        if (radiaPerlman(userInput)) {
+            renderPage10(wrapper);
+        } else {
+            inputShake(inputField);
+        }
+    });
     textContainer.append(nextStepButton)
 
     pageContainer.append(opacityBackground);
