@@ -6,6 +6,7 @@ function renderPage11(wrapper) {
 
     let pageContainer = document.createElement("div");
     pageContainer.id = "page-container";
+    pageContainer.classList.add("noScroll")
     wrapper.append(pageContainer);
 
     let opacityBackground = document.createElement("div");
@@ -38,11 +39,23 @@ function renderPage11(wrapper) {
     inputField.placeholder = "SIFFROR"
     textContainer.append(inputField)
 
+    function motherOfInternet(value) {
+        return ["MOTHER OF INTERNET", "MOTHER Of INTERNET", "MOTHER of INTERNET", "Mother Of Internet", "Mother of internet", "mother of internet"]
+            .includes(value.trim());
+    }
+
 
     let nextStepButton = document.createElement("button")
     nextStepButton.id = "nextStepButton"
-    nextStepButton.textContent = "STEG 11"
-    nextStepButton.addEventListener("click", () => {renderPage12(wrapper)});
+    nextStepButton.textContent = "ENTER"
+    nextStepButton.addEventListener("click", () => {
+        let userInput = inputField.value;
+        if (motherOfInternet(userInput)) {
+            renderPage12(wrapper);
+        } else {
+            inputShake(inputField);
+        }
+    });
     textContainer.append(nextStepButton)
 
     pageContainer.append(opacityBackground);
