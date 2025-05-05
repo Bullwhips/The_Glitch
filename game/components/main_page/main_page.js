@@ -23,7 +23,7 @@ function renderMainPageContent (wrapper) {
     backgroundDiv.append(startGameButton);
 
     startGameButton.addEventListener("click", () => {
-        renderVidePopup(wrapper)
+        renderVideoPopup(wrapper)
     });   
 }
 
