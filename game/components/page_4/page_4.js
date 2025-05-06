@@ -48,7 +48,8 @@ function renderPage4 (wrapper) {
     nextStepButton.addEventListener("click", () => {
         let userInput = inputField.value;
         if (adaLovelace(userInput)) {
-            renderPage5(wrapper);
+            const displayElement = document.querySelector("#timerDisplay");
+            renderPage5RemoveTime(wrapper, displayElement); // Skickar in display-elementet
         } else {
             inputShake(inputField);
         }
