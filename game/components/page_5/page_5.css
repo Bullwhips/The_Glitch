@@ -1,6 +1,32 @@
-#backDrop5 {
-    width: 400px;
-    height: 34.4rem;
-    border-radius: 20px;
-    background: #0D0000;
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+#popup-container-timer {
+    margin-top: 45vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#timer-text-popup {
+    font-family: technology;
+    font-size: 50px;
+    color: #E50913;
+}
+
+#close-popup-button-container2 {
+    position: absolute;
+    z-index: 1003;
+    top: 0.6rem;
+    left: 51.8rem;
+    width: 40px;
+    height: 40px;
+}
+
+#close-popup-button2 {
+    border: none;
+    background: transparent;
 }

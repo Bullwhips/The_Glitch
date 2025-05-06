@@ -30,11 +30,11 @@ function renderAboutUsPopup (wrapper) {
     popupContentContainer2.appendChild(creatersContainer);
 
     let creatersArray = [
-        {name: "Hedda Åberg", program: "MMA", picID: 1},
-        {name: "Amir Hamed", program: "MMA", picID: 2},
-        {name: "Elna Ressner", program: "MMA", picID: 3},
-        {name: "Mikaela Rasmusson", program: "WDU", picID: 4},
-        {name: "Johannes Dyk Strömberg", program: "WDU", picID: 5}
+        {name: "Hedda Åberg", nameID: 1, program: "MMA", programID: 1, picID: 1},
+        {name: "Amir Hamed", nameID: 2, program: "MMA", programID: 2, picID: 2},
+        {name: "Elna Ressner", nameID: 3, program: "MMA", programID: 3, picID: 3},
+        {name: "Mikaela Rasmusson", nameID: 4, program: "WDU", programID: 4, picID: 4},
+        {name: "Johannes Dyk Strömberg", nameID: 5, program: "WDU", programID: 5, picID: 5}
     ];
 
     creatersArray.forEach((element) => {
@@ -43,12 +43,12 @@ function renderAboutUsPopup (wrapper) {
         creatersContainer.appendChild(createrPic);
 
         let createrName = document.createElement("p");
-        createrName.id = "creater-name";
+        createrName.id = `creater-name-${element.nameID}`;
         createrName.textContent = `${element.name}`;
         creatersContainer.appendChild(createrName);
 
         let createrProgram = document.createElement("p");
-        createrProgram.id = "creater-program";
+        createrProgram.id = `creater-program-${element.programID}`;
         createrProgram.textContent = `${element.program}`;
         creatersContainer.appendChild(createrProgram);
     });

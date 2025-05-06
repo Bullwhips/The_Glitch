@@ -3,4 +3,34 @@
     height: 34.4rem;
     border-radius: 20px;
     background: #0D0000;
+    position: relative;
+}
+
+#close-popup-button-container {
+    position: absolute;
+    z-index: 999;
+    top: 0.6rem;
+    left: 21.8rem;
+    width: 40px;
+    height: 40px;
+}
+
+#close-popup-button {
+    border: none;
+    background: transparent;
+}
+
+#kairas-message-1 {
+    font-family: ptmono;
+    font-size: 14px;
+    color: #FFF;
+    margin: 0.8rem 0 1.2rem 0;
+}
+
+#head-text-popup-1 {
+    font-family: ptmono;
+    font-size: 20px;
+    color: #FFF;
+    text-align: center;
+    margin: 5rem 0 1.75rem 0;
 }
