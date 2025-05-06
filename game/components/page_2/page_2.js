@@ -52,7 +52,9 @@ function renderPage2(wrapper) {
     audio.addEventListener("ended", () => {
         if (!popupShown) {
             popupShown = true;
-            renderKairasMessagePopup(pageContainer);
+            // Vi kallar argumentet för wrapper i funktionen
+            // men skickar med pageContainer som blir "wrappern"
+            renderKairasMessagePopup1(pageContainer);
         }
     });
 
@@ -63,7 +65,7 @@ function renderPage2(wrapper) {
     textContainer.append(nextStepButton);
 }
 
-function renderKairasMessagePopup (wrapper) {
+function renderKairasMessagePopup1 (wrapper) {
     let kairasMessagePopupContainer = document.createElement("div");
     kairasMessagePopupContainer.id = "popup-container";
     kairasMessagePopupContainer.classList.remove("hidden");

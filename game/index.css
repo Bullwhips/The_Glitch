@@ -55,6 +55,7 @@ main {
 }
 
 #page-container {
+    position: relative;
     margin: 0;
     height: 100%;
     background-image: url("/static/assets/images/background_red_coding.jpg");
@@ -65,15 +66,20 @@ main {
 }
 
 .noScroll{
-    overflow-y: hidden;}
+    overflow-y: hidden;
+}
 
 #opacityBackground {
     width: 440px;
-    height: 1156px;
+    height: 1166px;    
     background: rgba(0, 0, 0, 0.50);
     display: flex;
     justify-content: center;
-   
+}
+
+#backdrop-container {
+    width: 400px;
+    position: relative;
 }
 
 #textContainer {
@@ -134,7 +140,6 @@ main {
     width: 25rem;
     position: absolute;
     top: 3.5rem;
-    left: 25.5rem;
     z-index: 1010;
     background-color: rgb(13, 0, 0, 0.2);
     border-radius: 20px;
@@ -147,7 +152,7 @@ main {
     font-size: 20px;
     color: #FFF;
     text-align: center;
-    margin: 5rem 0 1.75rem 0;
+    margin: 3rem 0 1.75rem 0;
 }
 
 #popup-text-container {
