@@ -37,11 +37,21 @@ function renderPage4 (wrapper) {
     inputField.placeholder = "SIFFROR";
     textContainer.append(inputField);
 
+    function adaLovelace (value) {
+        let number = parseInt(value);
+        return !isNaN(number) && number === 1842;
+    }
+
     let nextStepButton = document.createElement("button");
     nextStepButton.id = "nextStepButton4";
     nextStepButton.textContent = "NÄSTA STEG";
     nextStepButton.addEventListener("click", () => {
-        renderPage5(wrapper)
+        let userInput = inputField.value;
+        if (adaLovelace(userInput)) {
+            renderPage5(wrapper);
+        } else {
+            inputShake(inputField);
+        }
     });
     textContainer.append(nextStepButton);
 
@@ -79,7 +89,6 @@ function renderPage4 (wrapper) {
 
     let clueRevealTimeout = null;
 }
-
 
 function renderKairasMessagePopup2 (wrapper) {
     let kairasMessagePopupContainer = document.createElement("div");
