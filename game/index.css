@@ -181,3 +181,7 @@ main {
 #audio-container {
     margin-top: 4.25rem;
 }
+
+.blur {
+    filter: blur(5px);
+  }

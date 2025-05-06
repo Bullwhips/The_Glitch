@@ -286,19 +286,19 @@ const questions =
     answers: 
     [
       {
-        answer: "Hopper var involverad i skapandet av den första mobiltelefonen",
+        answer: "Hon var med i skapandet av den första mobiltelefonen",
         correct: false
       },
       {
-        answer: "Hopper var en av de första kvinnliga programmerarna som också arbetade som en lärare",
+        answer: "Hon var den första kvinnliga programmeraren som också var lärare",
         correct: false
       },
       {
-        answer: "Hopper var pilot i andra världskriget där hon stod som en symbol",
+        answer: "Hon var pilot under andra världskriget",
         correct: false
       },
       {
-        answer: "Hopper var den första som utarbetade teorin om maskin-oberoende programmeringsspråk",
+        answer: "Hon var den första som utarbetade teorin om maskinoberoende programmeringsspråk",
         correct: true
       }
     ]
@@ -313,11 +313,11 @@ const questions =
         correct: false
       },
       {
-        answer: "Hon tog isär väckarklockor för att ta reda på hur de fungerade",
+        answer: "Hon tog isär dem för att ta reda på hur de fungerade",
         correct: true
       },
       {
-        answer: "Hon gömde väckarklockor för att hon hatade ljudet av dem",
+        answer: "Hon gömde dem för att hon hatade ljudet av dem",
         correct: false
       },
       {
@@ -363,7 +363,7 @@ const questions =
         correct: false
       },
       {
-        answer: "Hon var involverad i skapandet av datorn ",
+        answer: "Hon var involverad i skapandet av datorn",
         correct: true
       },
       {
@@ -373,7 +373,7 @@ const questions =
     ]
   },
   {
-    question: "Grace Hopper krediteras för att mynta vilken dator-term",
+    question: "Grace Hopper krediteras för att mynta vilken datorterm",
     multipleChoise: false,
     answers: 
     [
@@ -382,7 +382,7 @@ const questions =
         correct: true
       },
       {
-        answer: "Binary Code, en serie av 1:or och 0:",
+        answer: "Binary Code, en serie av 1:or och 0:or:",
         correct: false
       },
       {
@@ -390,7 +390,7 @@ const questions =
         correct: false
       },
       {
-        answer: "Ping,  överföring (i tid) av data mellan din enhet och en server på Internet.",
+        answer: "Ping, överföring (i tid) av data ",
         correct: false
       }
     ]
