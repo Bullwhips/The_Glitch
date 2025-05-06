@@ -6,6 +6,7 @@ function renderPage13(wrapper) {
 
     let pageContainer = document.createElement("div");
     pageContainer.id = "page-container";
+    pageContainer.classList.add("noScroll")
     wrapper.append(pageContainer);
 
     let opacityBackground = document.createElement("div");
@@ -36,11 +37,23 @@ function renderPage13(wrapper) {
     inputField.placeholder = "BOKSTÄVER"
     textContainer.append(inputField)
 
+    function kaira(value) {
+        return ["KAIRA", "Kaira", "kaira"]
+            .includes(value.trim());
+    }
+
 
     let nextStepButton = document.createElement("button")
     nextStepButton.id = "nextStepButton"
-    nextStepButton.textContent = "STEG 12"
-    nextStepButton.addEventListener("click", () => {renderPage14(wrapper)});
+    nextStepButton.textContent = "ENTER"
+    nextStepButton.addEventListener("click", () => {
+        let userInput = inputField.value;
+        if (kaira(userInput)) {
+            renderPage14(wrapper);
+        } else {
+            inputShake(inputField);
+        }
+    });
     textContainer.append(nextStepButton)
 
     pageContainer.append(opacityBackground);

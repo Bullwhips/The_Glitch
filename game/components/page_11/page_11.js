@@ -6,6 +6,7 @@ function renderPage11(wrapper) {
 
     let pageContainer = document.createElement("div");
     pageContainer.id = "page-container";
+    pageContainer.classList.add("noScroll")
     wrapper.append(pageContainer);
 
     let opacityBackground = document.createElement("div");
@@ -27,9 +28,9 @@ function renderPage11(wrapper) {
      let bodyText = document.createElement("p")
     bodyText.id = "bodyText"
     bodyText.innerHTML =
-                        `Vänd på dagboks sidorna. 
-                        Siffrorna skapar en kombination, men det finns bara en kombination som är rätt. 
-                        Skriv in kombinationen nedan för att gå vidare, ni har hur många försök som helst.`
+                        `Om ni har kommit till detta steg så ska ni dela på er. 
+                        När ni har hittat hieroglyferna i caféet och scannat QR-koden på kaffemaskinen ska ni ha hittat den gömda meningen. 
+                        Samla sedan gruppen för att tillsammans skriva in det ord ni har avkodat.`
     textContainer.append(bodyText);
 
     let inputField = document.createElement("input")
@@ -38,11 +39,23 @@ function renderPage11(wrapper) {
     inputField.placeholder = "SIFFROR"
     textContainer.append(inputField)
 
+    function motherOfInternet(value) {
+        return ["MOTHER OF INTERNET", "MOTHER Of INTERNET", "MOTHER of INTERNET", "Mother Of Internet", "Mother of internet", "mother of internet"]
+            .includes(value.trim());
+    }
+
 
     let nextStepButton = document.createElement("button")
     nextStepButton.id = "nextStepButton"
-    nextStepButton.textContent = "STEG 11"
-    nextStepButton.addEventListener("click", () => {renderPage12(wrapper)});
+    nextStepButton.textContent = "ENTER"
+    nextStepButton.addEventListener("click", () => {
+        let userInput = inputField.value;
+        if (motherOfInternet(userInput)) {
+            renderPage12(wrapper);
+        } else {
+            inputShake(inputField);
+        }
+    });
     textContainer.append(nextStepButton)
 
     pageContainer.append(opacityBackground);

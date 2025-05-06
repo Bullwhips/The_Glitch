@@ -1,59 +1,63 @@
 
   // TYPEWRITER
-  const text = "Systemfel 22884, Jag behöver dig!\n Lösningen finns i allt, håll koll!";
-  const speed = 80;
-  let index = 0;
-  const typewriter = document.getElementById("typewriter");
-  let cursorVisible = true;
-  let blinkInterval;
-
-  // Function that types out the text dynamically
-  function type() {
-    if (index < text.length) {
-      const currentChar = text[index];
-      const visibleText = text.slice(0, index + 1).replace(/\n/g, "<br>");
-      typewriter.innerHTML = visibleText + '<span class="cursor">|</span>';
+  function startTypewriter({
+    text,
+    elementId,
+    speed = 80,
+    initialDelay = 0,
+    onComplete = null
+  }) {
+    let index = 0;
+    const typewriter = document.getElementById(elementId);
+    let cursorVisible = true;
+    let blinkInterval;
   
-      index++;
+    function type() {
+      if (index < text.length) {
+        const currentChar = text[index];
+        const visibleText = text.slice(0, index + 1).replace(/\n/g, "<br>");
+        typewriter.innerHTML = visibleText + '<span class="cursor">|</span>';
   
-      let delay = speed;
-      if (currentChar === '\n') {
-        delay = 800;
+        index++;
+        let delay = currentChar === '\n' ? 800 : speed;
+        setTimeout(type, delay);
+      } else {
+        startCursorBlinking();
+        if (onComplete) onComplete();
       }
-  
-      setTimeout(type, delay);
-    } else {
-      startCursorBlinking();
     }
+  
+    function startCursorBlinking() {
+      blinkInterval = setInterval(() => {
+        const cursor = document.querySelector(".cursor");
+        if (cursor) {
+          cursor.style.visibility = cursorVisible ? "hidden" : "visible";
+          cursorVisible = !cursorVisible;
+        }
+      }, 500);
+    }
+  
+    setTimeout(() => {
+      type();
+    }, initialDelay);
   }
   
-  // Start typing after 5 seconds
-  setTimeout(() => {
-    type(); // Start typing for real
-  }, 7000);
-
-
-// Function that makes the | blink
-  function startCursorBlinking() {
-    blinkInterval = setInterval(() => {
-      const cursor = document.querySelector(".cursor");
-      if (cursor) {
-        cursor.style.visibility = cursorVisible ? "hidden" : "visible";
-        cursorVisible = !cursorVisible;
-      }
-    }, 500); // blink every 0.5s
-  }
-
-
-
-
-// Makes the dots blink
+  // Example usage:
+  startTypewriter({
+    text: "Systemfel 224488, Jag behöver dig!\nLössningen finns i allt, håll koll!",
+    elementId: "typewriter",
+    speed: 80,
+    initialDelay: 7000
+  });
+  
+  // Blinking dots (remains unchanged)
   const dots = document.getElementById('dots');
   let count = 0;
   setInterval(() => {
     count = (count + 1) % 4;
     dots.textContent = '.'.repeat(count);
   }, 900);
+  
 
   // /TYPEWRITER
 
@@ -142,7 +146,7 @@ function inputShake(input) {
 const questions = 
 [
   {
-    question: "When was Grace Hopper born?",
+    question: "När var Grace Hopper född?",
     multipleChoise: false,
     answers: 
     [
@@ -155,34 +159,149 @@ const questions =
         correct: false
       },
       {
-        answer: "January 1, 1999",
+        answer: "Januari 1, 1999",
         correct: false
       },
       {
-        answer: "February, 1888",
+        answer: "Februari 29, 1888",
         correct: true
       }
     ]
   },
   {
-    question: "LMAO",
+    question: "Vilka jobb hade Grace Hopper?",
     multipleChoise: true,
     answers: 
     [
       {
-        answer: "text1",
+        answer: "Amerikanska flottan",
+        correct: true
+      },
+      {
+        answer: "Pilot",
         correct: false
       },
       {
-        answer: "text2",
+        answer: "Lärare",
+        correct: false
+      },
+      {
+        answer: "Dataprogrammerare",
+        correct: true
+      }
+    ]
+  },
+  {
+    question: "Hur påverkade Grace världen?",
+    multipleChoise: false,
+    answers: 
+    [
+      {
+        answer: "Hopper var involverad i skapandet av den första mobiltelefonen",
+        correct: false
+      },
+      {
+        answer: "Hopper var en av de första kvinnliga programmerarna som också arbetade som en lärare",
+        correct: false
+      },
+      {
+        answer: "Hopper var pilot i andra världskriget där hon stod som en symbol",
+        correct: false
+      },
+      {
+        answer: "Hopper var den första som utarbetade teorin om maskin-oberoende programmeringsspråk",
+        correct: true
+      }
+    ]
+  },
+  {
+    question: "Vad gjorde Grace med familjens väckarklockor när hon var sju år?",
+    multipleChoise: false,
+    answers: 
+    [
+      {
+        answer: "Hon kastade ner dem från fönstret för att förstöra dem",
+        correct: false
+      },
+      {
+        answer: "Hon tog isär väckarklockor för att ta reda på hur de fungerade",
         correct: true
       },
       {
-        answer: "text3",
+        answer: "Hon gömde väckarklockor för att hon hatade ljudet av dem",
+        correct: false
+      },
+      {
+        answer: "Hon sålde dem för att tjäna pengar",
+        correct: false
+      }
+    ]
+  },
+  {
+    question: "Vilket av dessa är ett av Grace Hoppers citat?",
+    multipleChoise: false,
+    answers: 
+    [
+      {
+        answer: "Ett fartyg i hamn är säkert, men det är inte vad fartyg är byggda för",
         correct: true
       },
       {
-        answer: "text4",
+        answer: "Var alltid glad",
+        correct: false
+      },
+      {
+        answer: "Ju hårdare konflikten är, desto större triumf",
+        correct: false
+      },
+      {
+        answer: "Livet i sig är den mest underbara sagan",
+        correct: false
+      }
+    ]
+  },
+  {
+    question: "Uppfann Grace Hopper datorn?",
+    multipleChoise: false,
+    answers: 
+    [
+      {
+        answer: "Ja",
+        correct: false
+      },
+      {
+        answer: "Nej",
+        correct: false
+      },
+      {
+        answer: "Hon var involverad i skapandet av datorn ",
+        correct: true
+      },
+      {
+        answer: "",
+        correct: false
+      }
+    ]
+  },
+  {
+    question: "Grace Hopper krediteras för att mynta vilken dator-term",
+    multipleChoise: false,
+    answers: 
+    [
+      {
+        answer: "Bug och de-bug, relaterat till datorfel",
+        correct: true
+      },
+      {
+        answer: "Binary Code, en serie av 1:or och 0:",
+        correct: false
+      },
+      {
+        answer: "Gamer, en person som spelar datorspel",
+        correct: false
+      },
+      {
+        answer: "Ping,  överföring (i tid) av data mellan din enhet och en server på Internet.",
         correct: false
       }
     ]

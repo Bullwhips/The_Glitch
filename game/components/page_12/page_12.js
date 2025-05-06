@@ -6,6 +6,7 @@ function renderPage12(wrapper) {
 
     let pageContainer = document.createElement("div");
     pageContainer.id = "page-container";
+    pageContainer.classList.add("noScroll")
     wrapper.append(pageContainer);
 
     let opacityBackground = document.createElement("div");
@@ -27,12 +28,18 @@ function renderPage12(wrapper) {
      let bodyText = document.createElement("p")
     bodyText.id = "bodyText"
     bodyText.innerHTML =
-                        `Sifferkombinationen som ni kom fram till under förra steget. Den kan användas på ett annat sätt. Klicka på tips-knappen för att få reda på hur.`
+                        `Sifferkombinationen som ni kom fram till under förra steget. Den kan användas på ett annat sätt. Klicka på TIPS-knappen för att få reda på hur.`
     textContainer.append(bodyText);
+
+    let tipsButton = document.createElement("button")
+    tipsButton.id = "tipsButton"
+    tipsButton.textContent = "TIPS"
+    tipsButton.addEventListener("click", () => {renderTipsPopup(wrapper)})
+    textContainer.append(tipsButton)
 
     let nextStepButton = document.createElement("button")
     nextStepButton.id = "nextStepButton"
-    nextStepButton.textContent = "TIPS"
+    nextStepButton.textContent = "NÄSTA STEG"
     nextStepButton.addEventListener("click", () => {renderPage13(wrapper)});
     textContainer.append(nextStepButton)
 

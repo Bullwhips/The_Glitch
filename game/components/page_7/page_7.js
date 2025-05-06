@@ -38,8 +38,8 @@ function renderPage7(wrapper){
     textContainer.append(inputField)
     
 
-    function graceHopper(value) {
-        return ["GRACE HOPPER", "Grace Hopper", "Grace hopper", "grace Hopper", "grace hopper"]
+    function superKvinnan(value) {
+        return ["SUPER KVINNAN", "Super Kvinnan", "Super kvinnan", "super Kvinnan", "super kvinnan"]
             .includes(value.trim());
     }
     
@@ -49,7 +49,7 @@ function renderPage7(wrapper){
     nextStepButton.textContent = "ENTER"
     nextStepButton.addEventListener("click", () => {
         let userInput = inputField.value;
-        if (graceHopper(userInput)) {
+        if (superKvinnan(userInput)) {
             renderPage8(wrapper);
         } else {
             inputShake(inputField);
