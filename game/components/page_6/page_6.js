@@ -40,6 +40,11 @@ function renderPage6 (wrapper) {
     audio.controls = true;
     audioContainer.append(audio);
 
+    let audioSource = document.createElement("source");
+    audioSource.src = "../../assets/audio/AI_song.mp3";
+    audioSource.type = "audio/mp3";
+    audio.appendChild(audioSource);
+
     let nextStepButton = document.createElement("button");
     nextStepButton.id = "nextStepButton";
     nextStepButton.textContent = "NÄSTA STEG";
