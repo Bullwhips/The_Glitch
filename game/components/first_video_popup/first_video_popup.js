@@ -1,4 +1,4 @@
-function renderVideoPopup (wrapper) {
+function renderVideoPopup (wrapper, video) {
     wrapper.innerHTML = "";
 
     let videoModalContainer = document.createElement("div");
@@ -32,9 +32,9 @@ function renderVideoPopup (wrapper) {
     videoContent.id = "video-content";
     videoContent.controls = true;
     videoContent.poster = "https://via.placeholder.com/432x932?text=Coming+Soon";
-    // let videoSource = document.createElement("source");
-    // videoSource.src = "";
-    // videoSource.type = "video/mp4";
-    // videoContent.appendChild(videoSource);
+    let videoSource = document.createElement("source");
+    videoSource.src = video;
+    videoSource.type = "video/mp4";
+    videoContent.appendChild(videoSource);
     videoInner.append(videoContent);
 }
