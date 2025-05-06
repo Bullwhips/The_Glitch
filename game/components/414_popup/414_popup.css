@@ -1,0 +1,15 @@
+#fouronefour{
+    height: 100%;
+    background-image: url("../../assets/video/glitched_414_error.gif");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#x414{
+    color: white;
+    margin-top: 20%;
+    margin-left: 90%;
+    font-size: 40px;
+
+}

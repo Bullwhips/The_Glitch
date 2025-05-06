@@ -91,7 +91,7 @@ function renderPage8(wrapper) {
         displaynumber++;
         quizNumber++;
         if (quizNumber >= questions.length) {
-            renderPage9(wrapper);
+            render414Popup(wrapper);
         } else {
             quiz();
         }
@@ -119,7 +119,7 @@ function renderPage8(wrapper) {
                     displaynumber++;
                     quizNumber++;
                     if (quizNumber >= questions.length) {
-                        renderPage9(wrapper);
+                        render414Popup(wrapper);
                     } else {
                         quiz();
                     }
@@ -145,7 +145,7 @@ function renderPage8(wrapper) {
     } else {
             submitButton.style.display = "none";
 }
-            quizHeader.textContent = "Fråga " + displaynumber + "/12"
+            quizHeader.textContent = "Fråga " + displaynumber + "/7"
         
             quizText.textContent = questions[quizNumber].question
         

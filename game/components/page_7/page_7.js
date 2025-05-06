@@ -39,7 +39,7 @@ function renderPage7(wrapper){
     
 
     function superKvinnan(value) {
-        return ["SUPER KVINNAN", "Super Kvinnan", "Super kvinnan", "super Kvinnan", "super kvinnan"]
+        return ["SUPERKVINNAN", "SuperKvinnan", "Superkvinnan", "superKvinnan", "superkvinnan"]
             .includes(value.trim());
     }
     

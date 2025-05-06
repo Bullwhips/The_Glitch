@@ -36,7 +36,7 @@ function renderPage11(wrapper) {
     let inputField = document.createElement("input")
     inputField.type = "text"
     inputField.id = "inputField"
-    inputField.placeholder = "SIFFROR"
+    inputField.placeholder = "BOKSTÄVER"
     textContainer.append(inputField)
 
     function motherOfInternet(value) {
