@@ -27,7 +27,7 @@ function renderMainPageContent (wrapper) {
 
     startGameButton.addEventListener("click", () => {
         renderVideoPopup(wrapper, video, nextPage)
-      
+        
     });   
 }
 

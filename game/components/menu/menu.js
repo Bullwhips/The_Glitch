@@ -1,7 +1,7 @@
-function renderMenu (wrapper) {
+function renderMenu (pageContainer) {
     let menuContainer = document.createElement("div");
     menuContainer.id = "menu-container";
-    wrapper.append(menuContainer);
+    pageContainer.append(menuContainer);
 
     let gameRulesButtonContainer = document.createElement("div");
     gameRulesButtonContainer.id = "menu-button-containers";

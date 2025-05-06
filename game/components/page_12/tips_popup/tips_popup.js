@@ -1,9 +1,9 @@
-function renderTipsPopup(wrapper) {
+function renderTipsPopup(pageContainer) {
     let tipsPopupContainer = document.createElement("div")
     tipsPopupContainer.id = "tipsPopupContainer"
     tipsPopupContainer.classList.remove("hidden")
     tipsPopupContainer.classList.add("visible")
-    wrapper.append(tipsPopupContainer)
+    pageContainer.append(tipsPopupContainer)
 
     let xTips = document.createElement("div")
     xTips.id = "xTips"

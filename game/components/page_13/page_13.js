@@ -43,7 +43,7 @@ function renderPage13(wrapper) {
     }
 
     let video = "static/assets/video/final_video_manifest.mp4"
-    let nextPage = renderPage11
+    let nextPage = renderPage14
 
     let nextStepButton = document.createElement("button")
     nextStepButton.id = "nextStepButton"
