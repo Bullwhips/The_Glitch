@@ -6,6 +6,7 @@ function renderPage2(wrapper) {
 
     let pageContainer = document.createElement("div");
     pageContainer.id = "page-container";
+    pageContainer.classList.add("noScroll")
     wrapper.append(pageContainer);
 
     let opacityBackground = document.createElement("div");
@@ -82,7 +83,7 @@ function renderKairasMessagePopup1 (wrapper) {
     kairasMessagePopupContainer.appendChild(popupTextContainer);
 
     let kairasMessageText = document.createElement("p");
-    kairasMessageText.id = "kairas-message-1";
+    kairasMessageText.id = "popup-text";
     kairasMessageText.innerHTML = `
         Hallå!!
         Hör ni mig???<br><br>
