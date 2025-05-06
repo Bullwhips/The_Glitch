@@ -1,5 +1,6 @@
 "use strict"
 
+
 function renderMainPageContent (wrapper) {
     let backgroundDiv = document.createElement("div");
     backgroundDiv.id = "background-div";
