@@ -142,7 +142,7 @@ function inputShake(input) {
 const questions = 
 [
   {
-    question: "When was Grace Hopper born?",
+    question: "När var Grace Hopper född?",
     multipleChoise: false,
     answers: 
     [
@@ -155,34 +155,149 @@ const questions =
         correct: false
       },
       {
-        answer: "January 1, 1999",
+        answer: "Januari 1, 1999",
         correct: false
       },
       {
-        answer: "February, 1888",
+        answer: "Februari 29, 1888",
         correct: true
       }
     ]
   },
   {
-    question: "LMAO",
+    question: "Vilka jobb hade Grace Hopper?",
     multipleChoise: true,
     answers: 
     [
       {
-        answer: "text1",
+        answer: "Amerikanska flottan",
+        correct: true
+      },
+      {
+        answer: "Pilot",
         correct: false
       },
       {
-        answer: "text2",
+        answer: "Lärare",
+        correct: false
+      },
+      {
+        answer: "Dataprogrammerare",
+        correct: true
+      }
+    ]
+  },
+  {
+    question: "Hur påverkade Grace världen?",
+    multipleChoise: false,
+    answers: 
+    [
+      {
+        answer: "Hopper var involverad i skapandet av den första mobiltelefonen",
+        correct: false
+      },
+      {
+        answer: "Hopper var en av de första kvinnliga programmerarna som också arbetade som en lärare",
+        correct: false
+      },
+      {
+        answer: "Hopper var pilot i andra världskriget där hon stod som en symbol",
+        correct: false
+      },
+      {
+        answer: "Hopper var den första som utarbetade teorin om maskin-oberoende programmeringsspråk",
+        correct: true
+      }
+    ]
+  },
+  {
+    question: "Vad gjorde Grace med familjens väckarklockor när hon var sju år?",
+    multipleChoise: false,
+    answers: 
+    [
+      {
+        answer: "Hon kastade ner dem från fönstret för att förstöra dem",
+        correct: false
+      },
+      {
+        answer: "Hon tog isär väckarklockor för att ta reda på hur de fungerade",
         correct: true
       },
       {
-        answer: "text3",
+        answer: "Hon gömde väckarklockor för att hon hatade ljudet av dem",
+        correct: false
+      },
+      {
+        answer: "Hon sålde dem för att tjäna pengar",
+        correct: false
+      }
+    ]
+  },
+  {
+    question: "Vilket av dessa är ett av Grace Hoppers citat?",
+    multipleChoise: false,
+    answers: 
+    [
+      {
+        answer: "Ett fartyg i hamn är säkert, men det är inte vad fartyg är byggda för",
         correct: true
       },
       {
-        answer: "text4",
+        answer: "Var alltid glad",
+        correct: false
+      },
+      {
+        answer: "Ju hårdare konflikten är, desto större triumf",
+        correct: false
+      },
+      {
+        answer: "Livet i sig är den mest underbara sagan",
+        correct: false
+      }
+    ]
+  },
+  {
+    question: "Uppfann Grace Hopper datorn?",
+    multipleChoise: false,
+    answers: 
+    [
+      {
+        answer: "Ja",
+        correct: false
+      },
+      {
+        answer: "Nej",
+        correct: false
+      },
+      {
+        answer: "Hon var involverad i skapandet av datorn ",
+        correct: true
+      },
+      {
+        answer: "",
+        correct: false
+      }
+    ]
+  },
+  {
+    question: "Grace Hopper krediteras för att mynta vilken dator-term",
+    multipleChoise: false,
+    answers: 
+    [
+      {
+        answer: "Bug och de-bug, relaterat till datorfel",
+        correct: true
+      },
+      {
+        answer: "Binary Code, en serie av 1:or och 0:",
+        correct: false
+      },
+      {
+        answer: "Gamer, en person som spelar datorspel",
+        correct: false
+      },
+      {
+        answer: "Ping,  överföring (i tid) av data mellan din enhet och en server på Internet.",
         correct: false
       }
     ]
