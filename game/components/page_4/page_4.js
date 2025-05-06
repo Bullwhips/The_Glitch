@@ -46,6 +46,12 @@ function renderPage4 (wrapper) {
     nextStepButton.id = "nextStepButton4";
     nextStepButton.textContent = "NÄSTA STEG";
     nextStepButton.addEventListener("click", () => {
+
+        let audio = new Audio("../../assets/audio/error_sound.mp3");
+        audio.play().catch(e => {
+            console.warn("Autoplay blockerat av webbläsaren:", e);
+        });
+        
         let userInput = inputField.value;
         if (adaLovelace(userInput)) {
             const displayElement = document.querySelector("#timerDisplay");
