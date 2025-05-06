@@ -29,3 +29,43 @@
     font-size: 24px;
     font-family: vt323;
 }
+
+#popup-container-short {
+    margin: 1.3rem;
+    width: 25rem;
+    height: 25rem;
+    position: absolute;
+    top: 4.5rem;    
+    z-index: 1010;
+    background-color: rgb(13, 0, 0, 0.2);
+    border-radius: 20px;
+    backdrop-filter: blur(440px);
+    box-shadow: -20px -20px 20px 0px rgba(54, 34, 34, 0.25), 20px 20px 20px 0px rgba(54, 34, 34, 0.25);
+}
+
+#kairas-message-2, #kairas-message-3, #kairas-message-4 {
+    font-family: ptmono;
+    font-size: 14px;
+    color: #FFF;
+    margin: 5rem 0 1.2rem 0;
+}
+
+#button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 36px 0 36px 0;
+    gap: 12px;
+}
+
+#yes-button-clue, #no-button-clue {
+    width: 170px;
+    height: 40px;
+    background-color: #A6032F;
+    color: #FFF;
+    font-family: vt323;
+    font-size: 20px;
+    text-align: center;
+    border: none;
+    border-radius: 10px;
+}
