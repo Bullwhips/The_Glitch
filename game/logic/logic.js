@@ -1,59 +1,63 @@
 
   // TYPEWRITER
-  const text = "Systemfel 224488, Jag behöver dig!\n Lössningen finns i allt, håll koll!";
-  const speed = 80;
-  let index = 0;
-  const typewriter = document.getElementById("typewriter");
-  let cursorVisible = true;
-  let blinkInterval;
-
-  // Function that types out the text dynamically
-  function type() {
-    if (index < text.length) {
-      const currentChar = text[index];
-      const visibleText = text.slice(0, index + 1).replace(/\n/g, "<br>");
-      typewriter.innerHTML = visibleText + '<span class="cursor">|</span>';
+  function startTypewriter({
+    text,
+    elementId,
+    speed = 80,
+    initialDelay = 0,
+    onComplete = null
+  }) {
+    let index = 0;
+    const typewriter = document.getElementById(elementId);
+    let cursorVisible = true;
+    let blinkInterval;
   
-      index++;
+    function type() {
+      if (index < text.length) {
+        const currentChar = text[index];
+        const visibleText = text.slice(0, index + 1).replace(/\n/g, "<br>");
+        typewriter.innerHTML = visibleText + '<span class="cursor">|</span>';
   
-      let delay = speed;
-      if (currentChar === '\n') {
-        delay = 800;
+        index++;
+        let delay = currentChar === '\n' ? 800 : speed;
+        setTimeout(type, delay);
+      } else {
+        startCursorBlinking();
+        if (onComplete) onComplete();
       }
-  
-      setTimeout(type, delay);
-    } else {
-      startCursorBlinking();
     }
+  
+    function startCursorBlinking() {
+      blinkInterval = setInterval(() => {
+        const cursor = document.querySelector(".cursor");
+        if (cursor) {
+          cursor.style.visibility = cursorVisible ? "hidden" : "visible";
+          cursorVisible = !cursorVisible;
+        }
+      }, 500);
+    }
+  
+    setTimeout(() => {
+      type();
+    }, initialDelay);
   }
   
-  // Start typing after 5 seconds
-  setTimeout(() => {
-    type(); // Start typing for real
-  }, 7000);
-
-
-// Function that makes the | blink
-  function startCursorBlinking() {
-    blinkInterval = setInterval(() => {
-      const cursor = document.querySelector(".cursor");
-      if (cursor) {
-        cursor.style.visibility = cursorVisible ? "hidden" : "visible";
-        cursorVisible = !cursorVisible;
-      }
-    }, 500); // blink every 0.5s
-  }
-
-
-
-
-// Makes the dots blink
+  // Example usage:
+  startTypewriter({
+    text: "Systemfel 224488, Jag behöver dig!\nLössningen finns i allt, håll koll!",
+    elementId: "typewriter",
+    speed: 80,
+    initialDelay: 7000
+  });
+  
+  // Blinking dots (remains unchanged)
   const dots = document.getElementById('dots');
   let count = 0;
   setInterval(() => {
     count = (count + 1) % 4;
     dots.textContent = '.'.repeat(count);
   }, 900);
+  
 
   // /TYPEWRITER
 
