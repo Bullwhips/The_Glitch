@@ -48,7 +48,7 @@ function renderPage9(wrapper) {
     nextStepButton.addEventListener("click", () => {
         let userInput = inputField.value;
         if (radiaPerlman(userInput)) {
-            renderPage10(wrapper);
+            renderRouterPopup(wrapper);
         } else {
             inputShake(inputField);
         }
@@ -60,41 +60,30 @@ function renderPage9(wrapper) {
     function renderRouterPopup (wrapper) {
         let renderRouterPopupContainer = document.createElement("div");
         renderRouterPopupContainer.id = "popup-container";
-        kairasMessagePopupContainer.classList.remove("hidden");
-        kairasMessagePopupContainer.classList.add("visible");
-        wrapper.appendChild(kairasMessagePopupContainer);
+        renderRouterPopupContainer.classList.remove("hidden");
+        renderRouterPopupContainer.classList.add("visible");
+        pageContainer.classList.add("blur")
+        wrapper.appendChild(renderRouterPopupContainer);
     
         let headTextRules = document.createElement("h2");
         headTextRules.id = "head-text-popup";
-        headTextRules.textContent = "⚠ MEDDELANDE: ${players.name}";
-        kairasMessagePopupContainer.appendChild(headTextRules);
+        headTextRules.textContent = "⚠ MEDDELANDE: ROUTER";
+        renderRouterPopupContainer.appendChild(headTextRules);
     
         let popupTextContainer = document.createElement("div");
         popupTextContainer.id = "popup-text-container";
-        kairasMessagePopupContainer.appendChild(popupTextContainer);
+        renderRouterPopupContainer.appendChild(popupTextContainer);
     
         let kairasMessageText = document.createElement("p");
-        kairasMessageText.id = "kairas-message-1";
+        kairasMessageText.id = "popup-text";
         kairasMessageText.innerHTML = `
-            Hallå!!
-            Hör ni mig???<br><br>
-            Fan jag har fastnat i glitchen. 
-            Detta är det enda sättet jag kan kommunicera med er. 
-            Jag vet inte riktigt var jag är, men jag behöver er hjälp!! 
-            Klockan ni ser är tiden innan glitchen är fullbordad och de 
-            anonyma får full kontroll. Jag önskar att jag kunde skriva ut allt, 
-            men jag är rädd att de ska se oss. 
-            Jag har gömt ledtrådar som för er närmare koden. 
-            Ni måste följa mina steg för att fixa det men ni får INTE bli upptäckta!! 
-            De vet inte att jag kan nå er och får de reda på det… då är det kört.<br><br>
-            Jag måste sticka nu, skynda er, tiden är knapp!<br>
-            GLÖM INTE ATT SVAREN KAN FINNAS I DETALJERNA.
+        Hon kallas internets mamma, routingens arkitekt. Dela upp er och leta på våningen. Bara en maskin bär hennes namn, där hittar ni nästa nyckel.
         `;
         popupTextContainer.appendChild(kairasMessageText);
     
         let closePopupButtonContainer = document.createElement("div");
         closePopupButtonContainer.id = "close-popup-button-container";
-        kairasMessagePopupContainer.append(closePopupButtonContainer);
+        renderRouterPopupContainer.append(closePopupButtonContainer);
         let closePopupButton = document.createElement("button");
         closePopupButton.id = "close-popup-button";
         closePopupButton.innerHTML = `
@@ -104,9 +93,11 @@ function renderPage9(wrapper) {
         `;
     
         closePopupButton.addEventListener("click", () => {
-            kairasMessagePopupContainer.classList.remove("visible");
-            kairasMessagePopupContainer.classList.add("hidden");
-            kairasMessagePopupContainer.remove();
+            renderRouterPopupContainer.classList.remove("visible");
+            renderRouterPopupContainer.classList.add("hidden");
+            pageContainer.classList.remove("blur")
+            renderRouterPopupContainer.remove();
+            renderPage10(wrapper)
         });
         closePopupButtonContainer.append(closePopupButton);
 }}
