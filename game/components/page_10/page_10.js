@@ -39,7 +39,7 @@ function renderPage10(wrapper) {
     textContainer.append(inputField)
 
     function routerKod(value) {
-        return ["AP0743", "ap0743"]
+        return ["AP0743", "ap0743", "Ap0743"]
             .includes(value.trim());
     }
 
