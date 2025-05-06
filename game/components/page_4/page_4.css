@@ -1,6 +1,31 @@
 #backDrop4 {
     width: 400px;
-    height: 29.4rem;
+    height: 30rem;
     border-radius: 20px;
     background: #0D0000;
+}
+
+#inputField4 {
+    height: 65px;
+    margin: 50px 0 0 0;
+    border: 1px solid #E50913;
+    border-radius: 25px;
+    background: #0D0000;
+    text-align: center;
+    color: #b3b3b3;
+    font-size: 24px;
+    font-family: vt323;
+}
+
+#nextStepButton4 {
+    height: 65px;
+    margin: 20px 0 36px 0;
+    border: none;
+    border-radius: 20px;
+    background: #A6032F;
+
+    text-align: center;
+    color: #FFF;
+    font-size: 24px;
+    font-family: vt323;
 }
