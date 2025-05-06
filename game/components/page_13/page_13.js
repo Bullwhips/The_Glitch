@@ -42,6 +42,8 @@ function renderPage13(wrapper) {
             .includes(value.trim());
     }
 
+    let video = "static/assets/video/final_video_manifest.mp4"
+    let nextPage = renderPage11
 
     let nextStepButton = document.createElement("button")
     nextStepButton.id = "nextStepButton"
@@ -49,7 +51,7 @@ function renderPage13(wrapper) {
     nextStepButton.addEventListener("click", () => {
         let userInput = inputField.value;
         if (kaira(userInput)) {
-            renderPage14(wrapper);
+            renderVideoPopup(wrapper, video, nextPage);
         } else {
             inputShake(inputField);
         }

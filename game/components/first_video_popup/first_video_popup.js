@@ -1,4 +1,4 @@
-function renderVideoPopup (wrapper, video) {
+function renderVideoPopup (wrapper, video, nextPage) {
     wrapper.innerHTML = "";
 
     let videoModalContainer = document.createElement("div");
@@ -24,7 +24,7 @@ function renderVideoPopup (wrapper, video) {
     closePopupButtonVideo.addEventListener("click", () => {
         videoModalContainer.classList.remove("visible");
         videoModalContainer.classList.add("hidden");
-        renderPage1(wrapper);
+        nextPage(wrapper);
     });
     closePopupButtonContainer.append(closePopupButtonVideo);
 
