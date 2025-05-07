@@ -125,9 +125,12 @@ function renderRadiaPerlmanPopup (wrapper) {
     let kairasMessageText = document.createElement("p");
     kairasMessageText.id = "popup-text";
     kairasMessageText.innerHTML = `
+       Ett tips till de nyfikna. 
+       Hitta koden som är svaret på allt.
+       Missa inte sista upslaget.
        På första våningen syns hon bland andra, 
        med rött som fångar blicken och bokstäver som för tankarna hemåt.
-        Där något hänger som tidigare synts – kanske finns där mer än bara tyg?
+       Där något hänger som tidigare synts – kanske finns där mer än bara tyg?
     `;
     popupTextContainer.appendChild(kairasMessageText);
 
