@@ -141,7 +141,7 @@
     #popup-container {
         margin: 1.3rem;
         position: absolute;
-        top: 3.5rem;
+        top: 4.5rem;
         z-index: 1010;
         background-color: rgb(13, 0, 0, 0.2);
         border-radius: 20px;
