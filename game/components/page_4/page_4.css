@@ -1,6 +1,14 @@
+#opacityBackground4 {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.50);
+    display: flex;
+    justify-content: center;
+}
+
 #backDrop4 {
-    width: 400px;
-    height: 30rem;
+    width: 90%;
+    height: 32rem;
     border-radius: 20px;
     background: #0D0000;
 }
@@ -32,8 +40,6 @@
 
 #popup-container-short {
     margin: 1.3rem;
-    width: 25rem;
-    height: 26rem;
     position: absolute;
     top: 4.5rem;    
     z-index: 1010;
@@ -43,9 +49,30 @@
     box-shadow: -20px -20px 20px 0px rgba(54, 34, 34, 0.25), 20px 20px 20px 0px rgba(54, 34, 34, 0.25);
 }
 
+#popup-text-container-short {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 8.5rem;
+    padding-left: 1.75rem;
+    line-height: 1.3rem;
+}
+
+#popup-container-special {
+    position: absolute;
+    top: 5.5rem;    
+    z-index: 1010;
+    background-color: rgb(13, 0, 0, 0.2);
+    border-radius: 20px;
+    backdrop-filter: blur(440px);
+    box-shadow: -20px -20px 20px 0px rgba(54, 34, 34, 0.25), 20px 20px 20px 0px rgba(54, 34, 34, 0.25);
+    width: 90%;
+    left: 5%;
+}
+
 #kairas-message-2, #kairas-message-3, #kairas-message-4 {
     font-family: ptmono;
-    font-size: 14px;
+    font-size: 0.9rem;
     color: #FFF;
     margin: 5rem 0 1.2rem 0;
 }
@@ -54,17 +81,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 36px 0 36px 0;
-    gap: 12px;
+    margin: 3rem 1rem 8rem 1rem;
+    gap: 0.5rem;
 }
 
 #yes-button-clue, #no-button-clue {
-    width: 170px;
-    height: 40px;
+    width: 9rem;
+    height: 2.5rem;
     background-color: #A6032F;
     color: #FFF;
     font-family: vt323;
-    font-size: 20px;
+    font-size: 1.25rem;
     text-align: center;
     border: none;
     border-radius: 10px;

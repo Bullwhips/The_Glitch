@@ -1,6 +1,14 @@
+#opacityBackground6 {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.50);
+    display: flex;
+    justify-content: center;
+}
+
 #backDrop6 {
-    width: 400px;
-    height: 34.4rem;
+    width: 90%;
+    height: 29rem;
     border-radius: 20px;
     background: #0D0000;
 }
