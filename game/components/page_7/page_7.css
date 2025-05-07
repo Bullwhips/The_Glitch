@@ -1,6 +1,21 @@
-#backDrop7{
-    width: 400px;
-    height: 494px;
+#opacityBackground7 {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.50);
+    display: flex;
+    justify-content: center;
+}
+
+#backDrop7 {
+    width: 90%;
+    height: 34rem;
     border-radius: 20px;
     background: #0D0000;
+}
+
+#popup-text-grace-hopper {
+    font-family: ptmono;
+    font-size: 0.9rem;
+    color: #FFF;
+    margin: 5rem 0 9rem 0;
 }

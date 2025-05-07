@@ -1,18 +1,27 @@
-#backDrop13{
-    width: 400px;
-    height: 549px;
+#opacityBackground13 {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.50);
+    display: flex;
+    justify-content: center;
+}
+
+#backDrop13 {
+    width: 90%;
+    height: 34rem;
     border-radius: 20px;
     background: #0D0000;
 }
 
 #tipsButton {
-    height: 65px;
-    margin: 24px 0 34px 0;
+    height: 3.5rem;
+    margin-top: 1.5rem;   
+    margin-bottom: 2.125rem; 
     border: none;
     border-radius: 20px;
     background: #b3b3b3;
     text-align: center;
     color: #0d0000;
-    font-size: 24px;
+    font-size: 1.5rem;
     font-family: vt323;
 }

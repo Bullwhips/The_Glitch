@@ -10,7 +10,7 @@ function renderPage12(wrapper) {
     wrapper.append(pageContainer);
 
     let opacityBackground = document.createElement("div");
-    opacityBackground.id = "opacityBackground";
+    opacityBackground.id = "opacityBackground12";
 
     let backDrop12 = document.createElement("div")
     backDrop12.id = "backDrop12"
@@ -127,7 +127,7 @@ function renderRadiaPerlmanPopup (wrapper) {
     kairasMessageText.innerHTML = `
        Ett tips till de nyfikna. 
        Hitta koden som är svaret på allt.
-       Missa inte sista upslaget.
+       Missa inte sista uppslaget.
        På första våningen syns hon bland andra, 
        med rött som fångar blicken och bokstäver som för tankarna hemåt.
        Där något hänger som tidigare synts – kanske finns där mer än bara tyg?

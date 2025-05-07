@@ -1,6 +1,14 @@
-#backDrop11{
-    width: 400px;
-    height: 521px;
+#opacityBackground11 {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.50);
+    display: flex;
+    justify-content: center;
+}
+
+#backDrop11 {
+    width: 90%;
+    height: 34rem;
     border-radius: 20px;
     background: #0D0000;
 }
