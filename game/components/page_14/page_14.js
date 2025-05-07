@@ -6,6 +6,7 @@ function renderPage14(wrapper) {
 
     let pageContainer = document.createElement("div");
     pageContainer.id = "page-container";
+    pageContainer.classList.add("noScroll")
     wrapper.append(pageContainer);
 
     let opacityBackground = document.createElement("div");
@@ -21,50 +22,37 @@ function renderPage14(wrapper) {
 
     let headerText = document.createElement("h2")
     headerText.id = "headerText"
-    headerText.textContent= "GÖR ERT VAL!"
+    headerText.textContent= "SKRIV RÄTT BOKSTÄVER"
     textContainer.append(headerText)
 
      let bodyText = document.createElement("p")
     bodyText.id = "bodyText"
     bodyText.innerHTML =
-                        `Ni har nu börjat nå slutet av spelet. 
-                        Men med informationen ni fick från videon så skapar ordet ett anagram. 
-                        Ni har alltså två val: Vill ni gå den goda vägen skriver ni in LISTEN. 
-                        Vill ni gå den onda vägen skriver ni in SILENT. Tänk igenom noga, detta är det sista valet ni gör.`
+                        `Skriv in bokstäverna som ni har avkodat från siffrorna från förra steget. Ni kan gissa hur många gånger som helst, men tänk på tiden!`
     textContainer.append(bodyText);
-
-    function listen(value) {
-        return ["LISTEN", "Listen", "listen"]
-            .includes(value.trim());
-    }
-
-    function silent(value) {
-        return ["SILENT", "Silent", "silent"]
-            .includes(value.trim());
-    }
 
     let inputField = document.createElement("input")
     inputField.type = "text"
     inputField.id = "inputField"
-    inputField.placeholder = "LISTEN ELLER SILENT"
+    inputField.placeholder = "BOKSTÄVER"
     textContainer.append(inputField)
 
-    let listenText = "Tack för att ni förstod mig. detta är förväl. Jag stannar här där jag trivs och känner mig hemma\n /Kaira"
-    let silentText = "Jag hoppades att ni skulle förstå mig. Jag ville bara göra det som var bäst för alla...\n /Kaira"
+    function kaira(value) {
+        return ["KAIRA", "Kaira", "kaira"]
+            .includes(value.trim());
+    }
 
+    let video = "static/assets/video/final_video_manifest.mp4"
+    let nextPage = renderPage15
 
     let nextStepButton = document.createElement("button")
     nextStepButton.id = "nextStepButton"
-    nextStepButton.textContent = "SKICKA"
+    nextStepButton.textContent = "ENTER"
     nextStepButton.addEventListener("click", () => {
         let userInput = inputField.value;
-        if (listen(userInput)) {
-            renderGameCompletePopup(wrapper,listenText);
-        } 
-        else if(silent(userInput)){
-            renderGameCompletePopup(wrapper,silentText)
-            }
-        else {
+        if (kaira(userInput)) {
+            renderVideoPopup(wrapper, video, nextPage);
+        } else {
             inputShake(inputField);
         }
     });

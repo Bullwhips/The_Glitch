@@ -22,40 +22,25 @@ function renderPage13(wrapper) {
 
     let headerText = document.createElement("h2")
     headerText.id = "headerText"
-    headerText.textContent= "SKRIV RÄTT BOKSTÄVER"
+    headerText.textContent= "VAD BETYDER SIFFRORNA?"
     textContainer.append(headerText)
 
      let bodyText = document.createElement("p")
     bodyText.id = "bodyText"
     bodyText.innerHTML =
-                        `Skriv in bokstäverna som ni har avkodat från siffrorna från förra steget. Ni kan gissa hur många gånger som helst, men tänk på tiden!`
+                        `Sifferkombinationen som ni kom fram till under förra steget. Den kan användas på ett annat sätt. Klicka på TIPS-knappen för att få reda på hur.`
     textContainer.append(bodyText);
 
-    let inputField = document.createElement("input")
-    inputField.type = "text"
-    inputField.id = "inputField"
-    inputField.placeholder = "BOKSTÄVER"
-    textContainer.append(inputField)
-
-    function kaira(value) {
-        return ["KAIRA", "Kaira", "kaira"]
-            .includes(value.trim());
-    }
-
-    let video = "static/assets/video/final_video_manifest.mp4"
-    let nextPage = renderPage14
+    let tipsButton = document.createElement("button")
+    tipsButton.id = "tipsButton"
+    tipsButton.textContent = "TIPS"
+    tipsButton.addEventListener("click", () => {renderTipsPopup(pageContainer)})
+    textContainer.append(tipsButton)
 
     let nextStepButton = document.createElement("button")
     nextStepButton.id = "nextStepButton"
-    nextStepButton.textContent = "ENTER"
-    nextStepButton.addEventListener("click", () => {
-        let userInput = inputField.value;
-        if (kaira(userInput)) {
-            renderVideoPopup(wrapper, video, nextPage);
-        } else {
-            inputShake(inputField);
-        }
-    });
+    nextStepButton.textContent = "NÄSTA STEG"
+    nextStepButton.addEventListener("click", () => {renderPage14(wrapper)});
     textContainer.append(nextStepButton)
 
     pageContainer.append(opacityBackground);
