@@ -1,11 +1,22 @@
+#popup-container-mediafiles {
+    position: absolute;
+    top: 5.5rem;    
+    z-index: 1010;
+    background-color: rgb(13, 0, 0, 0.2);
+    border-radius: 20px;
+    backdrop-filter: blur(440px);
+    box-shadow: -20px -20px 20px 0px rgba(54, 34, 34, 0.25), 20px 20px 20px 0px rgba(54, 34, 34, 0.25);
+    width: 90%;
+    left: 5%;
+    border: 1px solid #E50913;
+}
+
 #popup-content-container {
-    width: 22.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     margin-bottom: 0.5rem;
-    padding-left: 1.75rem;
     line-height: 1.3rem;
 }
 

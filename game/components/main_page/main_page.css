@@ -3,65 +3,66 @@
     to { opacity: 1; }
 }
 
-#background-div {
-    height: 100%;
-    background-image: url("../../assets/images/hooded_figure.webp");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    overflow: hidden;
-    opacity: 0;
-    animation: fadeIn 4s ease forwards;
-    animation-delay: 2s;
-}
-
-h1 {
-    font-family: vt323;
-    color: white;
-    font-size: 36px;
-    text-align: center;
-    padding-top: 140px;
-    position: relative;
-    z-index: 1;
-    opacity: 0;
-    animation: fadeIn 1s ease forwards;
-    animation-delay: 5s;
-}
-
-#dots {
-    color: white;
-}
-
-#typewriter {
+@media screen and (min-width: 360px) and (max-width: 700px) {
+    #background-div {
+        height: 100%;
+        width: 100%;
+        background-image: url("../../assets/images/hooded_figure.webp");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        overflow: hidden;
+        opacity: 0;
+        animation: fadeIn 4s ease forwards;
+        animation-delay: 2s;
+    }
     
-    color: white;
-    font-family: vt323;
-    font-size: 24px;
-    text-align: center;
+    h1 {
+        font-family: vt323;
+        color: white;
+        font-size: 2.25rem;
+        text-align: center;
+        padding-top: 30%;
+        position: relative;
+        z-index: 1;
+        opacity: 0;
+        animation: fadeIn 1s ease forwards;
+        animation-delay: 5s;
+    }
     
-}
-
-.cursor {
-    display: inline;
-}
-
-#start-game-button {
-    width: 400px;
-    height: 65px;
-    border-radius: 20px;
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-top: 330px;
-    border: none;
-    background: #A6032F;
-    color: #FFF;
-    text-align: center;
-    font-family: vt323;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    opacity: 0;
-    animation: fadeIn 1s ease forwards;
-    animation-delay: 16s;
+    #dots {
+        color: white;
+    }
+    
+    #typewriter {
+        color: white;
+        font-family: vt323;
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    
+    .cursor {
+        display: inline;
+    }
+    
+    #start-game-button {
+        width: 85%;
+        height: 7%;
+        border-radius: 20px;
+        margin-left: 8%;
+        margin-right: 8%;
+        margin-top: 90%;
+        border: none;
+        background: #A6032F;
+        color: #FFF;
+        text-align: center;
+        font-family: vt323;
+        font-size: 1.5rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        opacity: 0;
+        animation: fadeIn 1s ease forwards;
+        animation-delay: 16s;
+    }
 }
