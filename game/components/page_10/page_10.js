@@ -22,35 +22,33 @@ function renderPage10(wrapper) {
 
     let headerText = document.createElement("h2")
     headerText.id = "headerText"
-    headerText.textContent= "AVKODA FÖR ATT FORTSÄTTA"
+    headerText.textContent= "ANALOGT UPPDRAG - AVKODA FÖR ATT FORTSÄTTA"
     textContainer.append(headerText)
 
      let bodyText = document.createElement("p")
     bodyText.id = "bodyText"
     bodyText.innerHTML =
-                        `Radia Perlman står för routing och har arbetat med många algoritmer.
-                         Nu när ni har tagit er till detta steg ska ni hitta rätt router`
+                        `Detta uppdrag är analogt, men för att komma vidare måste ni skriva in det ni har avkodat.`
     textContainer.append(bodyText);
 
     let inputField = document.createElement("input")
     inputField.type = "text"
     inputField.id = "inputField"
-    inputField.placeholder = "KOD"
+    inputField.placeholder = "BOKSTÄVER"
     textContainer.append(inputField)
 
-    function routerKod(value) {
-        return ["AP0743", "ap0743", "Ap0743"]
+    function radiaPerlman(value) {
+        return ["RADIA PERLMAN", "Radia Perlman", "Radia perlman", "radia Perlman", "radia perlman"]
             .includes(value.trim());
     }
-
 
     let nextStepButton = document.createElement("button")
     nextStepButton.id = "nextStepButton"
     nextStepButton.textContent = "ENTER"
     nextStepButton.addEventListener("click", () => {
         let userInput = inputField.value;
-        if (routerKod(userInput)) {
-            renderIPPopup(wrapper);
+        if (radiaPerlman(userInput)) {
+            renderRouterPopup(wrapper);
         } else {
             inputShake(inputField);
         }
@@ -59,35 +57,33 @@ function renderPage10(wrapper) {
 
     pageContainer.append(opacityBackground);
 
-    function renderIPPopup (wrapper) {
-        let renderIPPopupContainer = document.createElement("div");
-        renderIPPopupContainer.id = "popup-container";
-        renderIPPopupContainer.classList.remove("hidden");
-        renderIPPopupContainer.classList.add("visible");
+    function renderRouterPopup (wrapper) {
+        let renderRouterPopupContainer = document.createElement("div");
+        renderRouterPopupContainer.id = "popup-container";
+        renderRouterPopupContainer.classList.remove("hidden");
+        renderRouterPopupContainer.classList.add("visible");
         pageContainer.classList.add("blur")
-        wrapper.appendChild(renderIPPopupContainer);
+        wrapper.appendChild(renderRouterPopupContainer);
     
         let headTextRules = document.createElement("h2");
         headTextRules.id = "head-text-popup";
-        headTextRules.textContent = "⚠ MEDDELANDE: IP";
-        renderIPPopupContainer.appendChild(headTextRules);
+        headTextRules.textContent = "⚠ MEDDELANDE: ROUTER";
+        renderRouterPopupContainer.appendChild(headTextRules);
     
         let popupTextContainer = document.createElement("div");
         popupTextContainer.id = "popup-text-container";
-        renderIPPopupContainer.appendChild(popupTextContainer);
+        renderRouterPopupContainer.appendChild(popupTextContainer);
     
         let kairasMessageText = document.createElement("p");
         kairasMessageText.id = "popup-text";
         kairasMessageText.innerHTML = `
-             Okej NU håller tiden verkligen på att rinna ut…orkar inte vänta in er mer, 
-             nu blir det snabba puckar. Splittra gruppen, några tar sig till caféet, 
-             igen jag vet. Resten till våning 4, hitta koden vid kaffemaskinen. Skärp er och samarbeta. Ni har mobiler, använd dem.
+        Hon kallas internets mamma, routingens arkitekt. Dela upp er och leta på våningen. Bara en maskin bär hennes namn, där hittar ni nästa nyckel.
         `;
         popupTextContainer.appendChild(kairasMessageText);
     
         let closePopupButtonContainer = document.createElement("div");
         closePopupButtonContainer.id = "close-popup-button-container";
-        renderIPPopupContainer.append(closePopupButtonContainer);
+        renderRouterPopupContainer.append(closePopupButtonContainer);
         let closePopupButton = document.createElement("button");
         closePopupButton.id = "close-popup-button";
         closePopupButton.innerHTML = `
@@ -97,10 +93,10 @@ function renderPage10(wrapper) {
         `;
     
         closePopupButton.addEventListener("click", () => {
-            renderIPPopupContainer.classList.remove("visible");
-            renderIPPopupContainer.classList.add("hidden");
-            renderIPPopupContainer.remove("blur")
-            renderIPPopupContainer.remove();
+            renderRouterPopupContainer.classList.remove("visible");
+            renderRouterPopupContainer.classList.add("hidden");
+            pageContainer.classList.remove("blur")
+            renderRouterPopupContainer.remove();
             renderPage11(wrapper)
         });
         closePopupButtonContainer.append(closePopupButton);

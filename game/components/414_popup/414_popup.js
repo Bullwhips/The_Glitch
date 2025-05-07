@@ -12,5 +12,5 @@ function render414Popup(wrapper) {
     x414.id = "x414"
     x414.textContent = "x"
     fouronefourContainer.append(x414)
-    x414.addEventListener("click", () => {renderPage9(wrapper)})
+    x414.addEventListener("click", () => {renderPage10(wrapper)})
 }
