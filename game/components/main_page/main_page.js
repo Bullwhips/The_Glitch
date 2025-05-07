@@ -23,7 +23,7 @@ function renderMainPageContent (wrapper) {
     startGameButton.textContent = "STARTA GAME";
     backgroundDiv.append(startGameButton);
 
-    let video = "static/assets/video/first_video.mp4"
+    let video = "static/assets/video/fixed_first_video.mp4"
     let nextPage = renderPage1
 
     startGameButton.addEventListener("click", () => {
