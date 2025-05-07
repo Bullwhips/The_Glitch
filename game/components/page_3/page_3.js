@@ -29,7 +29,7 @@ function renderPage3 (wrapper) {
     bodyText.id = "bodyText";
     bodyText.innerHTML =
                  `Använd er av länken nedan för att få fram rätt kod: <br><br>
-                 <a id="link" href="https://obamawhitehouse.archives.gov/women-in-stem">LÄNK</a>
+                   <a id="link" href="https://obamawhitehouse.archives.gov/women-in-stem" target="_blank" rel="noopener noreferrer">LÄNK</a>
                  `;
     textContainer.append(bodyText);
 
