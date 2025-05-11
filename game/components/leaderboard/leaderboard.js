@@ -21,6 +21,11 @@ function renderLeaderboard(wrapper) {
     textContainer.id = "textContainer";
     backDropLeader.append(textContainer);
 
+    let headerText = document.createElement("h2")
+    headerText.id = "headerText"
+    headerText.textContent= "LEADERBOARD"
+    textContainer.append(headerText)
+
 
     let groupList = document.createElement("ol");
     groupList.id = "groupList";
