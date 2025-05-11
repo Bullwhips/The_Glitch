@@ -12,7 +12,7 @@ function renderPage1(wrapper) {
 
     let opacityBackground = document.createElement("div");
     opacityBackground.id = "opacityBackground";
-    pageContainer.append(opacityBackground);
+    wrapper.append(opacityBackground);
 
     let backDrop1 = document.createElement("div");
     backDrop1.id = "backDrop1";

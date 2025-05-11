@@ -39,7 +39,6 @@ async function handleRequest(request) {
                     if (request.method == "POST") {
                         const grupp = await request.json()
                         grupp.id = GRUPPER.reduce((acc, next) => next.id > acc ? acc = next.id : acc, 0) + 1
-                        grupp.time = ""
                         GRUPPER.push(grupp)
                         updateDatabase(GRUPPER)
                         return new Response(JSON.stringify(grupp), options)

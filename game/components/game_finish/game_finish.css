@@ -3,3 +3,29 @@
     font-family: play;
     font-size: 36px;
 }
+
+#scoreboardButton {
+    height: 3.5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 2.125rem;
+    border: none;
+    border-radius: 20px;
+    background: #A6032F;
+
+    text-align: center;
+    color: #FFF;
+    font-size: 1.5rem;
+    font-family: vt323;
+}
+
+#gruppInput{
+    height: 3.5rem;
+    margin-top: 1.5rem;
+    border: 1px solid #E50913;
+    border-radius: 25px;
+    background: #0D0000;
+    text-align: center;
+    color: #b3b3b3;
+    font-size: 1.5rem;
+    font-family: vt323;
+}

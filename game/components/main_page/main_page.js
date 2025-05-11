@@ -27,7 +27,7 @@ function renderMainPageContent (wrapper) {
     let nextPage = renderPage1
 
     startGameButton.addEventListener("click", () => {
-        renderVideoPopup(wrapper, video, nextPage)
+        renderLeaderboard(wrapper)
         
     });   
 }

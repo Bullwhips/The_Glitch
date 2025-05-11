@@ -1,4 +1,9 @@
 function renderGameCompletePopup(wrapper,message){
+
+  if (activeTimerInterval) {
+    clearInterval(activeTimerInterval);
+    activeTimerInterval = null;
+  }
     wrapper.innerHTML = "";
 
     let backgroundDiv = document.createElement("div");
