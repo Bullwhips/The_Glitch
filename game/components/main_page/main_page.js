@@ -24,7 +24,7 @@ function renderMainPageContent (wrapper) {
     startGameButton.textContent = "STARTA GAME";
     backgroundDiv.append(startGameButton);
 
-    let video = "https://www.youtube.com/watch?v=q0INEorhinw"
+    let video = "https://youtu.be/rSx8ugDT6-g";
     let nextPage = renderPage1
 
     startGameButton.addEventListener("click", () => {

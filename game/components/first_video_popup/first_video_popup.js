@@ -31,15 +31,15 @@ function renderVideoPopup(wrapper, video, nextPage) {
     // Check if the video is a YouTube link
     if (video.includes("youtube.com") || video.includes("youtu.be")) {
         // Extract the video ID (works with both youtu.be and youtube.com URLs)
-        let videoId = "rSx8ugDT6-g";
+        let videoId = "";
         const youtubeMatch = video.match(/(?:v=|youtu\.be\/)([a-zA-Z0-9_-]{11})/);
         if (youtubeMatch && youtubeMatch[1]) {
             videoId = youtubeMatch[1];
         }
 
         let iframe = document.createElement("iframe");
-        iframe.width = "560";
-        iframe.height = "315";
+        iframe.width = "100%";
+        iframe.height = "100%";
         iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
         iframe.frameBorder = "0";
         iframe.allow =

@@ -39,7 +39,7 @@ function renderPage7(wrapper){
     
 
     function graceHopper(value) {
-        return ["GRACE HOPPER", "Grace Hopper", "Grace hopper", "grace Hopper", "grace hopper"]
+        return ["GRACE HOPPER", "Grace Hopper", "Grace hopper", "grace Hopper", "grace hopper", "gracehopper", "GraceHopper", "Gracehopper", "GRACEHOPPER"]
             .includes(value.trim());
     }
     
