@@ -28,8 +28,7 @@ function renderPage3 (wrapper) {
     let bodyText = document.createElement("p");
     bodyText.id = "bodyText";
     bodyText.innerHTML =
-                 `Använd er av länken nedan för att få fram rätt kod: <br><br>
-                   <a id="link" href="https://obamawhitehouse.archives.gov/women-in-stem" target="_blank" rel="noopener noreferrer">LÄNK</a>
+                 `Använd er av texten på pappret som finns i närheten flr att få fram rätt kod:
                  `;
     textContainer.append(bodyText);
 

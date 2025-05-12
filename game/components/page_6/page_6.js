@@ -52,7 +52,7 @@ function renderPage6 (wrapper) {
     nextStepButton.addEventListener("click", () => {renderPage7(wrapper)});
     textContainer.append(nextStepButton);
 
-    renderTimePopup(pageContainer);
+    renderTimePopup(wrapper);
 
     function renderTimePopup(wrapper) {
         let timePopupContainer = document.createElement("div");
@@ -92,8 +92,8 @@ function renderPage6 (wrapper) {
         `;
     
         closePopupButton.addEventListener("click", () => {
-            timePopupContainer.remove();
             pageContainer.classList.remove("blur");
+            timePopupContainer.remove();
         });
         closePopupButtonContainer.append(closePopupButton);
     }
