@@ -2,17 +2,16 @@ function renderPage1(wrapper) {
     wrapper.innerHTML = "";
 
     renderHeader(wrapper);
+    renderMenu(wrapper);
     
 
     let pageContainer = document.createElement("div");
     pageContainer.id = "page-container";
     wrapper.append(pageContainer);
 
-    renderMenu(pageContainer);
-
     let opacityBackground = document.createElement("div");
     opacityBackground.id = "opacityBackground";
-    wrapper.append(opacityBackground);
+    pageContainer.append(opacityBackground);
 
     let backDrop1 = document.createElement("div");
     backDrop1.id = "backDrop1";
