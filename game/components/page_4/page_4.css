@@ -41,13 +41,14 @@
 #popup-container-short {
     margin: 1.3rem;
     position: absolute;
-    top: 4.5rem;    
+    top: 4.5rem;
     z-index: 1010;
     background-color: rgb(13, 0, 0, 0.2);
     border-radius: 20px;
     border: 1px solid #E50913;
     backdrop-filter: blur(440px);
-    box-shadow: -20px -20px 20px 0px rgba(54, 34, 34, 0.25), 20px 20px 20px 0px rgba(54, 34, 34, 0.25);
+    -webkit-backdrop-filter: blur(440px);
+    box-shadow: -20px -20px 20px 0px rgba(54, 34, 34, 0.25), 20px 20px 20px 0px rgba(54, 34, 34, 0.25); 
 }
 
 #popup-text-container-short {
@@ -67,6 +68,7 @@
     border-radius: 20px;
     border: 1px solid #E50913;
     backdrop-filter: blur(440px);
+    -webkit-backdrop-filter: blur(440px);
     box-shadow: -20px -20px 20px 0px rgba(54, 34, 34, 0.25), 20px 20px 20px 0px rgba(54, 34, 34, 0.25);
     width: 90%;
     left: 5%;

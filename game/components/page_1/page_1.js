@@ -4,7 +4,6 @@ function renderPage1(wrapper) {
     renderHeader(wrapper);
     renderMenu(wrapper);
     
-
     let pageContainer = document.createElement("div");
     pageContainer.id = "page-container";
     wrapper.append(pageContainer);
