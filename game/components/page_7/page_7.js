@@ -28,7 +28,7 @@ function renderPage7(wrapper){
      let bodyText = document.createElement("p")
     bodyText.id = "bodyText"
     bodyText.innerHTML =
-                        `Detta uppdrag är analogt, men för att komma vidare måste ni skriva in det ni har avkodat.`
+                        `Detta uppdrag är analogt, men för att komma vidare måste ni skriva in det ni har avkodat.`;
     textContainer.append(bodyText);
 
     let inputField = document.createElement("input")

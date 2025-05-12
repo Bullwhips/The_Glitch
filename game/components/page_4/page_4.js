@@ -1,5 +1,8 @@
 function renderPage4 (wrapper) {
+    let currentPage = "page_4";
     wrapper.innerHTML = "";
+
+    let clueRevealTimeoutId  = null;
 
     renderHeader(wrapper);
     renderMenu(wrapper);
@@ -56,6 +59,9 @@ function renderPage4 (wrapper) {
         let userInput = inputField.value;
         if (adaLovelace(userInput)) {
             const displayElement = document.querySelector("#timerDisplay");
+            if (clueRevealTimeoutId) {
+                clearTimeout(clueRevealTimeoutId);
+            }
             renderPage5RemoveTime(wrapper, displayElement); // Skickar in display-elementet
         } else {
             inputShake(inputField);
@@ -65,25 +71,31 @@ function renderPage4 (wrapper) {
 
     renderKairasMessagePopup2(wrapper);
 
-    let cluePopupTimeout = setTimeout(() => {
+    clueRevealTimeoutId = setTimeout(() => {
         showClueQuestionPopup(wrapper, pageContainer);
     }, 1 * 60 * 1000);
 
     function showClueQuestionPopup(wrapper, pageContainer) {
+        if (currentPage !== "page_4") {
+            return;
+        }
+
         let popup = renderKairasMessagePopup3(wrapper, pageContainer, clueRevealTimeoutId);
 
         popup.querySelector("#no-button-clue").addEventListener("click", () => {
             popup.remove();
+            if (clueRevealTimeoutId) {
+                clearTimeout(clueRevealTimeoutId);
+            }
 
-            // Visa ledtråd efter ytterligare 10 minuter om användaren sa NEJ
             clueRevealTimeoutId = setTimeout(() => {
-                clueMessage(wrapper, pageContainer);
+                renderKairasClueMessage(wrapper, pageContainer);
             }, 3 * 60 * 1000);
         });
 
         // Om popupen stängs utan svar, visa ledtråd ändå efter 10 min
         popup.querySelector("#close-popup-button").addEventListener("click", () => {
-            if (clueRevealTimeoutId === null) {
+            if (!clueRevealTimeoutId) {
                 clueRevealTimeoutId = setTimeout(() => {
                     renderKairasClueMessage(wrapper, pageContainer);
                 }, 3 * 60 * 1000);
@@ -91,8 +103,6 @@ function renderPage4 (wrapper) {
             popup.remove();
         });
     }
-
-    let clueRevealTimeoutId  = null;
 
     function renderKairasMessagePopup2 (wrapper) {
         let kairasMessagePopupContainer = document.createElement("div");
@@ -137,6 +147,7 @@ function renderPage4 (wrapper) {
         closePopupButtonContainer.append(closePopupButton);
     }
 }
+
 function renderKairasMessagePopup3 (wrapper, pageContainer, clueRevealTimeoutId) {
     let kairasMessagePopupContainer = document.createElement("div");
     kairasMessagePopupContainer.id = "popup-container-special";

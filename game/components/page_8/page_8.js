@@ -37,12 +37,10 @@ function renderPage8(wrapper){
     inputField.placeholder = "BOKSTÄVER"
     textContainer.append(inputField)
     
-
     function superKvinnan(value) {
         return ["SUPERKVINNAN", "SuperKvinnan", "Superkvinnan", "superKvinnan", "superkvinnan"]
             .includes(value.trim());
     }
-    
 
     let nextStepButton = document.createElement("button")
     nextStepButton.id = "nextStepButton"
