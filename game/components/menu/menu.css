@@ -15,6 +15,9 @@
 }
 
 #menu-button-containers {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: var(--menu-button-size);
     height: var(--menu-button-size);
     background-color: #0D0000;
