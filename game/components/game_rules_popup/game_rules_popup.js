@@ -4,6 +4,7 @@ function renderGameRulesPopup (wrapper) {
     gameRulesPopupContainer.id = "popup-container";
     gameRulesPopupContainer.classList.remove("hidden");
     gameRulesPopupContainer.classList.add("visible");
+    gameRulesPopupContainer.classList.add("longerPopup")
     wrapper.appendChild(gameRulesPopupContainer);
 
     let headTextRules = document.createElement("h2");

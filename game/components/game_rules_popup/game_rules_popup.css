@@ -9,3 +9,8 @@
     border: none;
     background: transparent;
 }
+
+.longerPopup {
+    height: 85%;
+    overflow-y: scroll;
+}

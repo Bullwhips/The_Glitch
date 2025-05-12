@@ -4,6 +4,7 @@ function renderAboutUsPopup (wrapper) {
     aboutUsPopupContainer.id = "popup-container-aboutus";
     aboutUsPopupContainer.classList.remove("hidden");
     aboutUsPopupContainer.classList.add("visible");
+    aboutUsPopupContainer.classList.add("longerPopup");
     wrapper.appendChild(aboutUsPopupContainer);
 
     let headTextAboutUs = document.createElement("h2");

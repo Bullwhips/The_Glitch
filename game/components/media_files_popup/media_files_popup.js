@@ -4,6 +4,7 @@ function renderMediaFilesPopup (wrapper) {
     mediaFilesPopupContainer.id = "popup-container-mediafiles";
     mediaFilesPopupContainer.classList.remove("hidden");
     mediaFilesPopupContainer.classList.add("visible");
+    mediaFilesPopupContainer.classList.add("longerPopup");
     wrapper.appendChild(mediaFilesPopupContainer);
 
     let headTextMedia = document.createElement("h2");
