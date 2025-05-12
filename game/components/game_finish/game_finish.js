@@ -6,23 +6,34 @@ function renderGameFinish(wrapper) {
     opacityBackground.id = "opacityBackground";
     wrapper.append(opacityBackground);
 
-    let gameCompleteText = document.createElement("div");
-    gameCompleteText.id = "gameCompleteText";
-    gameCompleteText.textContent = "GAME COMPLETE";
-    opacityBackground.append(gameCompleteText);
+    let backDropFinish = document.createElement("div");
+    backDropFinish.id = "backDropFinish";
+    opacityBackground.append(backDropFinish);
+
+    
+    let textContainerFinish = document.createElement("div");
+    textContainerFinish.id = "textContainerFinish";
+    backDropFinish.append(textContainerFinish);
+
+    let finishText = document.createElement("h1")
+    finishText.id = "finishText"
+    finishText.textContent= "GAME COMPLETE"
+    textContainerFinish.append(finishText)
+
+
 
     let gruppForm = document.createElement("form");
     gruppForm.id = "gruppForm"; //  fixed
-    opacityBackground.append(gruppForm);
+    textContainerFinish.append(gruppForm);
 
     let inputField = document.createElement("input");
     inputField.type = "text";
     inputField.id = "gruppInput";
-    inputField.placeholder = "ANGE GRUPNAMN";
+    inputField.placeholder = "ANGE GRUPPNAMN";
     gruppForm.append(inputField);
 
     let nextStepButton = document.createElement("button");
-    nextStepButton.id = "scoreboardButton";
+    nextStepButton.id = "nextStepButton";
     nextStepButton.textContent = "SCOREBOARD";
     gruppForm.append(nextStepButton);
 

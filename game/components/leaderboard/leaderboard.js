@@ -17,19 +17,24 @@ function renderLeaderboard(wrapper) {
     backDropLeader.id = "backDropLeader";
     opacityBackground.append(backDropLeader);
 
-    let textContainer = document.createElement("div");
-    textContainer.id = "textContainer";
-    backDropLeader.append(textContainer);
+    let textContainerLeader = document.createElement("div");
+    textContainerLeader.id = "textContainerLeader";
+    backDropLeader.append(textContainerLeader);
 
-    let headerText = document.createElement("h2")
-    headerText.id = "headerText"
-    headerText.textContent= "LEADERBOARD"
-    textContainer.append(headerText)
+    let leaderText = document.createElement("h2")
+    leaderText.id = "leaderText"
+    leaderText.textContent= "LEADERBOARD"
+    textContainerLeader.append(leaderText)
+
+    let explainText = document.createElement("p")
+    explainText.id = "explainText"
+    explainText.textContent = "Tiden representerar tid kvar när spelet klarades."
+    textContainerLeader.append(explainText)
 
 
     let groupList = document.createElement("ol");
     groupList.id = "groupList";
-    textContainer.append(groupList); // append group list to DOM
+    textContainerLeader.append(groupList); // append group list to DOM
 
     fetchAllGroups();
 
