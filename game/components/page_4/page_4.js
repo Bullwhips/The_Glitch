@@ -138,8 +138,6 @@ function renderKairasMessagePopup2 (wrapper) {
     });
     closePopupButtonContainer.append(closePopupButton);
 }
-
-
 function renderKairasMessagePopup3 (wrapper, pageContainer) {
     let kairasMessagePopupContainer = document.createElement("div");
     kairasMessagePopupContainer.id = "popup-container-special";
@@ -290,3 +288,4 @@ function clueMessage (wrapper) {
     });
     closePopupButtonContainer.append(closePopupButton);
 }
+
