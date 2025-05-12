@@ -67,7 +67,7 @@ function renderMediaFilesPopup (wrapper) {
 
     let mp3FileText = document.createElement("p");
     mp3FileText.id = "popup-text";
-    mp3FileText.textContent = "9pae8L4ARda1irnm.jpeg";
+    mp3FileText.textContent = "9pae8L4ARda1irnm.mp3";
     popupContentContainer.appendChild(mp3FileText);
 
     let mp4File = document.createElement("button");
@@ -86,7 +86,7 @@ function renderMediaFilesPopup (wrapper) {
 
     let mp4FileText = document.createElement("p");
     mp4FileText.id = "popup-text";
-    mp4FileText.textContent = "o1gc74HpeRApR9e.html";
+    mp4FileText.textContent = "o1gc74HpeRApR9e.mp4";
     popupContentContainer.appendChild(mp4FileText);
 
     let closePopupButtonContainerMedia = document.createElement("div");
