@@ -7,6 +7,7 @@ function renderMainPageContent (wrapper) {
     wrapper.append(backgroundDiv);
 
     let textDiv = document.createElement("h1");
+    textDiv.id = "textDiv"
     textDiv.textContent = "VAKNA SPELARE";
     backgroundDiv.append(textDiv);
     
@@ -27,7 +28,7 @@ function renderMainPageContent (wrapper) {
     let nextPage = renderPage1
 
     startGameButton.addEventListener("click", () => {
-        renderVideoPopup(wrapper,video,nextPage)
+        renderVideoPopup(wrapper, video, nextPage)
         
     });   
 }

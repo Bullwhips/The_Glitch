@@ -1,5 +1,6 @@
 #groupList{
     color: white;
+    padding: 0;
     
 }
 
@@ -7,6 +8,9 @@
     border: 1px solid #E50913;
     list-style-position: inside;
     padding: 0.5em;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 #groupList li:nth-child(1)::marker {
@@ -32,3 +36,32 @@
         height: 100%;
     
   }
+
+  #leaderText, #explainText{
+    color: #E50913;
+    text-align: center;
+  }
+
+  #leaderText{
+    font-family: Technology;
+    font-size: 1.95rem;
+  }
+
+  #explainText{
+    font-family: ptmono;
+    font-size: 0.9rem;
+  }
+
+
+  #textContainerLeader {
+    margin-top: 39%;        
+    margin-right: 10%;
+    margin-left: 10%;
+    font-family: ptmono;
+    line-height: 150%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    color: #FFF;
+    
+}
