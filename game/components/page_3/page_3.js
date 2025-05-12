@@ -28,7 +28,7 @@ function renderPage3 (wrapper) {
     let bodyText = document.createElement("p");
     bodyText.id = "bodyText";
     bodyText.innerHTML =
-                 `Använd er av texten på pappret som finns i närheten flr att få fram rätt kod:
+                 `Använd er av texten på pappret som finns i närheten för att få fram rätt kod:
                  `;
     textContainer.append(bodyText);
 
