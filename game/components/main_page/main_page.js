@@ -1,5 +1,3 @@
-"use strict"
-
 
 function renderMainPageContent (wrapper) {
     let backgroundDiv = document.createElement("div");
@@ -29,7 +27,6 @@ function renderMainPageContent (wrapper) {
 
     startGameButton.addEventListener("click", () => {
         renderVideoPopup(wrapper, video, nextPage)
-        
     });   
 }
 

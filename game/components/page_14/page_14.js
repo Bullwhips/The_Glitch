@@ -42,7 +42,7 @@ function renderPage14(wrapper) {
             .includes(value.trim());
     }
 
-    let video = "static/assets/video/final_video_manifest.mp4"
+    let video = "https://youtube.com/shorts/k-JQd5sSK6E?feature=share";
     let nextPage = renderPage15
 
     let nextStepButton = document.createElement("button")

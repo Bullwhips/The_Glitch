@@ -11,6 +11,7 @@ function renderPage7(wrapper){
 
     let opacityBackground = document.createElement("div");
     opacityBackground.id = "opacityBackground7";
+    pageContainer.append(opacityBackground);
 
     let backDrop7 = document.createElement("div")
     backDrop7.id = "backDrop7"
@@ -25,7 +26,7 @@ function renderPage7(wrapper){
     headerText.textContent= "ANALOGT UPPDRAG - AVKODA FÖR ATT FORTSÄTTA"
     textContainer.append(headerText)
 
-     let bodyText = document.createElement("p")
+    let bodyText = document.createElement("p")
     bodyText.id = "bodyText"
     bodyText.innerHTML =
                         `Detta uppdrag är analogt, men för att komma vidare måste ni skriva in det ni har avkodat.`;
@@ -58,13 +59,13 @@ function renderPage7(wrapper){
     
     textContainer.append(nextStepButton)
 
-    pageContainer.append(opacityBackground);
 
     function renderGraceHopperPopup(wrapper) {
         let graceHopperPopupContainer = document.createElement("div");
         graceHopperPopupContainer.id = "popup-container-short";
         graceHopperPopupContainer.classList.remove("hidden");
         graceHopperPopupContainer.classList.add("visible");
+        pageContainer.classList.add("blur");
         wrapper.appendChild(graceHopperPopupContainer);
     
         let headTextRules = document.createElement("h2");

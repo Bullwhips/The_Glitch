@@ -8,7 +8,7 @@
 
 #backDrop13 {
     width: 90%;
-    height: 34rem;
+    height: 35rem;
     border-radius: 20px;
     background: #0D0000;
 }
@@ -16,7 +16,6 @@
 #tipsButton {
     height: 3.5rem;
     margin-top: 1.5rem;   
-    margin-bottom: 2.125rem; 
     border: none;
     border-radius: 20px;
     background: #b3b3b3;

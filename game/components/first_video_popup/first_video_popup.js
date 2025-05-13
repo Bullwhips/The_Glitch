@@ -32,7 +32,7 @@ function renderVideoPopup(wrapper, video, nextPage) {
     if (video.includes("youtube.com") || video.includes("youtu.be")) {
         // Extract the video ID (works with both youtu.be and youtube.com URLs)
         let videoId = "";
-        const youtubeMatch = video.match(/(?:v=|youtu\.be\/)([a-zA-Z0-9_-]{11})/);
+        const youtubeMatch = video.match(/(?:v=|youtu\.be\/|shorts\/)([a-zA-Z0-9_-]{11})/);
         if (youtubeMatch && youtubeMatch[1]) {
             videoId = youtubeMatch[1];
         }

@@ -69,7 +69,7 @@ function renderPage9(wrapper) {
 
     let submitButton = document.createElement("button");
     submitButton.textContent = "Submit";
-    submitButton.id = "nextStepButton";
+    submitButton.id = "submitButton";
     submitButton.style.display = "none"; // hidden by default
     backDrop9.append(submitButton);
 

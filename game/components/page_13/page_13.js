@@ -34,7 +34,7 @@ function renderPage13(wrapper) {
     let tipsButton = document.createElement("button")
     tipsButton.id = "tipsButton"
     tipsButton.textContent = "TIPS"
-    tipsButton.addEventListener("click", () => {renderTipsPopup(pageContainer)})
+    tipsButton.addEventListener("click", () => {renderTipsPopup(wrapper)});
     textContainer.append(tipsButton)
 
     let nextStepButton = document.createElement("button")

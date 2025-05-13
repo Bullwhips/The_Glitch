@@ -1,12 +1,12 @@
 #backDrop9{
-    width: 400px;
-    height: 969px;
-    border-radius: 20px;
+    width: 100%;
+    height: 100%;
     background: #0D0000;
 }
 
 #quizContainer{
-    margin-top: 100px;
+    margin-top: 5rem;
+    margin-left: 3rem;
     text-align: center;
 }
 
@@ -14,10 +14,8 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr); 
     grid-template-rows: repeat(2, 1fr);    
-    gap: 10px; 
-    margin-top: 50px;
-  
-    
+    gap: 0.7rem; 
+    margin: 1rem 0.5rem 2rem 0.5rem;
 }
 
 .answerDiv{
@@ -25,15 +23,32 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 130px;
-    width: 178px;
+    height: 8rem;
     color: #fff;
     font-family: ptmono;
-    font-size: 14px;
+    font-size: 0.875rem;
     border-radius: 20px;
+    padding-left: 0.3rem;
+    padding-right: 0.3rem;
 }
 
 .selected {
-    background-color: #8a2be2; /* or whatever style you want */
+    background-color: #b4b4b4; /* or whatever style you want */
     border: 2px solid white;
+}
+
+#submitButton {
+    width: 85%;
+    border-radius: 20px;
+    margin-left: 8%;
+    margin-right: 8%;
+    margin-bottom: 8%;
+    border: none;
+    background: #A6032F;
+    color: #FFF;
+    text-align: center;
+    font-family: vt323;
+    font-size: 1.5rem;
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
 }

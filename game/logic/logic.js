@@ -241,7 +241,7 @@ const questions =
     [
       {
         answer: "December 9, 1906",
-        correct: false
+        correct: true
       },
       {
         answer: "December 9, 2020",
@@ -253,7 +253,7 @@ const questions =
       },
       {
         answer: "Februari 29, 1888",
-        correct: true
+        correct: false
       }
     ]
   },
