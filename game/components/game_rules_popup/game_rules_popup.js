@@ -23,9 +23,7 @@ function renderGameRulesPopup (wrapper) {
     let notes = document.createElement("p");
     notes.id = "popup-text";
     notes.textContent = `
-        Detta spel kräver att ni har tillgång till papper och penna. 
-        För att kunna lösa vissa gåtor eller samla på information 
-        så behöver ni skriva ner detta för att lägga pusselbitarna i slutet.
+        Detta spel kräver att ni har tillgång till papper och penna. För att kunna lösa vissa gåtor eller samla på information så behöver ni skriva ner detta för att lägga pusselbitarna på plats i slutet.
     `;
     popupTextContainer.appendChild(notes);
 
@@ -36,10 +34,7 @@ function renderGameRulesPopup (wrapper) {
     let timer = document.createElement("p");
     timer.id = "popup-text";
     timer.textContent = `
-        Högst upp till höger ser ni en timer som tickar nedåt under spelets gång. 
-        När tiden har gått ut så avslutas spelet oavsett om ni har löst sista uppdraget 
-        eller inte. Var på er vakt, anteckna detaljer och samla så mycket information 
-        som ni kan för att lyckas klara spelet innan tiden går ut.
+        Högst upp till höger ser ni en timer som tickar nedåt under spelets gång. När tiden har gått ut så avslutas spelet oavsett om ni har löst sista uppdraget eller inte. Var på er vakt, anteckna detaljer och samla så mycket information som ni kan för att lyckas klara spelet innan tiden går ut.
     `;
     popupTextContainer.appendChild(timer);
 
@@ -50,13 +45,7 @@ function renderGameRulesPopup (wrapper) {
     let things = document.createElement("p");
     things.id = "popup-text";
     things.textContent = `
-        Om ni hittar fysiska föremål, titta på det, läs det eller ta en bild på det. 
-        Spara sedan undan ert exemplar av denna sak. 
-        Håll koll på hur antalet ni ska få med er. 
-        Alla fysiska prylar finns i flera upplagor 
-        för att alla spelare ska kunna samla på samma saker, 
-        dubbelkolla därför så att ni inte plockar upp flera delar av 
-        samma sak.
+        Om ni hittar fysiska föremål, titta på det, läs det eller ta en bild på det. Spara sedan undan ert exemplar av denna sak. Ta bara med er ett ex av varje sak. Alla fysiska prylar finns i flera upplagor för att alla spelare ska kunna samla på samma saker, dubbelkolla därför så att ni inte plockar upp flera delar av samma sak.
     `;
     popupTextContainer.appendChild(things);
 
@@ -67,8 +56,7 @@ function renderGameRulesPopup (wrapper) {
     let charachters = document.createElement("p");
     charachters.id = "popup-text";
     charachters.textContent = `
-        Genom spelet kan ni möta flera karaktärer. 
-        Var uppmärksam på signalement som kan känneteckna  de olika karaktärerna.
+        Genom spelet kan ni möta fler karaktärer. Var uppmärksam på signalement som kan känneteckna olika karaktärer.
     `;
     popupTextContainer.appendChild(charachters);
 
