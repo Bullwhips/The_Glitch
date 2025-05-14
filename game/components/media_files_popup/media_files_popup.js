@@ -204,59 +204,40 @@ function renderPopupSongLyrics (wrapper) {
     songLyricsText.id = "popup-text";
     songLyricsText.innerHTML = `
         [Verse]<br>
-        Glitching skies they crack and fall<br>
-        Dust of pixels cloak us all<br>
-        Shadows flicker neon ghosts<br>
-        Echoes hum where silence boasts<br><br>
+        Flames are licking at the door<br>
+        Smoke is crawling across the floor<br>
+        Heartbeat racing can't ignore<br>
+        Gotta find what we're running for<br><br>
+
+        [Chorus]<br>
+        Fire is spreading close and far<br>
+        Run down the emergency stairs to the waterfall<br>
+        Let the path lead the way<br>
+        To the bookshelf that's where you should stay<br><br>
 
         [Verse 2]<br>
-        Cables crawl like serpent spines<br>
-        Plugged-in souls march blurred designs<br>
-        Circuits buzz where dreams should start<br>
-        In this maze we play our part<br><br>
+        The ticking clocks they echo loud<br>
+        Shadows dance beneath the shroud<br>
+        A matrix maze through the crowd<br>
+        Find the truth before we're bowed<br><br>
 
         [Chorus]<br>
         Fire is spreading close and far<br>
-        Run down the firestairs to the bar<br>
-        Let the bookshelf show you were the secret lays<br>
-        And be fast before the time runs away,<br>
-        runs away<br><br>
-
-        [Verse 3]<br>
-        Binary rains fill the air<br>
-        Hoping a code will strip despair<br>
-        Fragments lost in data’s sea<br>
-        Trying to find what's left of me<br><br>
+        Run down the emergency stairs to the waterfall<br>
+        Let the path lead the way<br>
+        To the bookshelf that's where you should stay<br><br>
 
         [Bridge]<br>
-        Lights collide no sense of time<br>
-        Clocks erased in their prime<br>
-        We’re just fractures in the haze<br>
-        Lost in an endless digital maze<br><br>
+        Static hums in the neon glow<br>
+        Time’s unraveling we don’t know<br>
+        Secrets buried in the undertow<br>
+        Catch the rhythm and let it flow<br><br>
 
         [Chorus]<br>
         Fire is spreading close and far<br>
-        Run down the firestairs to the waterfall<br>
-        Let the path lead the way to the fountain<br>
-        And drink your sorrows away,<br>
-        away,<br>
-        runs away<br><br>
-
-        [Verse 4]<br>
-        Binary rains fill the air<br>
-        Hoping a code will strip despair<br>
-        Fragments lost in data’s sea<br>
-        Trying to find what's left of me<br><br>
-
-        [Bridge 2]<br>
-        Before the time, the time runs away,<br>
-        the time runs away, the time runs away, away<br><br>
-
-        [Chorus]<br>
-        Fire is spreading close and far<br>
-        Run down the firestairs to the waterfall<br>
-        Let the path lead the way to the fountain<br>
-        And drink your sorrows away
+        Run down the emergency stairs to the waterfall<br>
+        Let the path lead the way<br>
+        To the bookshelf that's where you should stay
     `;
     popupTextContainer.append(songLyricsText);
 

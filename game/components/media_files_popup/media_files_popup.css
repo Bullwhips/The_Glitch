@@ -1,7 +1,7 @@
 #popup-container-mediafiles {
     position: absolute;
     top: 5.5rem;    
-    z-index: 1010;
+    z-index: 1015;
     background-color: rgb(13, 0, 0, 0.2);
     border-radius: 20px;
     backdrop-filter: blur(440px);
@@ -33,6 +33,6 @@
     overflow-x: hidden;
     top: 0;
     right: 0;
-    z-index: 1011;
+    z-index: 1020;
     background-color: black;
 }
