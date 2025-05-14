@@ -44,7 +44,7 @@
   
   // Example usage:
   startTypewriter({
-    text: "Systemfel 22884, Jag behöver dig!\nLösningen finns i allt, håll koll!",
+    text: "Systemfel 22884, jag behöver dig.\nLösningen finns i allt, håll koll!",
     elementId: "typewriter",
     speed: 80,
     initialDelay: 7000
