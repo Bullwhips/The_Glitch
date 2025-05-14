@@ -29,7 +29,9 @@ function renderPage6 (wrapper) {
     let bodyText = document.createElement("p");
     bodyText.id = "bodyText";
     bodyText.innerHTML =
-                 `Tryck på play och lyssna på låten.`;
+                 `TRYCK PÅ PLAY OCH LYSSNA PÅ LÅTEN.<br><br>
+                 
+                 “I would like people to listen to me. And not just try to figure out who I’m talking about, because it’s not about that. It’s really not all about one person” - Billie Eilish`;
     textContainer.append(bodyText);
 
     let audioContainer = document.createElement("div");

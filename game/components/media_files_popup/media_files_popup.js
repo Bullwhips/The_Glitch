@@ -210,10 +210,10 @@ function renderPopupSongLyrics (wrapper) {
         Gotta find what we're running for<br><br>
 
         [Chorus]<br>
-        Fire is spreading close and far<br>
+        <span class="chorus">Fire is spreading close and far<br>
         Run down the emergency stairs to the waterfall<br>
         Let the path lead the way<br>
-        To the bookshelf that's where you should stay<br><br>
+        To the bookshelf that's where you should stay</span><br><br>
 
         [Verse 2]<br>
         The ticking clocks they echo loud<br>
@@ -222,10 +222,10 @@ function renderPopupSongLyrics (wrapper) {
         Find the truth before we're bowed<br><br>
 
         [Chorus]<br>
-        Fire is spreading close and far<br>
+        <span class="chorus">Fire is spreading close and far<br>
         Run down the emergency stairs to the waterfall<br>
         Let the path lead the way<br>
-        To the bookshelf that's where you should stay<br><br>
+        To the bookshelf that's where you should stay</span><br><br>
 
         [Bridge]<br>
         Static hums in the neon glow<br>
@@ -234,10 +234,10 @@ function renderPopupSongLyrics (wrapper) {
         Catch the rhythm and let it flow<br><br>
 
         [Chorus]<br>
-        Fire is spreading close and far<br>
+        <span class="chorus">Fire is spreading close and far<br>
         Run down the emergency stairs to the waterfall<br>
         Let the path lead the way<br>
-        To the bookshelf that's where you should stay
+        To the bookshelf that's where you should stay</span>
     `;
     popupTextContainer.append(songLyricsText);
 

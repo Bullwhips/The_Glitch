@@ -28,7 +28,7 @@ function renderPage3 (wrapper) {
     let bodyText = document.createElement("p");
     bodyText.id = "bodyText";
     bodyText.innerHTML =
-                 `Använd er av texten på pappret som är nära för att få fram rätt kod:<br><br>
+                 `Använd er av texten på pappret som är nära för att få fram rätt kod.<br><br>
                   Här kommer en ledtråd; börja uppe och missa inget steg, avslöja henne vars namn våra munnar teg.
     `;
     textContainer.append(bodyText);

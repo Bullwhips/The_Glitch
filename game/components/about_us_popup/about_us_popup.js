@@ -21,6 +21,11 @@ function renderAboutUsPopup (wrapper) {
     contactHeadline.textContent = "☎ KONTAKTA OSS";
     popupContentContainer2.appendChild(contactHeadline);
 
+    let contactInfo = document.createElement("p");
+    contactInfo.id = "popup-text-contact";
+    contactInfo.innerHTML = "Om ni skulle ha problem med spelet under spelveckan, antingen digitalt eller analogt, kontakta oss så löser vi problemet så snart som möjligt!<br>Telefonnummer: 072-372 98 30 eller 070-698 60 38";
+    popupContentContainer2.appendChild(contactInfo);
+
     let aboutUsHeadline = document.createElement("h3");
     aboutUsHeadline.id = "popup-text-headline-about";
     aboutUsHeadline.textContent = "VILKA ÄR VI BAKOM SPELET?"
@@ -62,9 +67,9 @@ function renderAboutUsPopup (wrapper) {
     aboutUsText.id = "popup-text";
     aboutUsText.innerHTML = 
                             `Vi är en blandad grupp av studenter från Malmö universitet. Vi studerar medieteknik programmen; Media Management & Webbdesign och utveckling. Under detta crossmedia projekt har vi kombinerat våra kompetenser som vi har samlat på oss under de olika utbildningarna som våra program innehåller. <br><br>
-                            Tillsammans har vi kokat ihop spelprojektet The Glitch som är en spelupplevelse med både digitala och analoga inslag. Vi har försökt få in så många delar som möjligt som representerar våra respektive program: berättande, olika medieformer (bild, ljud, video), programmering, design och marknadsföring. <br><br>
+                            Tillsammans har vi kokat ihop spelprojektet <i>The Glitch</i> som är en spelupplevelse med både digitala och analoga inslag. Vi har försökt få in så många delar som möjligt som representerar våra respektive program: berättande, olika medieformer (bild, ljud, video), programmering, design och marknadsföring. <br><br>
                             Syftet med kursen crossmedia är att vi studenter ska testa våra vingar genom att skapa ett levande projekt som innehåller stora delar av det vi har fått lära oss från tidigare kurser, samt att få känna på lite hur liknande projekt kan fungera i det riktiga arbetslivet. <br><br>
-                            Målet med The Glitch är att sprida spelglädje genom ett spännande, mystiskt och klurigt spel. Vi vill också höja en röst för kvinnor inom teknik som allt för ofta hamnar i skymundan i en mansdominerad bransch. <br><br>
+                            Målet med <i>The Glitch</i> är att sprida spelglädje genom ett spännande, mystiskt och klurigt spel. Vi vill också höja en röst för kvinnor inom teknik som allt för ofta hamnar i skymundan i en mansdominerad bransch. <br><br>
                             Om du spelar vårt spel så hoppas vi att du har fått/får känna den känsla som vi vill sprida. Främst så hoppas vi att du har lyckats ta dig igenom alla uppdrag och att du/ni lyckas lösa systemfel 22884.
     `;
     textContainer.appendChild(aboutUsText);

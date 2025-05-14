@@ -27,8 +27,7 @@ function renderPage9(wrapper) {
      let bodyText = document.createElement("p")
     bodyText.id = "bodyText"
     bodyText.innerHTML =
-                        `För att svara rätt på dessa quizfrågor får ni gärna googla fram svaren, detta är ett läroquiz. 
-                         Kom ihåg att frågorna och svaren kan vara viktiga framöver.`
+                        `För att svara rätt på detta quiz får ni gärna googla er fram detta är ett läroquiz.`
     textContainer.append(bodyText);
 
     let quizContainer = document.createElement("div")
