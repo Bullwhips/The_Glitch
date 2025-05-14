@@ -1,6 +1,5 @@
 function renderPage4 (wrapper) {
     localStorage.setItem("currentPage", "renderPage4");
-    let currentPage = "page_4";
     wrapper.innerHTML = "";
 
     let clueRevealTimeoutId  = null;
@@ -72,15 +71,20 @@ function renderPage4 (wrapper) {
     });
     textContainer.append(nextStepButton);
 
-    renderKairasMessagePopup2(wrapper);
-    let audio = new Audio("../../assets/audio/popup_sound.mp3");
+    if (localStorage.getItem("currentPage") === "renderPage4") {
+        renderKairasMessagePopup2(wrapper);
+        let audio = new Audio("../../assets/audio/popup_sound.mp3");
         audio.play().catch(e => {
-        console.warn("Autoplay blockerat av webbläsaren:", e);
-    });
+            console.warn("Autoplay blockerat av webbläsaren:", e);
+        });
+    }
 
     clueRevealTimeoutId = setTimeout(() => {
-        renderKairasClueMessage(wrapper, pageContainer);
+        if (localStorage.getItem("currentPage") === "renderPage4") {
+            renderKairasClueMessage(wrapper, pageContainer);
+        }
     }, 1 * 60 * 1000);
+
 
     function renderKairasMessagePopup2 (wrapper) {
         let kairasMessagePopupContainer = document.createElement("div");
