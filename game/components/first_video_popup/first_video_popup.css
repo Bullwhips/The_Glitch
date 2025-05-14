@@ -15,7 +15,7 @@
 
 #close-popup-button-container-1 {
     position: absolute;
-    z-index: 999;
+    z-index: 1111;
     top: 2%;
     left: -2%;
     width: 3.125rem;
