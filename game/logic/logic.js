@@ -435,19 +435,7 @@ const questions =
 
 ]
 
-let POPUPARRAY = 
-[
-
-  {
-    prevPage: () => localStorage.getItem("currentPage"),
-    headText: "⚠ MEDDELANDE:.2fKaira",
-    bodyText: `
-        Okej, grymt! Det verkar som ni förstår mina uppdrag! 
-        Skynda er till nästa nu. Det enda jag kan ge er är NI:A0515, vi hörs mer sen!
-        `
-    
-  }
-]
+let POPUPARRAY = []
 
 
 

@@ -132,7 +132,7 @@ function renderPage2(wrapper) {
         prevPage: () => localStorage.getItem("currentPage"),
         headText: "⚠ MEDDELANDE: ${players.name}",
         bodyText: `
-          Popup 2<br><br>
+          Popup 1<br><br>
           Hallå!!
           Hör ni mig???<br><br>
           Fan jag har fastnat i glitchen. 
