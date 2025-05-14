@@ -26,6 +26,22 @@
     background: transparent;
 }
 
+#xPopupFolder{
+    text-align: right;
+    font-size: 2rem;
+    font-family: ptmono;
+}
+
+#popupArrowContainer{
+    display: flex;
+    justify-content: space-between;
+}
+
+#prevArrow, #nextArrow{
+    font-size: 2rem;
+    font-family: ptmono;
+}
+
 #popup-container-song {
     position: absolute;
     width: 100%;

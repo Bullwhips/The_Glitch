@@ -165,6 +165,9 @@ function renderPopupFolder(wrapper) {
   popupTextContainer.append(kairasMessageText);
 
   // Arrows
+  let popupArrowContainer = document.createElement("div")
+  popupArrowContainer.id = "popupArrowContainer"
+  popupFolderDiv.append(popupArrowContainer)
   let prevArrow = document.createElement("div");
   prevArrow.id = "prevArrow";
   prevArrow.textContent = "<";
@@ -172,7 +175,7 @@ function renderPopupFolder(wrapper) {
     currentPopupIndex = (currentPopupIndex - 1 + POPUPARRAY.length) % POPUPARRAY.length;
     renderPopupFolder(wrapper);
   });
-  popupTextContainer.append(prevArrow);
+  popupArrowContainer.append(prevArrow);
 
   let nextArrow = document.createElement("div");
   nextArrow.id = "nextArrow";
@@ -181,7 +184,7 @@ function renderPopupFolder(wrapper) {
     currentPopupIndex = (currentPopupIndex + 1) % POPUPARRAY.length;
     renderPopupFolder(wrapper);
   });
-  popupTextContainer.append(nextArrow);
+  popupArrowContainer.append(nextArrow);
 }
 
 function renderPopupSongLyrics (wrapper) {
