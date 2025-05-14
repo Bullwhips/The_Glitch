@@ -1,4 +1,6 @@
 function renderVideoPopup(wrapper, video, nextPage) {
+    localStorage.setItem("currentPage", "renderVideoPopup");
+
     wrapper.innerHTML = "";
 
     let videoModalContainer = document.createElement("div");

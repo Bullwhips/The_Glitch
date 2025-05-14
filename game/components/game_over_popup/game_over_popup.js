@@ -1,4 +1,5 @@
 function renderGameOver(wrapper){
+    localStorage.setItem("currentPage", "renderMainPageContent");
     wrapper.innerHTML = "";
     let opacityBackground = document.createElement("div");
     opacityBackground.classList.add("noScroll")

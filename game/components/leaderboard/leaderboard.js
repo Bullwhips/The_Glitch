@@ -1,4 +1,5 @@
 function renderLeaderboard(wrapper) {
+    localStorage.setItem("currentPage", "renderMainPageContent");
     wrapper.innerHTML = ""
 
     renderHeader(wrapper);

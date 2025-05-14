@@ -1,4 +1,5 @@
 function renderGameFinish(wrapper) {
+    localStorage.setItem("currentPage", "renderGameFinish");
     wrapper.innerHTML = "";
 
     let opacityBackground = document.createElement("div");

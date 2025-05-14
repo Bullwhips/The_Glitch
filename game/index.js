@@ -1,5 +1,5 @@
-"use strict"
+// "use strict"
 
-let wrapper = document.querySelector("#wrapper");
+// let wrapper = document.querySelector("#wrapper");
 
-renderMainPageContent(wrapper);
+// renderMainPageContent(wrapper);

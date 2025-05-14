@@ -1,4 +1,5 @@
 function renderPage4 (wrapper) {
+    localStorage.setItem("currentPage", "renderPage4");
     let currentPage = "page_4";
     wrapper.innerHTML = "";
 
@@ -6,6 +7,8 @@ function renderPage4 (wrapper) {
 
     renderHeader(wrapper);
     renderMenu(wrapper);
+
+    startTimer();
 
     let pageContainer = document.createElement("div");
     pageContainer.id = "page-container";

@@ -1,4 +1,5 @@
 function renderPage15(wrapper) {
+    localStorage.setItem("currentPage", "renderPage15");
     wrapper.innerHTML = "";
 
     renderHeader(wrapper);

@@ -1,4 +1,44 @@
 
+
+window.addEventListener("DOMContentLoaded", () => {
+  const wrapper = document.querySelector("#wrapper");
+  const savedPageName = localStorage.getItem("currentPage");
+
+  window.pageRenderMap = {
+    renderMainPageContent,
+    renderVideoPopup,
+    renderPage1,
+    renderPage2,
+    renderPage3,
+    renderPage4,
+    renderPage6,
+    renderPage7,
+    renderPage8,
+    renderPage9,
+    render414Popup,
+    renderPage10,
+    renderPage11,
+    renderPage12,
+    renderPage13,
+    renderPage14,
+    renderPage15,
+    renderGameCompletePopup,
+    renderGameFinish
+  };
+
+  // Restore saved page or default to the start
+  if (savedPageName && pageRenderMap[savedPageName]) {
+    console.log("Restoring page:", savedPageName);
+    pageRenderMap[savedPageName](wrapper);
+  } else {
+    renderMainPageContent(wrapper); // Your game's starting page
+  }
+
+  
+});
+
+
+
   // TYPEWRITER
   function startTypewriter({
     text,
@@ -43,21 +83,18 @@
   }
   
   // Example usage:
-  startTypewriter({
-    text: "Systemfel 22884, Jag behöver dig!\nLösningen finns i allt, håll koll!",
-    elementId: "typewriter",
-    speed: 80,
-    initialDelay: 7000
-  });
+
   
+
   // Blinking dots (remains unchanged)
+  function startBlinkingDots(){
   const dots = document.getElementById('dots');
   let count = 0;
   setInterval(() => {
     count = (count + 1) % 4;
     dots.textContent = '.'.repeat(count);
   }, 900);
-  
+} 
 
   // /TYPEWRITER
 
@@ -400,28 +437,9 @@ const questions =
 
 let POPUPARRAY = 
 [
+
   {
-    prevPage: renderPage2,
-    headText: "⚠ MEDDELANDE: ${players.name}",
-    bodyText: `
-            Hallå!!
-            Hör ni mig???<br><br>
-            Fan jag har fastnat i glitchen. 
-            Detta är det enda sättet jag kan kommunicera med er. 
-            Jag vet inte riktigt var jag är, men jag behöver er hjälp!! 
-            Klockan ni ser är tiden innan glitchen är fullbordad och de 
-            anonyma får full kontroll. Jag önskar att jag kunde skriva ut allt, 
-            men jag är rädd att de ska se oss. 
-            Jag har gömt ledtrådar som för er närmare koden. 
-            Ni måste följa mina steg för att fixa det men ni får INTE bli upptäckta!! 
-            De vet inte att jag kan nå er och får de reda på det… då är det kört.<br><br>
-            Jag måste sticka nu, skynda er, tiden är knapp!<br>
-            GLÖM INTE ATT SVAREN KAN FINNAS I DETALJERNA.
-        `
-    
-  },
-  {
-    prevPage: renderPage4,
+    prevPage: () => localStorage.getItem("currentPage"),
     headText: "⚠ MEDDELANDE:.2fKaira",
     bodyText: `
         Okej, grymt! Det verkar som ni förstår mina uppdrag! 
@@ -430,4 +448,6 @@ let POPUPARRAY =
     
   }
 ]
+
+
 

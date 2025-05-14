@@ -4,6 +4,7 @@ function renderGameCompletePopup(wrapper,message){
     clearInterval(activeTimerInterval);
     activeTimerInterval = null;
   }
+  localStorage.setItem("currentPage", "renderGameCompletePopup");
     wrapper.innerHTML = "";
 
     let backgroundDiv = document.createElement("div");

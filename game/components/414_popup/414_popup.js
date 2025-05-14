@@ -1,4 +1,5 @@
 function render414Popup(wrapper) {
+    localStorage.setItem("currentPage", "render414Popup");
     wrapper.innerHTML = "";
 
     let fouronefourContainer = document.createElement("div");

@@ -1,5 +1,10 @@
 
 function renderMainPageContent (wrapper) {
+
+    
+
+   
+    
     let backgroundDiv = document.createElement("div");
     backgroundDiv.id = "background-div";
     wrapper.append(backgroundDiv);
@@ -13,9 +18,18 @@ function renderMainPageContent (wrapper) {
     dotSpan.id = "dots";
     textDiv.append(dotSpan);
 
+    startBlinkingDots();
+
     let typewriterText = document.createElement("p");
     typewriterText.id = "typewriter";
     backgroundDiv.append(typewriterText);
+
+    startTypewriter({
+        text: "Systemfel 22884, Jag behöver dig!\nLösningen finns i allt, håll koll!",
+        elementId: "typewriter",
+        speed: 80,
+        initialDelay: 7000
+      });
 
     let startGameButton = document.createElement("button");
     startGameButton.id = "start-game-button";
@@ -28,5 +42,7 @@ function renderMainPageContent (wrapper) {
     startGameButton.addEventListener("click", () => {
         renderVideoPopup(wrapper, video, nextPage)
     });   
+
+   
 }
 

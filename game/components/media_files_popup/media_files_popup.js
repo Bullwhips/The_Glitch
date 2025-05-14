@@ -142,7 +142,9 @@ function renderPopupFolder(wrapper) {
   xPopupFolder.id = "xPopupFolder";
   xPopupFolder.textContent = "x";
   xPopupFolder.addEventListener("click", () => {
-    popupData.prevPage(wrapper);
+    const pageKey = typeof popupData.prevPage === "function" ? popupData.prevPage() : popupData.prevPage;
+    const pageFn = window.pageRenderMap[pageKey];
+    if (pageFn) pageFn(wrapper);
   });
   popupFolderDiv.append(xPopupFolder);
 

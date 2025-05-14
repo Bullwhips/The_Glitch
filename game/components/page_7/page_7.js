@@ -1,8 +1,11 @@
 function renderPage7(wrapper){
+    localStorage.setItem("currentPage", "renderPage7");
     wrapper.innerHTML = "";
 
     renderHeader(wrapper);
     renderMenu(wrapper);
+
+    startTimer();
 
     let pageContainer = document.createElement("div");
     pageContainer.id = "page-container";
