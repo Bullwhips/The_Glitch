@@ -55,17 +55,17 @@ function renderPage3 (wrapper) {
     questContainer.appendChild(rightArrow);
 
     let questArray = [
-        {id: 1, leftNumber: 2, rightNumber: 1, inputFieldID: "input-field-1", correctLetter: "A"},
-        {id: 2, leftNumber: 6, rightNumber: 13, inputFieldID: "input-field-2", correctLetter: "D"},
-        {id: 3, leftNumber: 11, rightNumber: 29, inputFieldID: "input-field-3", correctLetter: "A"},
-        {id: 4, leftNumber: 14, rightNumber: 15, inputFieldID: "input-field-4", correctLetter: "L"},
-        {id: 5, leftNumber: 17, rightNumber: 8, inputFieldID: "input-field-5", correctLetter: "O"},
-        {id: 6, leftNumber: 11, rightNumber: 3, inputFieldID: "input-field-6", correctLetter: "V"},
-        {id: 7, leftNumber: 1, rightNumber: 5, inputFieldID: "input-field-7", correctLetter: "E"},
-        {id: 8, leftNumber: 14, rightNumber: 15, inputFieldID: "input-field-8", correctLetter: "L"},
-        {id: 9, leftNumber: 2, rightNumber: 1, inputFieldID: "input-field-9", correctLetter: "A"},
-        {id: 10, leftNumber: 4, rightNumber: 12, inputFieldID: "input-field-10", correctLetter: "C"},
-        {id: 11, leftNumber: 1, rightNumber: 5, inputFieldID: "input-field-11", correctLetter: "E"},
+        {id: 1, leftNumber: 4, rightNumber: 6, inputFieldID: "input-field-1", correctLetter: "A"},
+        {id: 2, leftNumber: 3, rightNumber: 16, inputFieldID: "input-field-2", correctLetter: "D"},
+        {id: 3, leftNumber: 2, rightNumber: 13, inputFieldID: "input-field-3", correctLetter: "A"},
+        {id: 4, leftNumber: 1, rightNumber: 1, inputFieldID: "input-field-4", correctLetter: "L"},
+        {id: 5, leftNumber: 7, rightNumber: 3, inputFieldID: "input-field-5", correctLetter: "O"},
+        {id: 6, leftNumber: 7, rightNumber: 19, inputFieldID: "input-field-6", correctLetter: "V"},
+        {id: 7, leftNumber: 10, rightNumber: 10, inputFieldID: "input-field-7", correctLetter: "E"},
+        {id: 8, leftNumber: 2, rightNumber: 14, inputFieldID: "input-field-8", correctLetter: "L"},
+        {id: 9, leftNumber: 4, rightNumber: 6, inputFieldID: "input-field-9", correctLetter: "A"},
+        {id: 10, leftNumber: 9, rightNumber: 4, inputFieldID: "input-field-10", correctLetter: "C"},
+        {id: 11, leftNumber: 5, rightNumber: 15, inputFieldID: "input-field-11", correctLetter: "E"},
     ];
 
     questArray.forEach((element) => {
