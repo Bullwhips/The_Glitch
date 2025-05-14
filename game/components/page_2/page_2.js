@@ -58,6 +58,10 @@ function renderPage2(wrapper) {
             popupShown = true;
             // Vi kallar argumentet för wrapper i funktionen
             // men skickar med pageContainer som blir "wrappern"
+            let audio = new Audio("../../assets/audio/popup_sound.mp3");
+                audio.play().catch(e => {
+                console.warn("Autoplay blockerat av webbläsaren:", e);
+            });
             renderKairasMessagePopup1(wrapper);
         }
     });

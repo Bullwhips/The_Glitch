@@ -10,7 +10,7 @@ function renderPage9(wrapper) {
     wrapper.append(pageContainer);
 
     let opacityBackground = document.createElement("div");
-    opacityBackground.id = "opacityBackground";
+    opacityBackground.id = "opacityBackgroundPage9";
 
     let backDrop9 = document.createElement("div")
     backDrop9.id = "backDrop9"
@@ -92,6 +92,10 @@ function renderPage9(wrapper) {
         displaynumber++;
         quizNumber++;
         if (quizNumber >= questions.length) {
+            let audio = new Audio("../../assets/audio/414_sound.mp3");
+                audio.play().catch(e => {
+                console.warn("Autoplay blockerat av webbläsaren:", e);
+            });
             render414Popup(wrapper);
         } else {
             quiz();
@@ -120,6 +124,10 @@ function renderPage9(wrapper) {
                     displaynumber++;
                     quizNumber++;
                     if (quizNumber >= questions.length) {
+                        let audio = new Audio("../../assets/audio/414_sound.mp3");
+                            audio.play().catch(e => {
+                            console.warn("Autoplay blockerat av webbläsaren:", e);
+                        });
                         render414Popup(wrapper);
                     } else {
                         quiz();

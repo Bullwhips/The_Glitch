@@ -6,9 +6,9 @@ function renderGameOver(wrapper){
     opacityBackground.id = "opacityBackground";
     wrapper.append(opacityBackground)
    
-
     let gameCompleteText = document.createElement("div")
     gameCompleteText.id = "gameCompleteText"
-    gameCompleteText.textContent = "GAME OVER: Tiden tog slut..."
+    gameCompleteText.innerHTML = `<span class="headerGameOver">GAME OVER</span><br>
+     Tiden tog slut...`;
     opacityBackground.append(gameCompleteText)
 }

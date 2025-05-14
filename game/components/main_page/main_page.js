@@ -33,10 +33,10 @@ function renderMainPageContent (wrapper) {
 
     let startGameButton = document.createElement("button");
     startGameButton.id = "start-game-button";
-    startGameButton.textContent = "STARTA GAME";
+    startGameButton.textContent = "STARTA SPEL";
     backgroundDiv.append(startGameButton);
 
-    let video = "https://youtu.be/rSx8ugDT6-g";
+    let video = "https://youtu.be/peL1uMC_Eas";
     let nextPage = renderPage1
 
     startGameButton.addEventListener("click", () => {
