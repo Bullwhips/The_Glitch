@@ -70,6 +70,10 @@ function renderPage4 (wrapper) {
     textContainer.append(nextStepButton);
 
     renderKairasMessagePopup2(wrapper);
+    let audio = new Audio("../../assets/audio/popup_sound.mp3");
+        audio.play().catch(e => {
+        console.warn("Autoplay blockerat av webbläsaren:", e);
+    });
 
     clueRevealTimeoutId = setTimeout(() => {
         showClueQuestionPopup(wrapper, pageContainer);
@@ -81,6 +85,10 @@ function renderPage4 (wrapper) {
         }
 
         let popup = renderKairasMessagePopup3(wrapper, pageContainer, clueRevealTimeoutId);
+        let audio = new Audio("../../assets/audio/popup_sound.mp3");
+            audio.play().catch(e => {
+            console.warn("Autoplay blockerat av webbläsaren:", e);
+        });
 
         popup.querySelector("#no-button-clue").addEventListener("click", () => {
             popup.remove();

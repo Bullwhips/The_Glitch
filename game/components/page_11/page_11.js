@@ -50,6 +50,10 @@ function renderPage11(wrapper) {
     nextStepButton.addEventListener("click", () => {
         let userInput = inputField.value;
         if (routerKod(userInput)) {
+            let audio = new Audio("../../assets/audio/popup_sound.mp3");
+                audio.play().catch(e => {
+                console.warn("Autoplay blockerat av webbläsaren:", e);
+            });
             renderIPPopup(wrapper);
         } else {
             inputShake(inputField);

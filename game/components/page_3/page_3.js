@@ -108,6 +108,10 @@ function renderPage3 (wrapper) {
         });
     
         if (allCorrect) {
+            let audio = new Audio("../../assets/audio/popup_sound.mp3");
+                audio.play().catch(e => {
+                console.warn("Autoplay blockerat av webbläsaren:", e);
+            });
             renderPage4(wrapper);
         } else {
             questArray.forEach((el) => {

@@ -34,6 +34,10 @@ function renderPage5RemoveTime(wrapper, displayElement) {
     </svg>
     `;
     closePopupButton.addEventListener("click", () => {
+        let audio = new Audio("../../assets/audio/popup_sound.mp3");
+            audio.play().catch(e => {
+            console.warn("Autoplay blockerat av webbläsaren:", e);
+        });
         renderPage6(wrapper);
     });
     closePopupButtonContainer.append(closePopupButton);

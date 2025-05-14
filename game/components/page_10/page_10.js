@@ -48,6 +48,10 @@ function renderPage10(wrapper) {
     nextStepButton.addEventListener("click", () => {
         let userInput = inputField.value;
         if (radiaPerlman(userInput)) {
+            let audio = new Audio("../../assets/audio/popup_sound.mp3");
+                audio.play().catch(e => {
+                console.warn("Autoplay blockerat av webbläsaren:", e);
+            });
             renderRouterPopup(wrapper);
         } else {
             inputShake(inputField);
