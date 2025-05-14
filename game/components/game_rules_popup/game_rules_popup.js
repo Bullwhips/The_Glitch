@@ -26,6 +26,7 @@ function renderGameRulesPopup (wrapper) {
         Detta spel kräver att ni har tillgång till papper och penna. 
         För att kunna lösa vissa gåtor eller samla på information 
         så behöver ni skriva ner detta för att lägga pusselbitarna i slutet.
+        OBS: Ladda inte om sidan under spelets gång, då kommer spelet att börja om.
     `;
     popupTextContainer.appendChild(notes);
 
