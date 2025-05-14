@@ -50,7 +50,7 @@ function renderPage4 (wrapper) {
 
     let nextStepButton = document.createElement("button");
     nextStepButton.id = "nextStepButton4";
-    nextStepButton.textContent = "NÄSTA STEG";
+    nextStepButton.textContent = "ENTER";
     nextStepButton.addEventListener("click", () => {
 
         let audio = new Audio("../../assets/audio/error_sound.mp3");

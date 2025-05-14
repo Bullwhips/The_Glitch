@@ -11,6 +11,7 @@ function renderPage15(wrapper) {
 
     let opacityBackground = document.createElement("div");
     opacityBackground.id = "opacityBackground15";
+    pageContainer.append(opacityBackground);
 
     let backDrop15 = document.createElement("div")
     backDrop15.id = "backDrop15"
@@ -28,10 +29,18 @@ function renderPage15(wrapper) {
      let bodyText = document.createElement("p")
     bodyText.id = "bodyText"
     bodyText.innerHTML =
-                        `Ni har nu börjat nå slutet av spelet. 
-                        Men med informationen ni fick från videon så skapar ordet ett anagram. 
-                        Ni har alltså två val: Vill ni gå den goda vägen skriver ni in LISTEN. 
-                        Vill ni gå den onda vägen skriver ni in SILENT. Tänk igenom noga, detta är det sista valet ni gör.`
+                        `Ni har nått slutet. Videon har sagt allt. Har jag lyckats övertala er?<br>
+                        Ett ord. Två vägar. Samma bokstäver.<br>
+                        Ni har alltså två alternativ:<br><br>
+
+                        LISTEN — Gå med Kaira i hennes uppsåt att förgöra digitalisering och låt kvinnorna stiga fram.<br><br>
+
+                        Eller<br><br>
+
+                        SILENT — Låt digitaliseringen ta över och orättvisan fortsätta! Men inget kan ändra det som redan satts i rullning.<br><br>
+ 
+                        Det här är ert sista val, så tänk efter noga.
+                        `;
     textContainer.append(bodyText);
 
     function listen(value) {
@@ -50,8 +59,8 @@ function renderPage15(wrapper) {
     inputField.placeholder = "LISTEN ELLER SILENT"
     textContainer.append(inputField)
 
-    let listenText = "Tack för att ni förstod mig. detta är förväl. Jag stannar här där jag trivs och känner mig hemma\n /Kaira"
-    let silentText = "Jag hoppades att ni skulle förstå mig. Jag ville bara göra det som var bäst för alla...\n /Kaira"
+    // let listenText = "Tack för att ni förstod mig. detta är förväl. Jag stannar här där jag trivs och känner mig hemma\n /Kaira"
+    // let silentText = "Jag hoppades att ni skulle förstå mig. Jag ville bara göra det som var bäst för alla...\n /Kaira"
 
 
     let nextStepButton = document.createElement("button")
@@ -70,6 +79,4 @@ function renderPage15(wrapper) {
         }
     });
     textContainer.append(nextStepButton)
-
-    pageContainer.append(opacityBackground);
 }
