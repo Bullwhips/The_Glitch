@@ -38,7 +38,7 @@ function renderPage10(wrapper) {
     textContainer.append(inputField)
 
     function radiaPerlman(value) {
-        return ["RADIA PERLMAN", "Radia Perlman", "Radia perlman", "radia Perlman", "radia perlman"]
+        return ["RADIA PERLMAN", "Radia Perlman", "Radia perlman", "radia Perlman", "radia perlman", "radiaperlman", "Radiaperlman", "RADIAPERLMAN", "RadiaPerlman"]
             .includes(value.trim());
     }
 
