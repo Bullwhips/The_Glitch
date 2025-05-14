@@ -85,6 +85,10 @@ function renderPage9(wrapper) {
         if ((isCorrect && !isSelected) || (!isCorrect && isSelected)) {
             allCorrect = false;
             Array.from(answerContainer.children).forEach(child => inputShake(child));
+            const timerDisplay = document.querySelector("#timerDisplay");
+            if (timerDisplay) {
+            removeTimeAndAnimate(120, timerDisplay);
+}
         }
     }
 
@@ -134,6 +138,10 @@ function renderPage9(wrapper) {
                     }
                 } else {
                     inputShake(div);
+                    const timerDisplay = document.querySelector("#timerDisplay");
+                    if (timerDisplay) {
+                      removeTimeAndAnimate(120, timerDisplay);
+                    }
                 }
             }
         });
