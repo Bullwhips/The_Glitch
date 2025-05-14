@@ -23,13 +23,20 @@ function renderPage13(wrapper) {
 
     let headerText = document.createElement("h2")
     headerText.id = "headerText"
-    headerText.textContent= "VAD BETYDER SIFFRORNA?"
+    headerText.textContent= "DAGBOKEN"
     textContainer.append(headerText)
 
      let bodyText = document.createElement("p")
     bodyText.id = "bodyText"
     bodyText.innerHTML =
-                        `Sifferkombinationen som ni kom fram till under förra steget. Den kan användas på ett annat sätt. Klicka på TIPS-knappen för att få reda på hur.`
+                        `Nu har ni alla 6 sidor av dagboken. Om inte se till att hitta dem innan ni läser hinten nedan. <br><br>
+                        
+                        Baksidorna minns mer än vad framsidan visar<br>
+                        Lägg dem i rätt ordning, inte som de är skrivna<br>
+                        Avslöja vad ni aldrig såg komma och förstå att ni alltid haft svaret<br>
+                        Knappa in rätt ögonblick och låt siffrorna forma namnet<br><br>
+
+                        Förstår du inte vad jag menar, klicka på tips för att få hjälp med mer.`;
     textContainer.append(bodyText);
 
     let tipsButton = document.createElement("button")
