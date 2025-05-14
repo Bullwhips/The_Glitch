@@ -1,0 +1,11 @@
+#gameCompleteText {
+    color: #E50913;
+    font-size: 2.25rem;
+    font-family: ptmono;
+    text-align: center;
+}
+
+#headerGameOver {
+    font-family: technology;
+    font-size: 3rem;
+}
