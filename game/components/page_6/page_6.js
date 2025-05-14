@@ -74,9 +74,8 @@ function renderPage6 (wrapper) {
         let kairasMessageText = document.createElement("p");
         kairasMessageText.id = "popup-text";
         kairasMessageText.innerHTML = `
-                        Oh shit, fan, nu försvann 30 minuter. 
-                        Ni måste verkligen vara försiktiga och försök att inte väcka uppmärksamhet, snälla! 
-                        Jag ska försöka vara lite mer diskret, nästa ledtråd hittar ni i låten:
+                        Oh shit, fan.. där försvann 30 minuter.. Kan ni snälla vara mer försiktiga och försök att inte väcka uppmärksamhet. 
+                        Jag ska försöka vara lite mer diskret, nästa ledtråd hittar ni i låten.
         `;
         popupTextContainer.appendChild(kairasMessageText);
     

@@ -168,7 +168,7 @@ function renderKairasMessagePopup3 (wrapper, pageContainer, clueRevealTimeoutId)
     let kairasMessageText = document.createElement("p");
     kairasMessageText.id = "kairas-message-3";
     kairasMessageText.innerHTML = `
-        Det har gått 15 min sedan ni startade detta uppdrag. Vill ni få en ledtråd av Kaira?
+        Det har gått 10 min sedan ni startade detta uppdrag. Vill ni få en ledtråd av Kaira?
     `;
     popupTextContainer.appendChild(kairasMessageText);
 
@@ -220,8 +220,6 @@ function renderKairasMessagePopup3 (wrapper, pageContainer, clueRevealTimeoutId)
 }
 
 function renderKairasClueMessage (wrapper, pageContainer) {
-    console.log("funktion kallad");
-    console.log(wrapper);
     let kairasMessagePopupContainer = document.createElement("div");
     kairasMessagePopupContainer.id = "popup-container-short";
     kairasMessagePopupContainer.classList.remove("hidden");
@@ -241,8 +239,7 @@ function renderKairasClueMessage (wrapper, pageContainer) {
     let kairasMessageText = document.createElement("p");
     kairasMessageText.id = "kairas-message-4";
     kairasMessageText.innerHTML = `
-        Ni skulle ju vara snabba!! Här är en ledtråd; Behind every great man, there is an even greater woman.<br><br>
-        / kAiRa
+        Ni skulle ju vara snabba… Här är en ledtråd; Behind every great man, there is an even greater woman (bokstavligt talat ;) ).
     `;
     popupTextContainer.appendChild(kairasMessageText);
 
@@ -284,8 +281,8 @@ function clueMessage (wrapper, pageContainer) {
     let kairasMessageText = document.createElement("p");
     kairasMessageText.id = "kairas-message-4";
     kairasMessageText.innerHTML = `
-        Det har gått 25 min sedan ni startade detta uppdrag. Här kommer nu en ledtråd:<br><br>
-        Ni skulle ju vara snabba!! Här är en ledtråd; Behind every great man, there is an even greater woman. / kAiRa
+        Det har gått 20 min sedan ni startade detta uppdrag. Här kommer nu en ledtråd:<br><br>
+        Ni skulle ju vara snabba… Här är en ledtråd; Behind every great man, there is an even greater woman (bokstavligt talat ;) ).
     `;
     popupTextContainer.appendChild(kairasMessageText);
 
