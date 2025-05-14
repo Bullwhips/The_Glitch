@@ -91,6 +91,10 @@ function renderPage9(wrapper) {
         displaynumber++;
         quizNumber++;
         if (quizNumber >= questions.length) {
+            let audio = new Audio("../../assets/audio/414_sound.mp3");
+                audio.play().catch(e => {
+                console.warn("Autoplay blockerat av webbläsaren:", e);
+            });
             render414Popup(wrapper);
         } else {
             quiz();
@@ -119,6 +123,10 @@ function renderPage9(wrapper) {
                     displaynumber++;
                     quizNumber++;
                     if (quizNumber >= questions.length) {
+                        let audio = new Audio("../../assets/audio/414_sound.mp3");
+                            audio.play().catch(e => {
+                            console.warn("Autoplay blockerat av webbläsaren:", e);
+                        });
                         render414Popup(wrapper);
                     } else {
                         quiz();
