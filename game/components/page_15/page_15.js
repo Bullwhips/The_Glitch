@@ -66,10 +66,10 @@ function renderPage15(wrapper) {
     nextStepButton.addEventListener("click", () => {
         let userInput = inputField.value;
         if (listen(userInput)) {
-            renderGameCompletePopup(wrapper);
+            renderGameCompleteListenPopup(wrapper);
         } 
         else if(silent(userInput)){
-            renderGameCompletePopup(wrapper);
+            renderGameCompleteSilentPopup(wrapper);
             }
         else {
             inputShake(inputField);

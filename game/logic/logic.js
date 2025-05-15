@@ -22,7 +22,7 @@ window.addEventListener("DOMContentLoaded", () => {
     renderPage13,
     renderPage14,
     renderPage15,
-    renderGameCompletePopup,
+    renderGameCompleteListenPopup,
     renderGameFinish
   };
 

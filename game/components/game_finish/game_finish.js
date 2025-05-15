@@ -21,8 +21,6 @@ function renderGameFinish(wrapper) {
     finishText.textContent= "GAME COMPLETE"
     textContainerFinish.append(finishText)
 
-
-
     let gruppForm = document.createElement("form");
     gruppForm.id = "gruppForm"; //  fixed
     textContainerFinish.append(gruppForm);
@@ -34,7 +32,7 @@ function renderGameFinish(wrapper) {
     gruppForm.append(inputField);
 
     let nextStepButton = document.createElement("button");
-    nextStepButton.id = "nextStepButton";
+    nextStepButton.id = "scoreButton";
     nextStepButton.textContent = "SCOREBOARD";
     gruppForm.append(nextStepButton);
 

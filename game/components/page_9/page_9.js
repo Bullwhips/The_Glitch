@@ -91,10 +91,10 @@ function renderPage9(wrapper) {
 }
         }
 
-        if (!hasShownWrongAnswer) {
-            hasShownWrongAnswer = true;
-            renderGraceHopperPopup(wrapper);
-        }
+        // if (!hasShownWrongAnswer) {
+        //     hasShownWrongAnswer = true;
+        //     renderGraceHopperPopup(wrapper);
+        // }
     }
 
     if (allCorrect) {
