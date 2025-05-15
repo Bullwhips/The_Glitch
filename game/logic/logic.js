@@ -186,7 +186,10 @@ function Timer(durationInSeconds, displayElement, shouldSave = true) {
       if (--timer < 0) {
         clearInterval(activeTimerInterval);
         activeTimerInterval = null;
-  
+        let audio = new Audio("../assets/audio/game_over_sound.mp3");
+        audio.play().catch(e => {
+          console.warn("Autoplay blockerat av webbläsaren:", e);
+        });
         renderGameOver(document.querySelector("#wrapper"));
       }
   
