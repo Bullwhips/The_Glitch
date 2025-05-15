@@ -67,11 +67,13 @@ function renderPage7(wrapper){
     textContainer.append(nextStepButton);
 
     clueRevealTimeoutId = setTimeout(() => {
-        let audio = new Audio("../../assets/audio/popup_sound.mp3");
-        audio.play().catch(e => {
-            console.warn("Autoplay blockerat av webbläsaren:", e);
-        });
-        renderClueDiaryPopup(wrapper);
+        if (localStorage.getItem("currentPage") === "renderPage7") {
+            let audio = new Audio("../../assets/audio/popup_sound.mp3");
+            audio.play().catch(e => {
+                console.warn("Autoplay blockerat av webbläsaren:", e);
+            });
+            renderClueDiaryPopup(wrapper);
+        }
     }, 1 * 60 * 1000);
 
     function renderClueDiaryPopup(wrapper) {
@@ -94,7 +96,7 @@ function renderPage7(wrapper){
         let kairasMessageText = document.createElement("p");
         kairasMessageText.id = "popup-text";
         kairasMessageText.innerHTML = `
-                        Har ni läst dagbok sidorna?<br><br>
+                        Har ni läst dagboksidorna?<br><br>
                         ALLA DETALJER ÄR VIKTIGA. DEN SOM SER ALLT MISSAR INGET.
 
         `;

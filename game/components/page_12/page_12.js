@@ -12,6 +12,7 @@ function renderPage12(wrapper) {
 
     let opacityBackground = document.createElement("div");
     opacityBackground.id = "opacityBackground12";
+    pageContainer.append(opacityBackground);
 
     let backDrop12 = document.createElement("div")
     backDrop12.id = "backDrop12"
@@ -45,7 +46,6 @@ function renderPage12(wrapper) {
             .includes(value.trim());
     }
 
-
     let nextStepButton = document.createElement("button")
     nextStepButton.id = "nextStepButton"
     nextStepButton.textContent = "ENTER"
@@ -61,9 +61,7 @@ function renderPage12(wrapper) {
             inputShake(inputField);
         }
     });
-    textContainer.append(nextStepButton)
-
-    pageContainer.append(opacityBackground);
+    textContainer.append(nextStepButton);
 
     function renderBeginingPopup (wrapper) {
         let renderBeginingPopupContainer = document.createElement("div");

@@ -12,6 +12,7 @@ function renderPage11(wrapper) {
 
     let opacityBackground = document.createElement("div");
     opacityBackground.id = "opacityBackground11";
+    pageContainer.append(opacityBackground);
 
     let backDrop11 = document.createElement("div")
     backDrop11.id = "backDrop11"
@@ -23,14 +24,14 @@ function renderPage11(wrapper) {
 
     let headerText = document.createElement("h2")
     headerText.id = "headerText"
-    headerText.textContent= "AVKODA FÖR ATT FORTSÄTTA"
+    headerText.textContent= "ANALOGT UPPDRAG - AVKODA FÖR ATT FORTSÄTTA"
     textContainer.append(headerText)
 
      let bodyText = document.createElement("p")
     bodyText.id = "bodyText"
     bodyText.innerHTML =
-                        `Radia Perlman står för routing och har arbetat med många algoritmer.
-                         Nu när ni har tagit er till detta steg ska ni hitta rätt router`
+                        `Förhoppningsvis har ni nu delat upp er och är på vardera rätt plats.
+                        Detta uppdrag är analogt, men för att komma vidare måste ni skriva in det ni har avkodat.`;
     textContainer.append(bodyText);
 
     let inputField = document.createElement("input")
@@ -44,25 +45,24 @@ function renderPage11(wrapper) {
             .includes(value.trim());
     }
 
-
     let nextStepButton = document.createElement("button")
     nextStepButton.id = "nextStepButton"
     nextStepButton.textContent = "ENTER"
     nextStepButton.addEventListener("click", () => {
         let userInput = inputField.value;
         if (routerKod(userInput)) {
-            let audio = new Audio("../../assets/audio/popup_sound.mp3");
-                audio.play().catch(e => {
-                console.warn("Autoplay blockerat av webbläsaren:", e);
-            });
-            renderIPPopup(wrapper);
+            renderPage12(wrapper);
         } else {
             inputShake(inputField);
         }
     });
-    textContainer.append(nextStepButton)
+    textContainer.append(nextStepButton);
 
-    pageContainer.append(opacityBackground);
+    let audio = new Audio("../../assets/audio/popup_sound.mp3");
+    audio.play().catch(e => {
+        console.warn("Autoplay blockerat av webbläsaren:", e);
+    });
+    renderIPPopup(wrapper);
 
     function renderIPPopup (wrapper) {
         let renderIPPopupContainer = document.createElement("div");
@@ -84,9 +84,7 @@ function renderPage11(wrapper) {
         let kairasMessageText = document.createElement("p");
         kairasMessageText.id = "popup-text";
         kairasMessageText.innerHTML = `
-             Okej NU håller tiden verkligen på att rinna ut…orkar inte vänta in er mer, 
-             nu blir det snabba puckar. Splittra gruppen, några tar sig till caféet, 
-             igen jag vet. Resten till våning 4, hitta koden vid kaffemaskinen. Skärp er och samarbeta. Ni har mobiler, använd dem.
+             Okej NU håller tiden verkligen på att rinna ut…orkar inte vänta in er mer, nu blir det snabba puckar. Splittra gruppen, några tar sig till caféet, igen jag vet. Resten till våning 4, hitta QR-koden vid kaffemaskinen. Skärp er och samarbeta. Ni har mobiler, använd dem för att kommunicera.
         `;
         popupTextContainer.appendChild(kairasMessageText);
     
@@ -104,9 +102,8 @@ function renderPage11(wrapper) {
         closePopupButton.addEventListener("click", () => {
             renderIPPopupContainer.classList.remove("visible");
             renderIPPopupContainer.classList.add("hidden");
-            renderIPPopupContainer.remove("blur")
+            pageContainer.classList.remove("blur");
             renderIPPopupContainer.remove();
-            renderPage12(wrapper)
         });
         closePopupButtonContainer.append(closePopupButton);
 }}

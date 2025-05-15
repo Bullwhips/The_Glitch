@@ -12,6 +12,7 @@ function renderPage10(wrapper) {
 
     let opacityBackground = document.createElement("div");
     opacityBackground.id = "opacityBackground10";
+    pageContainer.append(opacityBackground);
 
     let backDrop10 = document.createElement("div")
     backDrop10.id = "backDrop10"
@@ -29,7 +30,7 @@ function renderPage10(wrapper) {
      let bodyText = document.createElement("p")
     bodyText.id = "bodyText"
     bodyText.innerHTML =
-                        `Detta uppdrag är analogt, men för att komma vidare måste ni skriva in det ni har avkodat.`
+                        `Detta uppdrag är analogt, för att komma vidare måste ni skriva in det ni har avkodat.`
     textContainer.append(bodyText);
 
     let inputField = document.createElement("input")
@@ -49,18 +50,18 @@ function renderPage10(wrapper) {
     nextStepButton.addEventListener("click", () => {
         let userInput = inputField.value;
         if (radiaPerlman(userInput)) {
-            let audio = new Audio("../../assets/audio/popup_sound.mp3");
-                audio.play().catch(e => {
-                console.warn("Autoplay blockerat av webbläsaren:", e);
-            });
-            renderRouterPopup(wrapper);
+            renderPage11(wrapper);
         } else {
             inputShake(inputField);
         }
     });
-    textContainer.append(nextStepButton)
+    textContainer.append(nextStepButton);
 
-    pageContainer.append(opacityBackground);
+    let audio = new Audio("../../assets/audio/popup_sound.mp3");
+    audio.play().catch(e => {
+        console.warn("Autoplay blockerat av webbläsaren:", e);
+    });
+    renderRouterPopup(wrapper);
 
     function renderRouterPopup (wrapper) {
         let renderRouterPopupContainer = document.createElement("div");
@@ -82,7 +83,7 @@ function renderPage10(wrapper) {
         let kairasMessageText = document.createElement("p");
         kairasMessageText.id = "popup-text";
         kairasMessageText.innerHTML = `
-        Hon kallas internets mamma, routingens arkitekt. Dela upp er och leta på våningen. Bara en maskin bär hennes namn, där hittar ni nästa nyckel.
+        Routingens arkitekt vakar fortfarande över sitt verk. En enda maskin bär hennes avbild. Dela upp er – där finner ni nästa nyckel.
         `;
         popupTextContainer.appendChild(kairasMessageText);
     
@@ -102,7 +103,6 @@ function renderPage10(wrapper) {
             renderRouterPopupContainer.classList.add("hidden");
             pageContainer.classList.remove("blur")
             renderRouterPopupContainer.remove();
-            renderPage11(wrapper)
         });
         closePopupButtonContainer.append(closePopupButton);
 }}
