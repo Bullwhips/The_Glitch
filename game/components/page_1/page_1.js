@@ -42,4 +42,13 @@ function renderPage1(wrapper) {
     nextStepButton.textContent = "NÄSTA STEG";
     nextStepButton.addEventListener("click", () => {renderPage2(wrapper)});
     textContainer.append(nextStepButton);
+
+    
+    POPUPARRAY.push({
+        prevPage: () => localStorage.getItem("currentPage"),
+        headText: "Du har inte hittat några popups än!",
+        bodyText: `
+    Här kommer du att kunna se alla popups som du har hittat.
+        `
+      });
 }

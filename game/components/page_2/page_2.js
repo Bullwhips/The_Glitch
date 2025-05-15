@@ -128,6 +128,8 @@ function renderPage2(wrapper) {
         closePopupButtonContainer.append(closePopupButton);
     }
 
+    POPUPARRAY.splice(0, POPUPARRAY.length)
+
     POPUPARRAY.push({
         prevPage: () => localStorage.getItem("currentPage"),
         headText: "⚠ MEDDELANDE: ${players.name}",

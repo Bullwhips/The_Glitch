@@ -183,6 +183,7 @@ function renderPopupFolder(wrapper) {
   nextArrow.addEventListener("click", () => {
     currentPopupIndex = (currentPopupIndex + 1) % POPUPARRAY.length;
     renderPopupFolder(wrapper);
+    console.log(POPUPARRAY)
   });
   popupArrowContainer.append(nextArrow);
 }
