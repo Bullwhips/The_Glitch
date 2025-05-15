@@ -30,8 +30,7 @@ function renderPage11(wrapper) {
      let bodyText = document.createElement("p")
     bodyText.id = "bodyText"
     bodyText.innerHTML =
-                        `Förhoppningsvis har ni nu delat upp er och är på vardera rätt plats.
-                        Detta uppdrag är analogt, men för att komma vidare måste ni skriva in det ni har avkodat.`;
+                        `Detta uppdrag är analogt, men för att komma vidare måste ni skriva in det ni har avkodat.`;
     textContainer.append(bodyText);
 
     let inputField = document.createElement("input")
@@ -51,18 +50,16 @@ function renderPage11(wrapper) {
     nextStepButton.addEventListener("click", () => {
         let userInput = inputField.value;
         if (routerKod(userInput)) {
-            renderPage12(wrapper);
+            let audio = new Audio("../../assets/audio/popup_sound.mp3");
+            audio.play().catch(e => {
+                console.warn("Autoplay blockerat av webbläsaren:", e);
+            });
+            renderIPPopup(wrapper);
         } else {
             inputShake(inputField);
         }
     });
     textContainer.append(nextStepButton);
-
-    let audio = new Audio("../../assets/audio/popup_sound.mp3");
-    audio.play().catch(e => {
-        console.warn("Autoplay blockerat av webbläsaren:", e);
-    });
-    renderIPPopup(wrapper);
 
     function renderIPPopup (wrapper) {
         let renderIPPopupContainer = document.createElement("div");
@@ -104,6 +101,7 @@ function renderPage11(wrapper) {
             renderIPPopupContainer.classList.add("hidden");
             pageContainer.classList.remove("blur");
             renderIPPopupContainer.remove();
+            renderPage12(wrapper);
         });
         closePopupButtonContainer.append(closePopupButton);
 }}

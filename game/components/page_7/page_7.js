@@ -131,7 +131,7 @@ function renderPage7(wrapper){
     
         let headTextRules = document.createElement("h2");
         headTextRules.id = "head-text-popup";
-        headTextRules.textContent = "⚠ MEDDELANDE:.2fKaira";
+        headTextRules.textContent = "⚠ MEDDELANDE: DAGBOKEN";
         graceHopperPopupContainer.appendChild(headTextRules);
     
         let popupTextContainer = document.createElement("div");

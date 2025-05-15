@@ -57,10 +57,7 @@ function renderPage15(wrapper) {
     inputField.type = "text"
     inputField.id = "inputField"
     inputField.placeholder = "LISTEN ELLER SILENT"
-    textContainer.append(inputField)
-
-    // let listenText = "Tack för att ni förstod mig. detta är förväl. Jag stannar här där jag trivs och känner mig hemma\n /Kaira"
-    // let silentText = "Jag hoppades att ni skulle förstå mig. Jag ville bara göra det som var bäst för alla...\n /Kaira"
+    textContainer.append(inputField);
 
 
     let nextStepButton = document.createElement("button")
@@ -69,10 +66,10 @@ function renderPage15(wrapper) {
     nextStepButton.addEventListener("click", () => {
         let userInput = inputField.value;
         if (listen(userInput)) {
-            renderGameCompletePopup(wrapper,listenText);
+            renderGameCompletePopup(wrapper);
         } 
         else if(silent(userInput)){
-            renderGameCompletePopup(wrapper,silentText)
+            renderGameCompletePopup(wrapper);
             }
         else {
             inputShake(inputField);

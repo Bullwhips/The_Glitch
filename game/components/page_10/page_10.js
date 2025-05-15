@@ -50,18 +50,16 @@ function renderPage10(wrapper) {
     nextStepButton.addEventListener("click", () => {
         let userInput = inputField.value;
         if (radiaPerlman(userInput)) {
-            renderPage11(wrapper);
+            let audio = new Audio("../../assets/audio/popup_sound.mp3");
+            audio.play().catch(e => {
+                console.warn("Autoplay blockerat av webbläsaren:", e);
+            });
+            renderRouterPopup(wrapper);
         } else {
             inputShake(inputField);
         }
     });
     textContainer.append(nextStepButton);
-
-    let audio = new Audio("../../assets/audio/popup_sound.mp3");
-    audio.play().catch(e => {
-        console.warn("Autoplay blockerat av webbläsaren:", e);
-    });
-    renderRouterPopup(wrapper);
 
     function renderRouterPopup (wrapper) {
         let renderRouterPopupContainer = document.createElement("div");
@@ -103,6 +101,7 @@ function renderPage10(wrapper) {
             renderRouterPopupContainer.classList.add("hidden");
             pageContainer.classList.remove("blur")
             renderRouterPopupContainer.remove();
+            renderPage11(wrapper);
         });
         closePopupButtonContainer.append(closePopupButton);
 }}

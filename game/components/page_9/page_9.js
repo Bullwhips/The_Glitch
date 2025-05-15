@@ -150,6 +150,10 @@ function renderPage9(wrapper) {
 
                     if (!hasShownWrongAnswer) {
                         hasShownWrongAnswer = true;
+                        let audio = new Audio("../../assets/audio/popup_sound.mp3");
+                        audio.play().catch(e => {
+                            console.warn("Autoplay blockerat av webbläsaren:", e);
+                        });
                         renderWrongAnswerPopup(wrapper);
                     }
                 }
@@ -196,7 +200,7 @@ function renderPage9(wrapper) {
     
         let headTextRules = document.createElement("h2");
         headTextRules.id = "head-text-popup";
-        headTextRules.textContent = "⚠ MEDDELANDE:.2fKaira";
+        headTextRules.textContent = "⚠ MEDDELANDE: #takeAwayTime";
         wrongAnswerPopupContainer.appendChild(headTextRules);
     
         let popupTextContainer = document.createElement("div");

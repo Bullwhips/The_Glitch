@@ -16,7 +16,6 @@
 
 #popup-content-container-aboutus {
     display: flex;
-    justify-content: center;
     align-items: center;
     flex-direction: column;
     margin-bottom: 0.5rem;
@@ -27,12 +26,16 @@
     font-family: ptmono;
     font-size: 1rem;
     color: #FFF;
+    margin-left: 4.5rem;
+    margin-right: 4.5rem;
 }
 
 #popup-text-headline-about {
     font-family: ptmono;
     font-size: 1rem;
     color: #FFF;
+    margin-left: 4.5rem;
+    margin-right: 4.5rem;
 }
 
 #popup-text-contact {
