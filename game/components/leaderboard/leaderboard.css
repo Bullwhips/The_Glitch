@@ -11,6 +11,14 @@
     border-radius: 10px;
     margin-top: 20px;
     margin-bottom: 20px;
+    list-style: decimal;
+}
+
+.li-content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    white-space: nowrap;
 }
 
 #groupList li:nth-child(1)::marker {

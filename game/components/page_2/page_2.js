@@ -72,6 +72,15 @@ function renderPage2(wrapper) {
     nextStepButton.addEventListener("click", () => {renderPage3(wrapper)});
     textContainer.append(nextStepButton);
 
+        POPUPARRAY.splice(0, POPUPARRAY.length)
+        POPUPARRAY.push({
+        prevPage: () => localStorage.getItem("currentPage"),
+        headText: "Du har inte hittat några popups än!",
+        bodyText: `
+    Här kommer du att kunna se alla popups som du har hittat.
+        `
+      });
+
     function renderKairasMessagePopup1 (wrapper) {
         let kairasMessagePopupContainer = document.createElement("div");
         kairasMessagePopupContainer.id = "popup-container";
@@ -126,9 +135,8 @@ function renderPage2(wrapper) {
             kairasMessagePopupContainer.remove();
         });
         closePopupButtonContainer.append(closePopupButton);
-    }
 
-    POPUPARRAY.splice(0, POPUPARRAY.length)
+           POPUPARRAY.splice(0, POPUPARRAY.length)
 
     POPUPARRAY.push({
         prevPage: () => localStorage.getItem("currentPage"),
@@ -150,4 +158,7 @@ function renderPage2(wrapper) {
           GLÖM INTE ATT SVAREN KAN FINNAS I DETALJERNA.
         `
       });
+    }
+
+ 
 }

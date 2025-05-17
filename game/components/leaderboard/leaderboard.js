@@ -2,7 +2,7 @@ function renderLeaderboard(wrapper) {
     localStorage.setItem("currentPage", "renderMainPageContent");
     wrapper.innerHTML = ""
 
-    renderHeader(wrapper);
+    renderFinalHeader(wrapper);
     
 
     // let pageContainer = document.createElement("div");
@@ -54,13 +54,19 @@ function renderLeaderboard(wrapper) {
                 .sort((a, b) => timeToSeconds(b.time) - timeToSeconds(a.time)); // descending
     
             sortedGroups.forEach(insertGroup);
+            console.log(sortedGroups)
         
         }
     }
 
     function insertGroup(grupp) {
-        const li = document.createElement("li");
-        li.innerHTML = `${grupp.name} ${grupp.time || ""}`;
-        groupList.appendChild(li);
+    const li = document.createElement("li");
+
+    const wrapper = document.createElement("div");
+    wrapper.classList.add("li-content");
+    wrapper.innerHTML = `<span class="left">${grupp.name}</span><span class="right">${grupp.time || ""}</span>`;
+
+    li.appendChild(wrapper);
+    groupList.appendChild(li);
     }
 }

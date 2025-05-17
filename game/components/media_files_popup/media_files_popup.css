@@ -21,6 +21,17 @@
     line-height: 1.3rem;
 }
 
+#textContainerPopup {
+   
+    font-family: ptmono;
+    line-height: 150%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    color: #FFF;
+    
+}
+
 .content-buttons {
     border: none;
     background: transparent;
