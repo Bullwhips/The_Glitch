@@ -1,6 +1,6 @@
 import { serveDir, serveFile } from "jsr:@std/http/file-server";
 const kv = await Deno.openKv();
-await kv.delete(["grupp","6dce2857-8b02-4993-b14b-abc53c283451"]);
+
 
 
 
