@@ -82,7 +82,7 @@ function renderRadiaPerlmanPopup (wrapper) {
     let kairasMessageText = document.createElement("p");
     kairasMessageText.id = "popup-text";
     kairasMessageText.innerHTML = `
-                Popup 12<br><br>
+                
             Ett tips till de nyfikna. På entréplan syns hon bland andra där info finns. 
             Med ett stort leende ger hon dig svar som leder dig till sida 5 och 6. 
             Hitta Radias ord bland orden och följ vägen dit de för dig!
