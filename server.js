@@ -1,19 +1,12 @@
 import { serveDir, serveFile } from "jsr:@std/http/file-server";
+const kv = await Deno.openKv();
 
-let GRUPPER = [];
 
-try {
-  const grupperData = await Deno.readTextFile("./game/database/database.json");
-  GRUPPER = JSON.parse(grupperData);
-} catch (e) {
-  console.error("Failed to load grupper:", e);
-  GRUPPER = [];
-}
 
-async function updateDatabase(grupper) {
-  const grupperData = JSON.stringify(grupper, null, 2);
-  await Deno.writeTextFile("./game/database/database.json", grupperData);
-}
+// async function updateDatabase(grupper) {
+//   const grupperData = JSON.stringify(grupper, null, 2);
+//   await Deno.writeTextFile("./game/database/database.json", grupperData);
+// }
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
@@ -39,29 +32,44 @@ async function handleRequest(request) {
     }
 
     if (request.method === "GET") {
-      return new Response(JSON.stringify(GRUPPER), { headers: corsHeaders });
+        const grupps = [];
+
+        for await (const entry of kv.list({ prefix: ["grupp"] })) {
+        grupps.push(entry.value);
+  }
+
+        return new Response(JSON.stringify(grupps), corsHeaders);
     }
 
-    if (request.method === "POST") {
-      const grupp = await request.json();
-      grupp.id = GRUPPER.reduce((acc, next) => (next.id > acc ? next.id : acc), 0) + 1;
-      GRUPPER.push(grupp);
-      await updateDatabase(GRUPPER);
-      return new Response(JSON.stringify(grupp), { headers: corsHeaders });
-    }
+     if (request.method === "POST") {
+  
+    const grupp = await request.json();
 
-    if (request.method === "DELETE") {
-      const data = await request.json();
-      const index = GRUPPER.findIndex(grupp => grupp.id === data.id);
+     // Generate a unique ID (you can also use a timestamp or UUID here)
+    const id = crypto.randomUUID();
+     grupp.id = id;
 
-      if (index === -1) {
-        return new Response(JSON.stringify({ error: "Not found" }), { status: 404, headers: corsHeaders });
-      }
+     // Store the group in KV under key: ["grupp", id]
+     await kv.set(["grupp", id], grupp);
 
-      const removed = GRUPPER.splice(index, 1)[0];
-      await updateDatabase(GRUPPER);
-      return new Response(JSON.stringify(removed), { headers: corsHeaders });
-    }
+     return new Response(JSON.stringify(grupp), {
+     headers: corsHeaders
+  });
+}
+
+
+if (request.method === "DELETE") {
+  const data = await request.json();
+  const key = ["grupp", data.id];
+
+  const existing = await kv.get(key);
+  if (!existing.value) {
+    return new Response("", { status: 404 });
+  }
+
+  await kv.delete(key);
+  return new Response(JSON.stringify(existing.value), corsHeaders);
+}
   }
 
   if (pathname.endsWith(".mp3")) {
