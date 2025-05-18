@@ -87,7 +87,7 @@ function renderPage4 (wrapper) {
             });
             renderKairasClueMessage(wrapper, pageContainer);
         }
-    }, 1 * 60 * 1000);
+    }, 10 * 60 * 1000);
 
 
     function renderKairasMessagePopup2 (wrapper) {

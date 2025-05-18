@@ -74,7 +74,7 @@ function renderPage7(wrapper){
             });
             renderClueDiaryPopup(wrapper);
         }
-    }, 1 * 60 * 1000);
+    }, 10 * 60 * 1000);
 
            POPUPARRAY.splice(0, POPUPARRAY.length)
 

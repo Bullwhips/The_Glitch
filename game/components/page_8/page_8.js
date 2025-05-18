@@ -55,7 +55,7 @@ function renderPage8(wrapper){
             });
             renderClueElevatorPopup(wrapper);
         }
-    }, 1 * 60 * 1000);
+    }, 10 * 60 * 1000);
 
     clueRevealTimeoutId2 = setTimeout(() => {
         if (localStorage.getItem("currentPage") === "renderPage8") {
@@ -65,7 +65,7 @@ function renderPage8(wrapper){
             });
             renderClueDiaryPagesPopup(wrapper);
         }
-    }, 2 * 60 * 1000);
+    }, 20 * 60 * 1000);
 
     let nextStepButton = document.createElement("button")
     nextStepButton.id = "nextStepButton"
