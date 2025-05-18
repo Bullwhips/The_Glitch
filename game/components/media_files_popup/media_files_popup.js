@@ -279,7 +279,7 @@ function renderPopupSongLyrics (wrapper) {
 }
 
 function renderVideoPopupFolder(wrapper, video) {
-    // localStorage.setItem("currentPage", "renderVideoPopupFolder");
+
 
     wrapper.innerHTML = "";
 

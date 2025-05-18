@@ -22,7 +22,7 @@ function renderGameFinish(wrapper) {
     textContainerFinish.append(finishText)
 
     let gruppForm = document.createElement("form");
-    gruppForm.id = "gruppForm"; //  fixed
+    gruppForm.id = "gruppForm"; 
     textContainerFinish.append(gruppForm);
 
     let inputField = document.createElement("input");

@@ -88,13 +88,8 @@ function renderPage9(wrapper) {
             const timerDisplay = document.querySelector("#timerDisplay");
             if (timerDisplay) {
             removeTimeAndAnimate(120, timerDisplay);
-}
+          }
         }
-
-        // if (!hasShownWrongAnswer) {
-        //     hasShownWrongAnswer = true;
-        //     renderGraceHopperPopup(wrapper);
-        // }
     }
 
     if (allCorrect) {

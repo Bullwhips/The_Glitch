@@ -28,7 +28,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
   // Restore saved page or default to the start
   if (savedPageName && pageRenderMap[savedPageName]) {
-    console.log("Restoring page:", savedPageName);
+    
     pageRenderMap[savedPageName](wrapper);
   } else {
     renderMainPageContent(wrapper); // Your game's starting page
@@ -98,69 +98,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
   // /TYPEWRITER
 
-// TIMER
-  // function Timer(durationInSeconds, displayElement, shouldSave = true) {
-  //   let timer = durationInSeconds;
-  
-  //   if (shouldSave) {
-  //     const endTime = Date.now() + durationInSeconds * 1000;
-  //     localStorage.setItem("glitchTimerEnd", endTime);
-  //   }
-  
-  //   const interval = setInterval(() => {
-  //     const hours = Math.floor(timer / 3600);
-  //     const minutes = Math.floor((timer % 3600) / 60);
-  //     const seconds = timer % 60;
-  
-  //     displayElement.textContent =
-  //       `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
-  
-  //       if (--timer < 0) {
-  //         clearInterval(interval);
-          
-  //         renderGameOver(document.querySelector("#wrapper"))
-          
-  //         // // Remove from localStorage
-  //         // localStorage.removeItem("glitchTimerEnd");
-          
-  //         // const currentGroup = localStorage.getItem("glitchGroup");
-  //         // if (currentGroup) {
-  //         //   const grupp = JSON.parse(currentGroup);
-            
-  //         //   // Send DELETE request to server to remove the group
-  //         //   fetch("/api/grupper", {
-  //         //     method: "DELETE",
-  //         //     headers: {"Content-Type": "application/json"},
-  //         //     body: JSON.stringify({ id: grupp.id })
-  //         //   });
-        
-  //         //   // Remove group from local storage
-  //         //   localStorage.removeItem("glitchGroup");
-  //         // }
-  //       }
-        
-  //   }, 1000);
-  // }
-  
-  // function startTimer() {
-  //   const timerDisplay = document.querySelector("#timerDisplay");
-  //   const savedEndTime = localStorage.getItem("glitchTimerEnd");
-  
-  // if (savedEndTime) {
-  //   const remaining = Math.floor((savedEndTime - Date.now()) / 1000);
-  //   if (remaining > 0) {
-  //     Timer(remaining, timerDisplay, false);
-  //   } else {
-  //     // Timer expired while user was away
-  //     localStorage.removeItem("glitchTimerEnd");
-  //     Timer(2 * 60 * 60, timerDisplay);
-  //   }
-  // } else {
-    
-  //   Timer(2 * 60 * 60, timerDisplay);
-  // }
-  // }
-
+// Timer
 let activeTimerInterval = null;
 
 function Timer(durationInSeconds, displayElement, shouldSave = true) {
@@ -212,6 +150,7 @@ function startTimer() {
       Timer(2 * 60 * 60, timerDisplay);
     }
 }
+// /Timer
   
   // Denna funktion kan du anropa när du vill ta bort tid visuellt
 function removeTimeAndAnimate(durationToRemoveInSeconds, displayElement, callback) {
@@ -253,13 +192,8 @@ function removeTimeAndAnimate(durationToRemoveInSeconds, displayElement, callbac
   }
   
 
-// /Timer
 
-const currentGroup = JSON.parse(localStorage.getItem("glitchGroup"));
-if (currentGroup) {
-  console.log("Welcome back,", currentGroup.name);
 
-}
 
 function inputShake(input) {
   input.classList.add("input-error");

@@ -7,7 +7,6 @@ function renderPage13(wrapper) {
 
     let pageContainer = document.createElement("div");
     pageContainer.id = "page-container";
-    //pageContainer.classList.add("noScroll")
     wrapper.append(pageContainer);
 
     let opacityBackground = document.createElement("div");

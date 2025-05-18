@@ -4,11 +4,6 @@ function renderLeaderboard(wrapper) {
 
     renderFinalHeader(wrapper);
     
-
-    // let pageContainer = document.createElement("div");
-    // pageContainer.id = "page-container";
-    // wrapper.append(pageContainer);
-
     let opacityBackground = document.createElement("div");
     opacityBackground.classList.add("noScroll");
     opacityBackground.id = "opacityBackground";
@@ -35,7 +30,7 @@ function renderLeaderboard(wrapper) {
 
     let groupList = document.createElement("ol");
     groupList.id = "groupList";
-    textContainerLeader.append(groupList); // append group list to DOM
+    textContainerLeader.append(groupList); 
 
     fetchAllGroups();
 
@@ -51,10 +46,10 @@ function renderLeaderboard(wrapper) {
     
             const sortedGroups = groups
                 .filter(g => g.time && g.time.includes(":"))
-                .sort((a, b) => timeToSeconds(b.time) - timeToSeconds(a.time)); // descending
+                .sort((a, b) => timeToSeconds(b.time) - timeToSeconds(a.time)); 
     
             sortedGroups.forEach(insertGroup);
-            console.log(sortedGroups)
+            
         
         }
     }
