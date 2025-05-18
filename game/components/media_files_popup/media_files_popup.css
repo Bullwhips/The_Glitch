@@ -39,6 +39,7 @@
 
 #xPopupFolder{
     text-align: right;
+    padding-top: 40px;
     font-size: 2rem;
     font-family: ptmono;
 }
